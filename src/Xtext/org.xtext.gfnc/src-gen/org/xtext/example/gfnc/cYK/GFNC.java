@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.gfnc.cYK.GFNC#getW <em>W</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.GFNC#getInit <em>Init</em>}</li>
  *   <li>{@link org.xtext.example.gfnc.cYK.GFNC#getProductions <em>Productions</em>}</li>
  * </ul>
  *
@@ -38,28 +37,6 @@ public interface GFNC extends EObject
    * @generated
    */
   EList<Simple> getW();
-
-  /**
-   * Returns the value of the '<em><b>Init</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Init</em>' containment reference.
-   * @see #setInit(Initial)
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getGFNC_Init()
-   * @model containment="true"
-   * @generated
-   */
-  Initial getInit();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.GFNC#getInit <em>Init</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Init</em>' containment reference.
-   * @see #getInit()
-   * @generated
-   */
-  void setInit(Initial value);
 
   /**
    * Returns the value of the '<em><b>Productions</b></em>' containment reference list.

@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
-import org.xtext.example.gfnc.cYK.Right;
+import org.xtext.example.gfnc.cYK.Rigth;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ import org.xtext.example.gfnc.cYK.Right;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl#getRigth <em>Rigth</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,14 +51,14 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
   protected NonTerminal left;
 
   /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference list.
+   * The cached value of the '{@link #getRigth() <em>Rigth</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getRigth()
    * @generated
    * @ordered
    */
-  protected EList<Right> right;
+  protected EList<Rigth> rigth;
 
   /**
    * <!-- begin-user-doc -->
@@ -137,13 +137,13 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
    * @generated
    */
   @Override
-  public EList<Right> getRight()
+  public EList<Rigth> getRigth()
   {
-    if (right == null)
+    if (rigth == null)
     {
-      right = new EObjectContainmentEList<Right>(Right.class, this, CYKPackage.PRODUCTION__RIGHT);
+      rigth = new EObjectContainmentEList<Rigth>(Rigth.class, this, CYKPackage.PRODUCTION__RIGTH);
     }
-    return right;
+    return rigth;
   }
 
   /**
@@ -158,8 +158,8 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
     {
       case CYKPackage.PRODUCTION__LEFT:
         return basicSetLeft(null, msgs);
-      case CYKPackage.PRODUCTION__RIGHT:
-        return ((InternalEList<?>)getRight()).basicRemove(otherEnd, msgs);
+      case CYKPackage.PRODUCTION__RIGTH:
+        return ((InternalEList<?>)getRigth()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -176,8 +176,8 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
     {
       case CYKPackage.PRODUCTION__LEFT:
         return getLeft();
-      case CYKPackage.PRODUCTION__RIGHT:
-        return getRight();
+      case CYKPackage.PRODUCTION__RIGTH:
+        return getRigth();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -196,9 +196,9 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
       case CYKPackage.PRODUCTION__LEFT:
         setLeft((NonTerminal)newValue);
         return;
-      case CYKPackage.PRODUCTION__RIGHT:
-        getRight().clear();
-        getRight().addAll((Collection<? extends Right>)newValue);
+      case CYKPackage.PRODUCTION__RIGTH:
+        getRigth().clear();
+        getRigth().addAll((Collection<? extends Rigth>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -217,8 +217,8 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
       case CYKPackage.PRODUCTION__LEFT:
         setLeft((NonTerminal)null);
         return;
-      case CYKPackage.PRODUCTION__RIGHT:
-        getRight().clear();
+      case CYKPackage.PRODUCTION__RIGTH:
+        getRigth().clear();
         return;
     }
     super.eUnset(featureID);
@@ -236,8 +236,8 @@ public class ProductionImpl extends MinimalEObjectImpl.Container implements Prod
     {
       case CYKPackage.PRODUCTION__LEFT:
         return left != null;
-      case CYKPackage.PRODUCTION__RIGHT:
-        return right != null && !right.isEmpty();
+      case CYKPackage.PRODUCTION__RIGTH:
+        return rigth != null && !rigth.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -17,11 +17,9 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransi
 import org.xtext.example.gfnc.cYK.Binary;
 import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.GFNC;
-import org.xtext.example.gfnc.cYK.Initial;
-import org.xtext.example.gfnc.cYK.Lambda;
 import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
-import org.xtext.example.gfnc.cYK.Right;
+import org.xtext.example.gfnc.cYK.Rigth;
 import org.xtext.example.gfnc.cYK.Simple;
 import org.xtext.example.gfnc.services.CYKGrammarAccess;
 
@@ -45,20 +43,14 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case CYKPackage.GFNC:
 				sequence_GFNC(context, (GFNC) semanticObject); 
 				return; 
-			case CYKPackage.INITIAL:
-				sequence_Initial(context, (Initial) semanticObject); 
-				return; 
-			case CYKPackage.LAMBDA:
-				sequence_Lambda(context, (Lambda) semanticObject); 
-				return; 
 			case CYKPackage.NON_TERMINAL:
 				sequence_NonTerminal(context, (NonTerminal) semanticObject); 
 				return; 
 			case CYKPackage.PRODUCTION:
 				sequence_Production(context, (Production) semanticObject); 
 				return; 
-			case CYKPackage.RIGHT:
-				sequence_Right(context, (Right) semanticObject); 
+			case CYKPackage.RIGTH:
+				sequence_Rigth(context, (Rigth) semanticObject); 
 				return; 
 			case CYKPackage.SIMPLE:
 				sequence_Simple(context, (Simple) semanticObject); 
@@ -85,8 +77,8 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CYKPackage.Literals.BINARY__SECOND));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBinaryAccess().getFirstNonTerminalParserRuleCall_1_0(), semanticObject.getFirst());
-		feeder.accept(grammarAccess.getBinaryAccess().getSecondNonTerminalParserRuleCall_2_0(), semanticObject.getSecond());
+		feeder.accept(grammarAccess.getBinaryAccess().getFirstNonTerminalParserRuleCall_1_0_0(), semanticObject.getFirst());
+		feeder.accept(grammarAccess.getBinaryAccess().getSecondNonTerminalParserRuleCall_1_1_0(), semanticObject.getSecond());
 		feeder.finish();
 	}
 	
@@ -97,45 +89,11 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     GFNC returns GFNC
 	 *
 	 * Constraint:
-	 *     (w+=Simple w+=Simple* init=Initial productions+=Production*)
+	 *     (w+=Simple w+=Simple* productions+=Production*)
 	 * </pre>
 	 */
 	protected void sequence_GFNC(ISerializationContext context, GFNC semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Initial returns Initial
-	 *
-	 * Constraint:
-	 *     (left='S' right+=Lambda right+=Right*)
-	 * </pre>
-	 */
-	protected void sequence_Initial(ISerializationContext context, Initial semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Lambda returns Lambda
-	 *
-	 * Constraint:
-	 *     right='_'
-	 * </pre>
-	 */
-	protected void sequence_Lambda(ISerializationContext context, Lambda semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, CYKPackage.Literals.LAMBDA__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CYKPackage.Literals.LAMBDA__RIGHT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLambdaAccess().getRight_Keyword_0_1_0(), semanticObject.getRight());
-		feeder.finish();
 	}
 	
 	
@@ -164,6 +122,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         noTerminals='P' | 
 	 *         noTerminals='Q' | 
 	 *         noTerminals='R' | 
+	 *         noTerminals='S' | 
 	 *         noTerminals='T' | 
 	 *         noTerminals='U' | 
 	 *         noTerminals='V' | 
@@ -185,7 +144,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Production returns Production
 	 *
 	 * Constraint:
-	 *     (left=NonTerminal right+=Right right+=Right*)
+	 *     (left=NonTerminal rigth+=Rigth rigth+=Rigth*)
 	 * </pre>
 	 */
 	protected void sequence_Production(ISerializationContext context, Production semanticObject) {
@@ -196,14 +155,13 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Lambda returns Right
-	 *     Right returns Right
+	 *     Rigth returns Rigth
 	 *
 	 * Constraint:
-	 *     (simple=Simple | binary=Binary)
+	 *     (simple=Simple | binary=Binary | lambda='_')
 	 * </pre>
 	 */
-	protected void sequence_Right(ISerializationContext context, Right semanticObject) {
+	protected void sequence_Rigth(ISerializationContext context, Rigth semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -13,11 +13,9 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.xtext.example.gfnc.cYK.Binary;
 import org.xtext.example.gfnc.cYK.CYKFactory;
 import org.xtext.example.gfnc.cYK.CYKPackage;
-import org.xtext.example.gfnc.cYK.Initial;
-import org.xtext.example.gfnc.cYK.Lambda;
 import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
-import org.xtext.example.gfnc.cYK.Right;
+import org.xtext.example.gfnc.cYK.Rigth;
 import org.xtext.example.gfnc.cYK.Simple;
 
 /**
@@ -40,20 +38,6 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass initialEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass lambdaEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass productionEClass = null;
 
   /**
@@ -61,7 +45,7 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass rightEClass = null;
+  private EClass rigthEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -175,75 +159,9 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EReference getGFNC_Init()
-  {
-    return (EReference)gfncEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EReference getGFNC_Productions()
   {
-    return (EReference)gfncEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getInitial()
-  {
-    return initialEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getInitial_Left()
-  {
-    return (EAttribute)initialEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getInitial_Right()
-  {
-    return (EReference)initialEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getLambda()
-  {
-    return lambdaEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getLambda_Right()
-  {
-    return (EAttribute)lambdaEClass.getEStructuralFeatures().get(0);
+    return (EReference)gfncEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -274,7 +192,7 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EReference getProduction_Right()
+  public EReference getProduction_Rigth()
   {
     return (EReference)productionEClass.getEStructuralFeatures().get(1);
   }
@@ -285,9 +203,9 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EClass getRight()
+  public EClass getRigth()
   {
-    return rightEClass;
+    return rigthEClass;
   }
 
   /**
@@ -296,9 +214,9 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EReference getRight_Simple()
+  public EReference getRigth_Simple()
   {
-    return (EReference)rightEClass.getEStructuralFeatures().get(0);
+    return (EReference)rigthEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -307,9 +225,20 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EReference getRight_Binary()
+  public EReference getRigth_Binary()
   {
-    return (EReference)rightEClass.getEStructuralFeatures().get(1);
+    return (EReference)rigthEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRigth_Lambda()
+  {
+    return (EAttribute)rigthEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -422,23 +351,16 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
     // Create classes and their features
     gfncEClass = createEClass(GFNC);
     createEReference(gfncEClass, GFNC__W);
-    createEReference(gfncEClass, GFNC__INIT);
     createEReference(gfncEClass, GFNC__PRODUCTIONS);
-
-    initialEClass = createEClass(INITIAL);
-    createEAttribute(initialEClass, INITIAL__LEFT);
-    createEReference(initialEClass, INITIAL__RIGHT);
-
-    lambdaEClass = createEClass(LAMBDA);
-    createEAttribute(lambdaEClass, LAMBDA__RIGHT);
 
     productionEClass = createEClass(PRODUCTION);
     createEReference(productionEClass, PRODUCTION__LEFT);
-    createEReference(productionEClass, PRODUCTION__RIGHT);
+    createEReference(productionEClass, PRODUCTION__RIGTH);
 
-    rightEClass = createEClass(RIGHT);
-    createEReference(rightEClass, RIGHT__SIMPLE);
-    createEReference(rightEClass, RIGHT__BINARY);
+    rigthEClass = createEClass(RIGTH);
+    createEReference(rigthEClass, RIGTH__SIMPLE);
+    createEReference(rigthEClass, RIGTH__BINARY);
+    createEAttribute(rigthEClass, RIGTH__LAMBDA);
 
     simpleEClass = createEClass(SIMPLE);
     createEAttribute(simpleEClass, SIMPLE__TERMINALS);
@@ -480,28 +402,20 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    rightEClass.getESuperTypes().add(this.getLambda());
 
     // Initialize classes and features; add operations and parameters
     initEClass(gfncEClass, org.xtext.example.gfnc.cYK.GFNC.class, "GFNC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getGFNC_W(), this.getSimple(), null, "w", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGFNC_Init(), this.getInitial(), null, "init", null, 0, 1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGFNC_Productions(), this.getProduction(), null, "productions", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(initialEClass, Initial.class, "Initial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInitial_Left(), ecorePackage.getEString(), "left", null, 0, 1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInitial_Right(), this.getLambda(), null, "right", null, 0, -1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(lambdaEClass, Lambda.class, "Lambda", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLambda_Right(), ecorePackage.getEString(), "right", null, 0, 1, Lambda.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(productionEClass, Production.class, "Production", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getProduction_Left(), this.getNonTerminal(), null, "left", null, 0, 1, Production.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProduction_Right(), this.getRight(), null, "right", null, 0, -1, Production.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProduction_Rigth(), this.getRigth(), null, "rigth", null, 0, -1, Production.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(rightEClass, Right.class, "Right", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRight_Simple(), this.getSimple(), null, "simple", null, 0, 1, Right.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRight_Binary(), this.getBinary(), null, "binary", null, 0, 1, Right.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(rigthEClass, Rigth.class, "Rigth", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRigth_Simple(), this.getSimple(), null, "simple", null, 0, 1, Rigth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRigth_Binary(), this.getBinary(), null, "binary", null, 0, 1, Rigth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRigth_Lambda(), ecorePackage.getEString(), "lambda", null, 0, 1, Rigth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(simpleEClass, Simple.class, "Simple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSimple_Terminals(), ecorePackage.getEString(), "terminals", null, 0, 1, Simple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

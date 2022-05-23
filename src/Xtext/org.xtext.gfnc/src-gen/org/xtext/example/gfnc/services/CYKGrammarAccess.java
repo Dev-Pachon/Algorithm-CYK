@@ -26,212 +26,141 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	public class GFNCElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.GFNC");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cWAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cWSimpleParserRuleCall_0_0 = (RuleCall)cWAssignment_0.eContents().get(0);
-		private final Assignment cWAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cWSimpleParserRuleCall_1_0 = (RuleCall)cWAssignment_1.eContents().get(0);
-		private final Assignment cInitAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cInitInitialParserRuleCall_2_0 = (RuleCall)cInitAssignment_2.eContents().get(0);
-		private final Assignment cProductionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cProductionsProductionParserRuleCall_3_0 = (RuleCall)cProductionsAssignment_3.eContents().get(0);
+		private final Keyword cWKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cWAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cWSimpleParserRuleCall_2_0 = (RuleCall)cWAssignment_2.eContents().get(0);
+		private final Assignment cWAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cWSimpleParserRuleCall_3_0 = (RuleCall)cWAssignment_3.eContents().get(0);
+		private final Keyword cGKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cProductionsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cProductionsProductionParserRuleCall_6_0 = (RuleCall)cProductionsAssignment_6.eContents().get(0);
 		
 		//GFNC:
-		//     w += (Simple)(w += Simple)*
-		//     init = Initial productions += Production*
+		//    'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+		//    'G' ':'  productions+=Production*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//w += (Simple)(w += Simple)*
-		//init = Initial productions += Production*
+		//'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+		//'G' ':'  productions+=Production*
 		public Group getGroup() { return cGroup; }
 		
-		//w += (Simple)
-		public Assignment getWAssignment_0() { return cWAssignment_0; }
+		//'W'
+		public Keyword getWKeyword_0() { return cWKeyword_0; }
+		
+		//':'
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//w+=(Simple)
+		public Assignment getWAssignment_2() { return cWAssignment_2; }
 		
 		//(Simple)
-		public RuleCall getWSimpleParserRuleCall_0_0() { return cWSimpleParserRuleCall_0_0; }
+		public RuleCall getWSimpleParserRuleCall_2_0() { return cWSimpleParserRuleCall_2_0; }
 		
-		//(w += Simple)*
-		public Assignment getWAssignment_1() { return cWAssignment_1; }
+		//(w+=Simple)*
+		public Assignment getWAssignment_3() { return cWAssignment_3; }
 		
 		//Simple
-		public RuleCall getWSimpleParserRuleCall_1_0() { return cWSimpleParserRuleCall_1_0; }
+		public RuleCall getWSimpleParserRuleCall_3_0() { return cWSimpleParserRuleCall_3_0; }
 		
-		//init = Initial
-		public Assignment getInitAssignment_2() { return cInitAssignment_2; }
+		////W is the string which will be analyzed by CYK
+		//   'G'
+		public Keyword getGKeyword_4() { return cGKeyword_4; }
 		
-		//Initial
-		public RuleCall getInitInitialParserRuleCall_2_0() { return cInitInitialParserRuleCall_2_0; }
+		//':'
+		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
 		
-		//productions += Production*
-		public Assignment getProductionsAssignment_3() { return cProductionsAssignment_3; }
+		//productions+=Production*
+		public Assignment getProductionsAssignment_6() { return cProductionsAssignment_6; }
 		
 		//Production
-		public RuleCall getProductionsProductionParserRuleCall_3_0() { return cProductionsProductionParserRuleCall_3_0; }
-	}
-	public class InitialElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Initial");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cInitialAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cLeftAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cLeftSKeyword_1_0 = (Keyword)cLeftAssignment_1.eContents().get(0);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cRightAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cRightLambdaParserRuleCall_3_0 = (RuleCall)cRightAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cVerticalLineKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cRightAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cRightRightParserRuleCall_4_1_0 = (RuleCall)cRightAssignment_4_1.eContents().get(0);
-		
-		//Initial:
-		//    {Initial} left = 'S' '->' right += (Lambda)('|' + right += Right)*
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{Initial} left = 'S' '->' right += (Lambda)('|' + right += Right)*
-		public Group getGroup() { return cGroup; }
-		
-		//{Initial}
-		public Action getInitialAction_0() { return cInitialAction_0; }
-		
-		//left = 'S'
-		public Assignment getLeftAssignment_1() { return cLeftAssignment_1; }
-		
-		//'S'
-		public Keyword getLeftSKeyword_1_0() { return cLeftSKeyword_1_0; }
-		
-		//'->'
-		public Keyword getHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusGreaterThanSignKeyword_2; }
-		
-		//right += (Lambda)
-		public Assignment getRightAssignment_3() { return cRightAssignment_3; }
-		
-		//(Lambda)
-		public RuleCall getRightLambdaParserRuleCall_3_0() { return cRightLambdaParserRuleCall_3_0; }
-		
-		//('|' + right += Right)*
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'|' +
-		public Keyword getVerticalLineKeyword_4_0() { return cVerticalLineKeyword_4_0; }
-		
-		//right += Right
-		public Assignment getRightAssignment_4_1() { return cRightAssignment_4_1; }
-		
-		//Right
-		public RuleCall getRightRightParserRuleCall_4_1_0() { return cRightRightParserRuleCall_4_1_0; }
-	}
-	public class LambdaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Lambda");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Action cLambdaAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Assignment cRightAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final Keyword cRight_Keyword_0_1_0 = (Keyword)cRightAssignment_0_1.eContents().get(0);
-		private final RuleCall cRightParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//Lambda:
-		//    {Lambda} right = '_' | Right
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{Lambda} right = '_' | Right
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//{Lambda} right = '_'
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//{Lambda}
-		public Action getLambdaAction_0_0() { return cLambdaAction_0_0; }
-		
-		//right = '_'
-		public Assignment getRightAssignment_0_1() { return cRightAssignment_0_1; }
-		
-		//'_'
-		public Keyword getRight_Keyword_0_1_0() { return cRight_Keyword_0_1_0; }
-		
-		//Right
-		public RuleCall getRightParserRuleCall_1() { return cRightParserRuleCall_1; }
+		public RuleCall getProductionsProductionParserRuleCall_6_0() { return cProductionsProductionParserRuleCall_6_0; }
 	}
 	public class ProductionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Production");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cProductionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cLeftAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cLeftNonTerminalParserRuleCall_1_0 = (RuleCall)cLeftAssignment_1.eContents().get(0);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cRightAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cRightRightParserRuleCall_3_0 = (RuleCall)cRightAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cVerticalLineKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cRightAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cRightRightParserRuleCall_4_1_0 = (RuleCall)cRightAssignment_4_1.eContents().get(0);
+		private final Assignment cLeftAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLeftNonTerminalParserRuleCall_0_0 = (RuleCall)cLeftAssignment_0.eContents().get(0);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cRigthAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRigthRigthParserRuleCall_2_0 = (RuleCall)cRigthAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cVerticalLineKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cRigthAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cRigthRigthParserRuleCall_3_1_0 = (RuleCall)cRigthAssignment_3_1.eContents().get(0);
 		
 		//Production:
-		//    {Production} left = NonTerminal '->' right += (Right)('|' + right += Right)*
+		//    left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Production} left = NonTerminal '->' right += (Right)('|' + right += Right)*
+		//left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
 		public Group getGroup() { return cGroup; }
 		
-		//{Production}
-		public Action getProductionAction_0() { return cProductionAction_0; }
-		
-		//left = NonTerminal
-		public Assignment getLeftAssignment_1() { return cLeftAssignment_1; }
+		//left=NonTerminal
+		public Assignment getLeftAssignment_0() { return cLeftAssignment_0; }
 		
 		//NonTerminal
-		public RuleCall getLeftNonTerminalParserRuleCall_1_0() { return cLeftNonTerminalParserRuleCall_1_0; }
+		public RuleCall getLeftNonTerminalParserRuleCall_0_0() { return cLeftNonTerminalParserRuleCall_0_0; }
 		
 		//'->'
-		public Keyword getHyphenMinusGreaterThanSignKeyword_2() { return cHyphenMinusGreaterThanSignKeyword_2; }
+		public Keyword getHyphenMinusGreaterThanSignKeyword_1() { return cHyphenMinusGreaterThanSignKeyword_1; }
 		
-		//right += (Right)
-		public Assignment getRightAssignment_3() { return cRightAssignment_3; }
+		//rigth+=(Rigth)
+		public Assignment getRigthAssignment_2() { return cRigthAssignment_2; }
 		
-		//(Right)
-		public RuleCall getRightRightParserRuleCall_3_0() { return cRightRightParserRuleCall_3_0; }
+		//(Rigth)
+		public RuleCall getRigthRigthParserRuleCall_2_0() { return cRigthRigthParserRuleCall_2_0; }
 		
-		//('|' + right += Right)*
-		public Group getGroup_4() { return cGroup_4; }
+		//('|' + rigth+=Rigth)*
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'|' +
-		public Keyword getVerticalLineKeyword_4_0() { return cVerticalLineKeyword_4_0; }
+		public Keyword getVerticalLineKeyword_3_0() { return cVerticalLineKeyword_3_0; }
 		
-		//right += Right
-		public Assignment getRightAssignment_4_1() { return cRightAssignment_4_1; }
+		//rigth+=Rigth
+		public Assignment getRigthAssignment_3_1() { return cRigthAssignment_3_1; }
 		
-		//Right
-		public RuleCall getRightRightParserRuleCall_4_1_0() { return cRightRightParserRuleCall_4_1_0; }
+		//Rigth
+		public RuleCall getRigthRigthParserRuleCall_3_1_0() { return cRigthRigthParserRuleCall_3_1_0; }
 	}
-	public class RightElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Right");
+	public class RigthElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Rigth");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cSimpleAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cSimpleSimpleParserRuleCall_0_0 = (RuleCall)cSimpleAssignment_0.eContents().get(0);
 		private final Assignment cBinaryAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cBinaryBinaryParserRuleCall_1_0 = (RuleCall)cBinaryAssignment_1.eContents().get(0);
+		private final Assignment cLambdaAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final Keyword cLambda_Keyword_2_0 = (Keyword)cLambdaAssignment_2.eContents().get(0);
 		
-		//Right:
-		//    simple = Simple | binary = Binary
+		//Rigth:
+		//    simple=Simple | binary=Binary | lambda = '_'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//simple = Simple | binary = Binary
+		//simple=Simple | binary=Binary | lambda = '_'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//simple = Simple
+		//simple=Simple
 		public Assignment getSimpleAssignment_0() { return cSimpleAssignment_0; }
 		
 		//Simple
 		public RuleCall getSimpleSimpleParserRuleCall_0_0() { return cSimpleSimpleParserRuleCall_0_0; }
 		
-		//binary = Binary
+		//binary=Binary
 		public Assignment getBinaryAssignment_1() { return cBinaryAssignment_1; }
 		
 		//Binary
 		public RuleCall getBinaryBinaryParserRuleCall_1_0() { return cBinaryBinaryParserRuleCall_1_0; }
+		
+		//lambda = '_'
+		public Assignment getLambdaAssignment_2() { return cLambdaAssignment_2; }
+		
+		//'_'
+		public Keyword getLambda_Keyword_2_0() { return cLambda_Keyword_2_0; }
 	}
 	public class SimpleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Simple");
@@ -385,33 +314,34 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cNoTerminalsPKeyword_1_0_15 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(15);
 		private final Keyword cNoTerminalsQKeyword_1_0_16 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(16);
 		private final Keyword cNoTerminalsRKeyword_1_0_17 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(17);
-		private final Keyword cNoTerminalsTKeyword_1_0_18 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(18);
-		private final Keyword cNoTerminalsUKeyword_1_0_19 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(19);
-		private final Keyword cNoTerminalsVKeyword_1_0_20 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(20);
-		private final Keyword cNoTerminalsWKeyword_1_0_21 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(21);
-		private final Keyword cNoTerminalsXKeyword_1_0_22 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(22);
-		private final Keyword cNoTerminalsYKeyword_1_0_23 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(23);
-		private final Keyword cNoTerminalsZKeyword_1_0_24 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(24);
+		private final Keyword cNoTerminalsSKeyword_1_0_18 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(18);
+		private final Keyword cNoTerminalsTKeyword_1_0_19 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(19);
+		private final Keyword cNoTerminalsUKeyword_1_0_20 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(20);
+		private final Keyword cNoTerminalsVKeyword_1_0_21 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(21);
+		private final Keyword cNoTerminalsWKeyword_1_0_22 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(22);
+		private final Keyword cNoTerminalsXKeyword_1_0_23 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(23);
+		private final Keyword cNoTerminalsYKeyword_1_0_24 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(24);
+		private final Keyword cNoTerminalsZKeyword_1_0_25 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(25);
 		
 		//NonTerminal:
 		//    {NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
-		//    'M'|'N'|'O'|'P'|'Q'|'R'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
+		//    'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
-		//'M'|'N'|'O'|'P'|'Q'|'R'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
+		//'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 		public Group getGroup() { return cGroup; }
 		
 		//{NonTerminal}
 		public Action getNonTerminalAction_0() { return cNonTerminalAction_0; }
 		
 		//noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
-		//   'M'|'N'|'O'|'P'|'Q'|'R'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
+		//   'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 		public Assignment getNoTerminalsAssignment_1() { return cNoTerminalsAssignment_1; }
 		
 		//('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
-		//   'M'|'N'|'O'|'P'|'Q'|'R'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
+		//   'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 		public Alternatives getNoTerminalsAlternatives_1_0() { return cNoTerminalsAlternatives_1_0; }
 		
 		//'A'
@@ -468,66 +398,71 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'R'
 		public Keyword getNoTerminalsRKeyword_1_0_17() { return cNoTerminalsRKeyword_1_0_17; }
 		
+		//'S'
+		public Keyword getNoTerminalsSKeyword_1_0_18() { return cNoTerminalsSKeyword_1_0_18; }
+		
 		//'T'
-		public Keyword getNoTerminalsTKeyword_1_0_18() { return cNoTerminalsTKeyword_1_0_18; }
+		public Keyword getNoTerminalsTKeyword_1_0_19() { return cNoTerminalsTKeyword_1_0_19; }
 		
 		//'U'
-		public Keyword getNoTerminalsUKeyword_1_0_19() { return cNoTerminalsUKeyword_1_0_19; }
+		public Keyword getNoTerminalsUKeyword_1_0_20() { return cNoTerminalsUKeyword_1_0_20; }
 		
 		//'V'
-		public Keyword getNoTerminalsVKeyword_1_0_20() { return cNoTerminalsVKeyword_1_0_20; }
+		public Keyword getNoTerminalsVKeyword_1_0_21() { return cNoTerminalsVKeyword_1_0_21; }
 		
 		//'W'
-		public Keyword getNoTerminalsWKeyword_1_0_21() { return cNoTerminalsWKeyword_1_0_21; }
+		public Keyword getNoTerminalsWKeyword_1_0_22() { return cNoTerminalsWKeyword_1_0_22; }
 		
 		//'X'
-		public Keyword getNoTerminalsXKeyword_1_0_22() { return cNoTerminalsXKeyword_1_0_22; }
+		public Keyword getNoTerminalsXKeyword_1_0_23() { return cNoTerminalsXKeyword_1_0_23; }
 		
 		//'Y'
-		public Keyword getNoTerminalsYKeyword_1_0_23() { return cNoTerminalsYKeyword_1_0_23; }
+		public Keyword getNoTerminalsYKeyword_1_0_24() { return cNoTerminalsYKeyword_1_0_24; }
 		
 		//'Z'
-		public Keyword getNoTerminalsZKeyword_1_0_24() { return cNoTerminalsZKeyword_1_0_24; }
+		public Keyword getNoTerminalsZKeyword_1_0_25() { return cNoTerminalsZKeyword_1_0_25; }
 	}
 	public class BinaryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Binary");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBinaryAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cFirstAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFirstNonTerminalParserRuleCall_1_0 = (RuleCall)cFirstAssignment_1.eContents().get(0);
-		private final Assignment cSecondAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSecondNonTerminalParserRuleCall_2_0 = (RuleCall)cSecondAssignment_2.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cFirstAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cFirstNonTerminalParserRuleCall_1_0_0 = (RuleCall)cFirstAssignment_1_0.eContents().get(0);
+		private final Assignment cSecondAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cSecondNonTerminalParserRuleCall_1_1_0 = (RuleCall)cSecondAssignment_1_1.eContents().get(0);
 		
 		//Binary:
-		//    {Binary} (first = NonTerminal)(second = NonTerminal)
+		//    {Binary}(first=NonTerminal second=NonTerminal)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Binary} (first = NonTerminal)(second = NonTerminal)
+		//{Binary}(first=NonTerminal second=NonTerminal)
 		public Group getGroup() { return cGroup; }
 		
 		//{Binary}
 		public Action getBinaryAction_0() { return cBinaryAction_0; }
 		
-		//(first = NonTerminal)
-		public Assignment getFirstAssignment_1() { return cFirstAssignment_1; }
+		//(first=NonTerminal second=NonTerminal)
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//first=NonTerminal
+		public Assignment getFirstAssignment_1_0() { return cFirstAssignment_1_0; }
 		
 		//NonTerminal
-		public RuleCall getFirstNonTerminalParserRuleCall_1_0() { return cFirstNonTerminalParserRuleCall_1_0; }
+		public RuleCall getFirstNonTerminalParserRuleCall_1_0_0() { return cFirstNonTerminalParserRuleCall_1_0_0; }
 		
-		//(second = NonTerminal)
-		public Assignment getSecondAssignment_2() { return cSecondAssignment_2; }
+		//second=NonTerminal
+		public Assignment getSecondAssignment_1_1() { return cSecondAssignment_1_1; }
 		
 		//NonTerminal
-		public RuleCall getSecondNonTerminalParserRuleCall_2_0() { return cSecondNonTerminalParserRuleCall_2_0; }
+		public RuleCall getSecondNonTerminalParserRuleCall_1_1_0() { return cSecondNonTerminalParserRuleCall_1_1_0; }
 	}
 	
 	
 	private final GFNCElements pGFNC;
-	private final InitialElements pInitial;
-	private final LambdaElements pLambda;
 	private final ProductionElements pProduction;
-	private final RightElements pRight;
+	private final RigthElements pRigth;
 	private final SimpleElements pSimple;
 	private final NonTerminalElements pNonTerminal;
 	private final BinaryElements pBinary;
@@ -542,10 +477,8 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pGFNC = new GFNCElements();
-		this.pInitial = new InitialElements();
-		this.pLambda = new LambdaElements();
 		this.pProduction = new ProductionElements();
-		this.pRight = new RightElements();
+		this.pRigth = new RigthElements();
 		this.pSimple = new SimpleElements();
 		this.pNonTerminal = new NonTerminalElements();
 		this.pBinary = new BinaryElements();
@@ -579,8 +512,8 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 
 	
 	//GFNC:
-	//     w += (Simple)(w += Simple)*
-	//     init = Initial productions += Production*
+	//    'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+	//    'G' ':'  productions+=Production*
 	//;
 	public GFNCElements getGFNCAccess() {
 		return pGFNC;
@@ -590,30 +523,8 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getGFNCAccess().getRule();
 	}
 	
-	//Initial:
-	//    {Initial} left = 'S' '->' right += (Lambda)('|' + right += Right)*
-	//;
-	public InitialElements getInitialAccess() {
-		return pInitial;
-	}
-	
-	public ParserRule getInitialRule() {
-		return getInitialAccess().getRule();
-	}
-	
-	//Lambda:
-	//    {Lambda} right = '_' | Right
-	//;
-	public LambdaElements getLambdaAccess() {
-		return pLambda;
-	}
-	
-	public ParserRule getLambdaRule() {
-		return getLambdaAccess().getRule();
-	}
-	
 	//Production:
-	//    {Production} left = NonTerminal '->' right += (Right)('|' + right += Right)*
+	//    left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
 	//;
 	public ProductionElements getProductionAccess() {
 		return pProduction;
@@ -623,15 +534,15 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getProductionAccess().getRule();
 	}
 	
-	//Right:
-	//    simple = Simple | binary = Binary
+	//Rigth:
+	//    simple=Simple | binary=Binary | lambda = '_'
 	//;
-	public RightElements getRightAccess() {
-		return pRight;
+	public RigthElements getRigthAccess() {
+		return pRigth;
 	}
 	
-	public ParserRule getRightRule() {
-		return getRightAccess().getRule();
+	public ParserRule getRigthRule() {
+		return getRigthAccess().getRule();
 	}
 	
 	//Simple:
@@ -648,7 +559,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	//NonTerminal:
 	//    {NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
-	//    'M'|'N'|'O'|'P'|'Q'|'R'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
+	//    'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 	//;
 	public NonTerminalElements getNonTerminalAccess() {
 		return pNonTerminal;
@@ -659,7 +570,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Binary:
-	//    {Binary} (first = NonTerminal)(second = NonTerminal)
+	//    {Binary}(first=NonTerminal second=NonTerminal)
 	//;
 	public BinaryElements getBinaryAccess() {
 		return pBinary;

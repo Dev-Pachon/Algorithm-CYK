@@ -31,36 +31,29 @@ public class CYKParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CYKGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getLambdaAccess().getAlternatives(), "rule__Lambda__Alternatives");
-			builder.put(grammarAccess.getRightAccess().getAlternatives(), "rule__Right__Alternatives");
+			builder.put(grammarAccess.getRigthAccess().getAlternatives(), "rule__Rigth__Alternatives");
 			builder.put(grammarAccess.getSimpleAccess().getTerminalsAlternatives_1_0(), "rule__Simple__TerminalsAlternatives_1_0");
 			builder.put(grammarAccess.getNonTerminalAccess().getNoTerminalsAlternatives_1_0(), "rule__NonTerminal__NoTerminalsAlternatives_1_0");
 			builder.put(grammarAccess.getGFNCAccess().getGroup(), "rule__GFNC__Group__0");
-			builder.put(grammarAccess.getInitialAccess().getGroup(), "rule__Initial__Group__0");
-			builder.put(grammarAccess.getInitialAccess().getGroup_4(), "rule__Initial__Group_4__0");
-			builder.put(grammarAccess.getLambdaAccess().getGroup_0(), "rule__Lambda__Group_0__0");
 			builder.put(grammarAccess.getProductionAccess().getGroup(), "rule__Production__Group__0");
-			builder.put(grammarAccess.getProductionAccess().getGroup_4(), "rule__Production__Group_4__0");
+			builder.put(grammarAccess.getProductionAccess().getGroup_3(), "rule__Production__Group_3__0");
 			builder.put(grammarAccess.getSimpleAccess().getGroup(), "rule__Simple__Group__0");
 			builder.put(grammarAccess.getNonTerminalAccess().getGroup(), "rule__NonTerminal__Group__0");
 			builder.put(grammarAccess.getBinaryAccess().getGroup(), "rule__Binary__Group__0");
-			builder.put(grammarAccess.getGFNCAccess().getWAssignment_0(), "rule__GFNC__WAssignment_0");
-			builder.put(grammarAccess.getGFNCAccess().getWAssignment_1(), "rule__GFNC__WAssignment_1");
-			builder.put(grammarAccess.getGFNCAccess().getInitAssignment_2(), "rule__GFNC__InitAssignment_2");
-			builder.put(grammarAccess.getGFNCAccess().getProductionsAssignment_3(), "rule__GFNC__ProductionsAssignment_3");
-			builder.put(grammarAccess.getInitialAccess().getLeftAssignment_1(), "rule__Initial__LeftAssignment_1");
-			builder.put(grammarAccess.getInitialAccess().getRightAssignment_3(), "rule__Initial__RightAssignment_3");
-			builder.put(grammarAccess.getInitialAccess().getRightAssignment_4_1(), "rule__Initial__RightAssignment_4_1");
-			builder.put(grammarAccess.getLambdaAccess().getRightAssignment_0_1(), "rule__Lambda__RightAssignment_0_1");
-			builder.put(grammarAccess.getProductionAccess().getLeftAssignment_1(), "rule__Production__LeftAssignment_1");
-			builder.put(grammarAccess.getProductionAccess().getRightAssignment_3(), "rule__Production__RightAssignment_3");
-			builder.put(grammarAccess.getProductionAccess().getRightAssignment_4_1(), "rule__Production__RightAssignment_4_1");
-			builder.put(grammarAccess.getRightAccess().getSimpleAssignment_0(), "rule__Right__SimpleAssignment_0");
-			builder.put(grammarAccess.getRightAccess().getBinaryAssignment_1(), "rule__Right__BinaryAssignment_1");
+			builder.put(grammarAccess.getBinaryAccess().getGroup_1(), "rule__Binary__Group_1__0");
+			builder.put(grammarAccess.getGFNCAccess().getWAssignment_2(), "rule__GFNC__WAssignment_2");
+			builder.put(grammarAccess.getGFNCAccess().getWAssignment_3(), "rule__GFNC__WAssignment_3");
+			builder.put(grammarAccess.getGFNCAccess().getProductionsAssignment_6(), "rule__GFNC__ProductionsAssignment_6");
+			builder.put(grammarAccess.getProductionAccess().getLeftAssignment_0(), "rule__Production__LeftAssignment_0");
+			builder.put(grammarAccess.getProductionAccess().getRigthAssignment_2(), "rule__Production__RigthAssignment_2");
+			builder.put(grammarAccess.getProductionAccess().getRigthAssignment_3_1(), "rule__Production__RigthAssignment_3_1");
+			builder.put(grammarAccess.getRigthAccess().getSimpleAssignment_0(), "rule__Rigth__SimpleAssignment_0");
+			builder.put(grammarAccess.getRigthAccess().getBinaryAssignment_1(), "rule__Rigth__BinaryAssignment_1");
+			builder.put(grammarAccess.getRigthAccess().getLambdaAssignment_2(), "rule__Rigth__LambdaAssignment_2");
 			builder.put(grammarAccess.getSimpleAccess().getTerminalsAssignment_1(), "rule__Simple__TerminalsAssignment_1");
 			builder.put(grammarAccess.getNonTerminalAccess().getNoTerminalsAssignment_1(), "rule__NonTerminal__NoTerminalsAssignment_1");
-			builder.put(grammarAccess.getBinaryAccess().getFirstAssignment_1(), "rule__Binary__FirstAssignment_1");
-			builder.put(grammarAccess.getBinaryAccess().getSecondAssignment_2(), "rule__Binary__SecondAssignment_2");
+			builder.put(grammarAccess.getBinaryAccess().getFirstAssignment_1_0(), "rule__Binary__FirstAssignment_1_0");
+			builder.put(grammarAccess.getBinaryAccess().getSecondAssignment_1_1(), "rule__Binary__SecondAssignment_1_1");
 		}
 	}
 	

@@ -76,12 +76,20 @@ ruleGFNC returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='W'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGFNCAccess().getWKeyword_0());
+		}
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGFNCAccess().getColonKeyword_1());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_2_0());
 				}
-				lv_w_0_0=ruleSimple
+				lv_w_2_0=ruleSimple
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGFNCRule());
@@ -89,7 +97,7 @@ ruleGFNC returns [EObject current=null]
 					add(
 						$current,
 						"w",
-						lv_w_0_0,
+						lv_w_2_0,
 						"org.xtext.example.gfnc.CYK.Simple");
 					afterParserOrEnumRuleCall();
 				}
@@ -98,9 +106,9 @@ ruleGFNC returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_3_0());
 				}
-				lv_w_1_0=ruleSimple
+				lv_w_3_0=ruleSimple
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGFNCRule());
@@ -108,37 +116,26 @@ ruleGFNC returns [EObject current=null]
 					add(
 						$current,
 						"w",
-						lv_w_1_0,
+						lv_w_3_0,
 						"org.xtext.example.gfnc.CYK.Simple");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
+		otherlv_4='G'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getGFNCAccess().getGKeyword_4());
+		}
+		otherlv_5=':'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGFNCAccess().getColonKeyword_5());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGFNCAccess().getInitInitialParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGFNCAccess().getProductionsProductionParserRuleCall_6_0());
 				}
-				lv_init_2_0=ruleInitial
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGFNCRule());
-					}
-					set(
-						$current,
-						"init",
-						lv_init_2_0,
-						"org.xtext.example.gfnc.CYK.Initial");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGFNCAccess().getProductionsProductionParserRuleCall_3_0());
-				}
-				lv_productions_3_0=ruleProduction
+				lv_productions_6_0=ruleProduction
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGFNCRule());
@@ -146,153 +143,12 @@ ruleGFNC returns [EObject current=null]
 					add(
 						$current,
 						"productions",
-						lv_productions_3_0,
+						lv_productions_6_0,
 						"org.xtext.example.gfnc.CYK.Production");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-	)
-;
-
-// Entry rule entryRuleInitial
-entryRuleInitial returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getInitialRule()); }
-	iv_ruleInitial=ruleInitial
-	{ $current=$iv_ruleInitial.current; }
-	EOF;
-
-// Rule Initial
-ruleInitial returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getInitialAccess().getInitialAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				lv_left_1_0='S'
-				{
-					newLeafNode(lv_left_1_0, grammarAccess.getInitialAccess().getLeftSKeyword_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getInitialRule());
-					}
-					setWithLastConsumed($current, "left", lv_left_1_0, "S");
-				}
-			)
-		)
-		otherlv_2='->'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getInitialAccess().getHyphenMinusGreaterThanSignKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getInitialAccess().getRightLambdaParserRuleCall_3_0());
-				}
-				lv_right_3_0=ruleLambda
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getInitialRule());
-					}
-					add(
-						$current,
-						"right",
-						lv_right_3_0,
-						"org.xtext.example.gfnc.CYK.Lambda");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				otherlv_4='|'
-				{
-					newLeafNode(otherlv_4, grammarAccess.getInitialAccess().getVerticalLineKeyword_4_0());
-				}
-			)+
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getInitialAccess().getRightRightParserRuleCall_4_1_0());
-					}
-					lv_right_5_0=ruleRight
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getInitialRule());
-						}
-						add(
-							$current,
-							"right",
-							lv_right_5_0,
-							"org.xtext.example.gfnc.CYK.Right");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-	)
-;
-
-// Entry rule entryRuleLambda
-entryRuleLambda returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getLambdaRule()); }
-	iv_ruleLambda=ruleLambda
-	{ $current=$iv_ruleLambda.current; }
-	EOF;
-
-// Rule Lambda
-ruleLambda returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getLambdaAccess().getLambdaAction_0_0(),
-						$current);
-				}
-			)
-			(
-				(
-					lv_right_1_0='_'
-					{
-						newLeafNode(lv_right_1_0, grammarAccess.getLambdaAccess().getRight_Keyword_0_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getLambdaRule());
-						}
-						setWithLastConsumed($current, "right", lv_right_1_0, "_");
-					}
-				)
-			)
-		)
-		    |
-		{
-			newCompositeNode(grammarAccess.getLambdaAccess().getRightParserRuleCall_1());
-		}
-		this_Right_2=ruleRight
-		{
-			$current = $this_Right_2.current;
-			afterParserOrEnumRuleCall();
-		}
 	)
 ;
 
@@ -313,18 +169,11 @@ ruleProduction returns [EObject current=null]
 }:
 	(
 		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getProductionAccess().getProductionAction_0(),
-					$current);
-			}
-		)
-		(
 			(
 				{
-					newCompositeNode(grammarAccess.getProductionAccess().getLeftNonTerminalParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getProductionAccess().getLeftNonTerminalParserRuleCall_0_0());
 				}
-				lv_left_1_0=ruleNonTerminal
+				lv_left_0_0=ruleNonTerminal
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getProductionRule());
@@ -332,57 +181,57 @@ ruleProduction returns [EObject current=null]
 					set(
 						$current,
 						"left",
-						lv_left_1_0,
+						lv_left_0_0,
 						"org.xtext.example.gfnc.CYK.NonTerminal");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_2='->'
+		otherlv_1='->'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getProductionAccess().getHyphenMinusGreaterThanSignKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getProductionAccess().getHyphenMinusGreaterThanSignKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_2_0());
 				}
-				lv_right_3_0=ruleRight
+				lv_rigth_2_0=ruleRigth
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getProductionRule());
 					}
 					add(
 						$current,
-						"right",
-						lv_right_3_0,
-						"org.xtext.example.gfnc.CYK.Right");
+						"rigth",
+						lv_rigth_2_0,
+						"org.xtext.example.gfnc.CYK.Rigth");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
 			(
-				otherlv_4='|'
+				otherlv_3='|'
 				{
-					newLeafNode(otherlv_4, grammarAccess.getProductionAccess().getVerticalLineKeyword_4_0());
+					newLeafNode(otherlv_3, grammarAccess.getProductionAccess().getVerticalLineKeyword_3_0());
 				}
 			)+
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_3_1_0());
 					}
-					lv_right_5_0=ruleRight
+					lv_rigth_4_0=ruleRigth
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getProductionRule());
 						}
 						add(
 							$current,
-							"right",
-							lv_right_5_0,
-							"org.xtext.example.gfnc.CYK.Right");
+							"rigth",
+							lv_rigth_4_0,
+							"org.xtext.example.gfnc.CYK.Rigth");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -391,15 +240,15 @@ ruleProduction returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleRight
-entryRuleRight returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRightRule()); }
-	iv_ruleRight=ruleRight
-	{ $current=$iv_ruleRight.current; }
+// Entry rule entryRuleRigth
+entryRuleRigth returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRigthRule()); }
+	iv_ruleRigth=ruleRigth
+	{ $current=$iv_ruleRigth.current; }
 	EOF;
 
-// Rule Right
-ruleRight returns [EObject current=null]
+// Rule Rigth
+ruleRigth returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -410,12 +259,12 @@ ruleRight returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getRigthAccess().getSimpleSimpleParserRuleCall_0_0());
 				}
 				lv_simple_0_0=ruleSimple
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRightRule());
+						$current = createModelElementForParent(grammarAccess.getRigthRule());
 					}
 					set(
 						$current,
@@ -430,12 +279,12 @@ ruleRight returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRightAccess().getBinaryBinaryParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getRigthAccess().getBinaryBinaryParserRuleCall_1_0());
 				}
 				lv_binary_1_0=ruleBinary
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRightRule());
+						$current = createModelElementForParent(grammarAccess.getRigthRule());
 					}
 					set(
 						$current,
@@ -443,6 +292,21 @@ ruleRight returns [EObject current=null]
 						lv_binary_1_0,
 						"org.xtext.example.gfnc.CYK.Binary");
 					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		    |
+		(
+			(
+				lv_lambda_2_0='_'
+				{
+					newLeafNode(lv_lambda_2_0, grammarAccess.getRigthAccess().getLambda_Keyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRigthRule());
+					}
+					setWithLastConsumed($current, "lambda", lv_lambda_2_0, "_");
 				}
 			)
 		)
@@ -979,9 +843,9 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_18, null);
 					}
 					    |
-					lv_noTerminals_1_19='T'
+					lv_noTerminals_1_19='S'
 					{
-						newLeafNode(lv_noTerminals_1_19, grammarAccess.getNonTerminalAccess().getNoTerminalsTKeyword_1_0_18());
+						newLeafNode(lv_noTerminals_1_19, grammarAccess.getNonTerminalAccess().getNoTerminalsSKeyword_1_0_18());
 					}
 					{
 						if ($current==null) {
@@ -990,9 +854,9 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_19, null);
 					}
 					    |
-					lv_noTerminals_1_20='U'
+					lv_noTerminals_1_20='T'
 					{
-						newLeafNode(lv_noTerminals_1_20, grammarAccess.getNonTerminalAccess().getNoTerminalsUKeyword_1_0_19());
+						newLeafNode(lv_noTerminals_1_20, grammarAccess.getNonTerminalAccess().getNoTerminalsTKeyword_1_0_19());
 					}
 					{
 						if ($current==null) {
@@ -1001,9 +865,9 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_20, null);
 					}
 					    |
-					lv_noTerminals_1_21='V'
+					lv_noTerminals_1_21='U'
 					{
-						newLeafNode(lv_noTerminals_1_21, grammarAccess.getNonTerminalAccess().getNoTerminalsVKeyword_1_0_20());
+						newLeafNode(lv_noTerminals_1_21, grammarAccess.getNonTerminalAccess().getNoTerminalsUKeyword_1_0_20());
 					}
 					{
 						if ($current==null) {
@@ -1012,9 +876,9 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_21, null);
 					}
 					    |
-					lv_noTerminals_1_22='W'
+					lv_noTerminals_1_22='V'
 					{
-						newLeafNode(lv_noTerminals_1_22, grammarAccess.getNonTerminalAccess().getNoTerminalsWKeyword_1_0_21());
+						newLeafNode(lv_noTerminals_1_22, grammarAccess.getNonTerminalAccess().getNoTerminalsVKeyword_1_0_21());
 					}
 					{
 						if ($current==null) {
@@ -1023,9 +887,9 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_22, null);
 					}
 					    |
-					lv_noTerminals_1_23='X'
+					lv_noTerminals_1_23='W'
 					{
-						newLeafNode(lv_noTerminals_1_23, grammarAccess.getNonTerminalAccess().getNoTerminalsXKeyword_1_0_22());
+						newLeafNode(lv_noTerminals_1_23, grammarAccess.getNonTerminalAccess().getNoTerminalsWKeyword_1_0_22());
 					}
 					{
 						if ($current==null) {
@@ -1034,9 +898,9 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_23, null);
 					}
 					    |
-					lv_noTerminals_1_24='Y'
+					lv_noTerminals_1_24='X'
 					{
-						newLeafNode(lv_noTerminals_1_24, grammarAccess.getNonTerminalAccess().getNoTerminalsYKeyword_1_0_23());
+						newLeafNode(lv_noTerminals_1_24, grammarAccess.getNonTerminalAccess().getNoTerminalsXKeyword_1_0_23());
 					}
 					{
 						if ($current==null) {
@@ -1045,15 +909,26 @@ ruleNonTerminal returns [EObject current=null]
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_24, null);
 					}
 					    |
-					lv_noTerminals_1_25='Z'
+					lv_noTerminals_1_25='Y'
 					{
-						newLeafNode(lv_noTerminals_1_25, grammarAccess.getNonTerminalAccess().getNoTerminalsZKeyword_1_0_24());
+						newLeafNode(lv_noTerminals_1_25, grammarAccess.getNonTerminalAccess().getNoTerminalsYKeyword_1_0_24());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
 						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_25, null);
+					}
+					    |
+					lv_noTerminals_1_26='Z'
+					{
+						newLeafNode(lv_noTerminals_1_26, grammarAccess.getNonTerminalAccess().getNoTerminalsZKeyword_1_0_25());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getNonTerminalRule());
+						}
+						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_26, null);
 					}
 				)
 			)
@@ -1086,40 +961,42 @@ ruleBinary returns [EObject current=null]
 		)
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getBinaryAccess().getFirstNonTerminalParserRuleCall_1_0());
-				}
-				lv_first_1_0=ruleNonTerminal
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBinaryRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getBinaryAccess().getFirstNonTerminalParserRuleCall_1_0_0());
 					}
-					set(
-						$current,
-						"first",
-						lv_first_1_0,
-						"org.xtext.example.gfnc.CYK.NonTerminal");
-					afterParserOrEnumRuleCall();
-				}
+					lv_first_1_0=ruleNonTerminal
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBinaryRule());
+						}
+						set(
+							$current,
+							"first",
+							lv_first_1_0,
+							"org.xtext.example.gfnc.CYK.NonTerminal");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
-		(
 			(
-				{
-					newCompositeNode(grammarAccess.getBinaryAccess().getSecondNonTerminalParserRuleCall_2_0());
-				}
-				lv_second_2_0=ruleNonTerminal
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getBinaryRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getBinaryAccess().getSecondNonTerminalParserRuleCall_1_1_0());
 					}
-					set(
-						$current,
-						"second",
-						lv_second_2_0,
-						"org.xtext.example.gfnc.CYK.NonTerminal");
-					afterParserOrEnumRuleCall();
-				}
+					lv_second_2_0=ruleNonTerminal
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getBinaryRule());
+						}
+						set(
+							$current,
+							"second",
+							lv_second_2_0,
+							"org.xtext.example.gfnc.CYK.NonTerminal");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
 		)
 	)

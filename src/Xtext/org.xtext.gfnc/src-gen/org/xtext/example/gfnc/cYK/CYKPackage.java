@@ -77,22 +77,13 @@ public interface CYKPackage extends EPackage
   int GFNC__W = 0;
 
   /**
-   * The feature id for the '<em><b>Init</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GFNC__INIT = 1;
-
-  /**
    * The feature id for the '<em><b>Productions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GFNC__PRODUCTIONS = 2;
+  int GFNC__PRODUCTIONS = 1;
 
   /**
    * The number of structural features of the '<em>GFNC</em>' class.
@@ -101,72 +92,7 @@ public interface CYKPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GFNC_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.InitialImpl <em>Initial</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.gfnc.cYK.impl.InitialImpl
-   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getInitial()
-   * @generated
-   */
-  int INITIAL = 1;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INITIAL__LEFT = 0;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INITIAL__RIGHT = 1;
-
-  /**
-   * The number of structural features of the '<em>Initial</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INITIAL_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.LambdaImpl <em>Lambda</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.gfnc.cYK.impl.LambdaImpl
-   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getLambda()
-   * @generated
-   */
-  int LAMBDA = 2;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAMBDA__RIGHT = 0;
-
-  /**
-   * The number of structural features of the '<em>Lambda</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAMBDA_FEATURE_COUNT = 1;
+  int GFNC_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl <em>Production</em>}' class.
@@ -176,7 +102,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getProduction()
    * @generated
    */
-  int PRODUCTION = 3;
+  int PRODUCTION = 1;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -188,13 +114,13 @@ public interface CYKPackage extends EPackage
   int PRODUCTION__LEFT = 0;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference list.
+   * The feature id for the '<em><b>Rigth</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRODUCTION__RIGHT = 1;
+  int PRODUCTION__RIGTH = 1;
 
   /**
    * The number of structural features of the '<em>Production</em>' class.
@@ -206,23 +132,14 @@ public interface CYKPackage extends EPackage
   int PRODUCTION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.RightImpl <em>Right</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.RigthImpl <em>Rigth</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.gfnc.cYK.impl.RightImpl
-   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getRight()
+   * @see org.xtext.example.gfnc.cYK.impl.RigthImpl
+   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getRigth()
    * @generated
    */
-  int RIGHT = 4;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RIGHT__RIGHT = LAMBDA__RIGHT;
+  int RIGTH = 2;
 
   /**
    * The feature id for the '<em><b>Simple</b></em>' containment reference.
@@ -231,7 +148,7 @@ public interface CYKPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RIGHT__SIMPLE = LAMBDA_FEATURE_COUNT + 0;
+  int RIGTH__SIMPLE = 0;
 
   /**
    * The feature id for the '<em><b>Binary</b></em>' containment reference.
@@ -240,16 +157,25 @@ public interface CYKPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RIGHT__BINARY = LAMBDA_FEATURE_COUNT + 1;
+  int RIGTH__BINARY = 1;
 
   /**
-   * The number of structural features of the '<em>Right</em>' class.
+   * The feature id for the '<em><b>Lambda</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RIGHT_FEATURE_COUNT = LAMBDA_FEATURE_COUNT + 2;
+  int RIGTH__LAMBDA = 2;
+
+  /**
+   * The number of structural features of the '<em>Rigth</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIGTH_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.SimpleImpl <em>Simple</em>}' class.
@@ -259,7 +185,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getSimple()
    * @generated
    */
-  int SIMPLE = 5;
+  int SIMPLE = 3;
 
   /**
    * The feature id for the '<em><b>Terminals</b></em>' attribute.
@@ -287,7 +213,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getNonTerminal()
    * @generated
    */
-  int NON_TERMINAL = 6;
+  int NON_TERMINAL = 4;
 
   /**
    * The feature id for the '<em><b>No Terminals</b></em>' attribute.
@@ -315,7 +241,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getBinary()
    * @generated
    */
-  int BINARY = 7;
+  int BINARY = 5;
 
   /**
    * The feature id for the '<em><b>First</b></em>' containment reference.
@@ -367,17 +293,6 @@ public interface CYKPackage extends EPackage
   EReference getGFNC_W();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.gfnc.cYK.GFNC#getInit <em>Init</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Init</em>'.
-   * @see org.xtext.example.gfnc.cYK.GFNC#getInit()
-   * @see #getGFNC()
-   * @generated
-   */
-  EReference getGFNC_Init();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.gfnc.cYK.GFNC#getProductions <em>Productions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -387,59 +302,6 @@ public interface CYKPackage extends EPackage
    * @generated
    */
   EReference getGFNC_Productions();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Initial <em>Initial</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Initial</em>'.
-   * @see org.xtext.example.gfnc.cYK.Initial
-   * @generated
-   */
-  EClass getInitial();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.Initial#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Left</em>'.
-   * @see org.xtext.example.gfnc.cYK.Initial#getLeft()
-   * @see #getInitial()
-   * @generated
-   */
-  EAttribute getInitial_Left();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.gfnc.cYK.Initial#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Right</em>'.
-   * @see org.xtext.example.gfnc.cYK.Initial#getRight()
-   * @see #getInitial()
-   * @generated
-   */
-  EReference getInitial_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Lambda <em>Lambda</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lambda</em>'.
-   * @see org.xtext.example.gfnc.cYK.Lambda
-   * @generated
-   */
-  EClass getLambda();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.Lambda#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Right</em>'.
-   * @see org.xtext.example.gfnc.cYK.Lambda#getRight()
-   * @see #getLambda()
-   * @generated
-   */
-  EAttribute getLambda_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Production <em>Production</em>}'.
@@ -463,47 +325,58 @@ public interface CYKPackage extends EPackage
   EReference getProduction_Left();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.gfnc.cYK.Production#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.gfnc.cYK.Production#getRigth <em>Rigth</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Right</em>'.
-   * @see org.xtext.example.gfnc.cYK.Production#getRight()
+   * @return the meta object for the containment reference list '<em>Rigth</em>'.
+   * @see org.xtext.example.gfnc.cYK.Production#getRigth()
    * @see #getProduction()
    * @generated
    */
-  EReference getProduction_Right();
+  EReference getProduction_Rigth();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Right <em>Right</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Rigth <em>Rigth</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Right</em>'.
-   * @see org.xtext.example.gfnc.cYK.Right
+   * @return the meta object for class '<em>Rigth</em>'.
+   * @see org.xtext.example.gfnc.cYK.Rigth
    * @generated
    */
-  EClass getRight();
+  EClass getRigth();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.gfnc.cYK.Right#getSimple <em>Simple</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.gfnc.cYK.Rigth#getSimple <em>Simple</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Simple</em>'.
-   * @see org.xtext.example.gfnc.cYK.Right#getSimple()
-   * @see #getRight()
+   * @see org.xtext.example.gfnc.cYK.Rigth#getSimple()
+   * @see #getRigth()
    * @generated
    */
-  EReference getRight_Simple();
+  EReference getRigth_Simple();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.gfnc.cYK.Right#getBinary <em>Binary</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.gfnc.cYK.Rigth#getBinary <em>Binary</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Binary</em>'.
-   * @see org.xtext.example.gfnc.cYK.Right#getBinary()
-   * @see #getRight()
+   * @see org.xtext.example.gfnc.cYK.Rigth#getBinary()
+   * @see #getRigth()
    * @generated
    */
-  EReference getRight_Binary();
+  EReference getRigth_Binary();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.Rigth#getLambda <em>Lambda</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Lambda</em>'.
+   * @see org.xtext.example.gfnc.cYK.Rigth#getLambda()
+   * @see #getRigth()
+   * @generated
+   */
+  EAttribute getRigth_Lambda();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Simple <em>Simple</em>}'.
@@ -621,64 +494,12 @@ public interface CYKPackage extends EPackage
     EReference GFNC__W = eINSTANCE.getGFNC_W();
 
     /**
-     * The meta object literal for the '<em><b>Init</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference GFNC__INIT = eINSTANCE.getGFNC_Init();
-
-    /**
      * The meta object literal for the '<em><b>Productions</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference GFNC__PRODUCTIONS = eINSTANCE.getGFNC_Productions();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.InitialImpl <em>Initial</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.gfnc.cYK.impl.InitialImpl
-     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getInitial()
-     * @generated
-     */
-    EClass INITIAL = eINSTANCE.getInitial();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INITIAL__LEFT = eINSTANCE.getInitial_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INITIAL__RIGHT = eINSTANCE.getInitial_Right();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.LambdaImpl <em>Lambda</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.gfnc.cYK.impl.LambdaImpl
-     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getLambda()
-     * @generated
-     */
-    EClass LAMBDA = eINSTANCE.getLambda();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LAMBDA__RIGHT = eINSTANCE.getLambda_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl <em>Production</em>}' class.
@@ -699,22 +520,22 @@ public interface CYKPackage extends EPackage
     EReference PRODUCTION__LEFT = eINSTANCE.getProduction_Left();
 
     /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Rigth</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRODUCTION__RIGHT = eINSTANCE.getProduction_Right();
+    EReference PRODUCTION__RIGTH = eINSTANCE.getProduction_Rigth();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.RightImpl <em>Right</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.RigthImpl <em>Rigth</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.gfnc.cYK.impl.RightImpl
-     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getRight()
+     * @see org.xtext.example.gfnc.cYK.impl.RigthImpl
+     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getRigth()
      * @generated
      */
-    EClass RIGHT = eINSTANCE.getRight();
+    EClass RIGTH = eINSTANCE.getRigth();
 
     /**
      * The meta object literal for the '<em><b>Simple</b></em>' containment reference feature.
@@ -722,7 +543,7 @@ public interface CYKPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RIGHT__SIMPLE = eINSTANCE.getRight_Simple();
+    EReference RIGTH__SIMPLE = eINSTANCE.getRigth_Simple();
 
     /**
      * The meta object literal for the '<em><b>Binary</b></em>' containment reference feature.
@@ -730,7 +551,15 @@ public interface CYKPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference RIGHT__BINARY = eINSTANCE.getRight_Binary();
+    EReference RIGTH__BINARY = eINSTANCE.getRigth_Binary();
+
+    /**
+     * The meta object literal for the '<em><b>Lambda</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RIGTH__LAMBDA = eINSTANCE.getRigth_Lambda();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.SimpleImpl <em>Simple</em>}' class.

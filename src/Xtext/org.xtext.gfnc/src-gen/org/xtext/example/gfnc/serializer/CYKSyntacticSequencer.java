@@ -20,14 +20,12 @@ import org.xtext.example.gfnc.services.CYKGrammarAccess;
 public class CYKSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected CYKGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Initial_VerticalLineKeyword_4_0_p;
-	protected AbstractElementAlias match_Production_VerticalLineKeyword_4_0_p;
+	protected AbstractElementAlias match_Production_VerticalLineKeyword_3_0_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (CYKGrammarAccess) access;
-		match_Initial_VerticalLineKeyword_4_0_p = new TokenAlias(true, false, grammarAccess.getInitialAccess().getVerticalLineKeyword_4_0());
-		match_Production_VerticalLineKeyword_4_0_p = new TokenAlias(true, false, grammarAccess.getProductionAccess().getVerticalLineKeyword_4_0());
+		match_Production_VerticalLineKeyword_3_0_p = new TokenAlias(true, false, grammarAccess.getProductionAccess().getVerticalLineKeyword_3_0());
 	}
 	
 	@Override
@@ -42,10 +40,8 @@ public class CYKSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Initial_VerticalLineKeyword_4_0_p.equals(syntax))
-				emit_Initial_VerticalLineKeyword_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Production_VerticalLineKeyword_4_0_p.equals(syntax))
-				emit_Production_VerticalLineKeyword_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Production_VerticalLineKeyword_3_0_p.equals(syntax))
+				emit_Production_VerticalLineKeyword_3_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -56,26 +52,11 @@ public class CYKSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '|'+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     right+=Lambda (ambiguity) right+=Right
-	 *     right+=Right (ambiguity) right+=Right
+	 *     rigth+=Rigth (ambiguity) rigth+=Rigth
 	 
 	 * </pre>
 	 */
-	protected void emit_Initial_VerticalLineKeyword_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * <pre>
-	 * Ambiguous syntax:
-	 *     '|'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     right+=Right (ambiguity) right+=Right
-	 
-	 * </pre>
-	 */
-	protected void emit_Production_VerticalLineKeyword_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Production_VerticalLineKeyword_3_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

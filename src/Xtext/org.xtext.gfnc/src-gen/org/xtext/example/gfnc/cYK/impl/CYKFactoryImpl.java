@@ -66,10 +66,8 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
     switch (eClass.getClassifierID())
     {
       case CYKPackage.GFNC: return createGFNC();
-      case CYKPackage.INITIAL: return createInitial();
-      case CYKPackage.LAMBDA: return createLambda();
       case CYKPackage.PRODUCTION: return createProduction();
-      case CYKPackage.RIGHT: return createRight();
+      case CYKPackage.RIGTH: return createRigth();
       case CYKPackage.SIMPLE: return createSimple();
       case CYKPackage.NON_TERMINAL: return createNonTerminal();
       case CYKPackage.BINARY: return createBinary();
@@ -96,30 +94,6 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
    * @generated
    */
   @Override
-  public Initial createInitial()
-  {
-    InitialImpl initial = new InitialImpl();
-    return initial;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Lambda createLambda()
-  {
-    LambdaImpl lambda = new LambdaImpl();
-    return lambda;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Production createProduction()
   {
     ProductionImpl production = new ProductionImpl();
@@ -132,10 +106,10 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
    * @generated
    */
   @Override
-  public Right createRight()
+  public Rigth createRigth()
   {
-    RightImpl right = new RightImpl();
-    return right;
+    RigthImpl rigth = new RigthImpl();
+    return rigth;
   }
 
   /**

@@ -5,7 +5,6 @@ package org.xtext.example.gfnc.cYK.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -13,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -21,7 +19,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.GFNC;
-import org.xtext.example.gfnc.cYK.Initial;
 import org.xtext.example.gfnc.cYK.Production;
 import org.xtext.example.gfnc.cYK.Simple;
 
@@ -34,7 +31,6 @@ import org.xtext.example.gfnc.cYK.Simple;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.gfnc.cYK.impl.GFNCImpl#getW <em>W</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.GFNCImpl#getInit <em>Init</em>}</li>
  *   <li>{@link org.xtext.example.gfnc.cYK.impl.GFNCImpl#getProductions <em>Productions</em>}</li>
  * </ul>
  *
@@ -51,16 +47,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
    * @ordered
    */
   protected EList<Simple> w;
-
-  /**
-   * The cached value of the '{@link #getInit() <em>Init</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInit()
-   * @generated
-   * @ordered
-   */
-  protected Initial init;
 
   /**
    * The cached value of the '{@link #getProductions() <em>Productions</em>}' containment reference list.
@@ -114,56 +100,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
    * @generated
    */
   @Override
-  public Initial getInit()
-  {
-    return init;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetInit(Initial newInit, NotificationChain msgs)
-  {
-    Initial oldInit = init;
-    init = newInit;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CYKPackage.GFNC__INIT, oldInit, newInit);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setInit(Initial newInit)
-  {
-    if (newInit != init)
-    {
-      NotificationChain msgs = null;
-      if (init != null)
-        msgs = ((InternalEObject)init).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CYKPackage.GFNC__INIT, null, msgs);
-      if (newInit != null)
-        msgs = ((InternalEObject)newInit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CYKPackage.GFNC__INIT, null, msgs);
-      msgs = basicSetInit(newInit, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.GFNC__INIT, newInit, newInit));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EList<Production> getProductions()
   {
     if (productions == null)
@@ -185,8 +121,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
     {
       case CYKPackage.GFNC__W:
         return ((InternalEList<?>)getW()).basicRemove(otherEnd, msgs);
-      case CYKPackage.GFNC__INIT:
-        return basicSetInit(null, msgs);
       case CYKPackage.GFNC__PRODUCTIONS:
         return ((InternalEList<?>)getProductions()).basicRemove(otherEnd, msgs);
     }
@@ -205,8 +139,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
     {
       case CYKPackage.GFNC__W:
         return getW();
-      case CYKPackage.GFNC__INIT:
-        return getInit();
       case CYKPackage.GFNC__PRODUCTIONS:
         return getProductions();
     }
@@ -227,9 +159,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
       case CYKPackage.GFNC__W:
         getW().clear();
         getW().addAll((Collection<? extends Simple>)newValue);
-        return;
-      case CYKPackage.GFNC__INIT:
-        setInit((Initial)newValue);
         return;
       case CYKPackage.GFNC__PRODUCTIONS:
         getProductions().clear();
@@ -252,9 +181,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
       case CYKPackage.GFNC__W:
         getW().clear();
         return;
-      case CYKPackage.GFNC__INIT:
-        setInit((Initial)null);
-        return;
       case CYKPackage.GFNC__PRODUCTIONS:
         getProductions().clear();
         return;
@@ -274,8 +200,6 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
     {
       case CYKPackage.GFNC__W:
         return w != null && !w.isEmpty();
-      case CYKPackage.GFNC__INIT:
-        return init != null;
       case CYKPackage.GFNC__PRODUCTIONS:
         return productions != null && !productions.isEmpty();
     }

@@ -81,24 +81,14 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
         return createGFNCAdapter();
       }
       @Override
-      public Adapter caseInitial(Initial object)
-      {
-        return createInitialAdapter();
-      }
-      @Override
-      public Adapter caseLambda(Lambda object)
-      {
-        return createLambdaAdapter();
-      }
-      @Override
       public Adapter caseProduction(Production object)
       {
         return createProductionAdapter();
       }
       @Override
-      public Adapter caseRight(Right object)
+      public Adapter caseRigth(Rigth object)
       {
-        return createRightAdapter();
+        return createRigthAdapter();
       }
       @Override
       public Adapter caseSimple(Simple object)
@@ -153,36 +143,6 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Initial <em>Initial</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.gfnc.cYK.Initial
-   * @generated
-   */
-  public Adapter createInitialAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Lambda <em>Lambda</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.gfnc.cYK.Lambda
-   * @generated
-   */
-  public Adapter createLambdaAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Production <em>Production</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -198,16 +158,16 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Right <em>Right</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Rigth <em>Rigth</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.gfnc.cYK.Right
+   * @see org.xtext.example.gfnc.cYK.Rigth
    * @generated
    */
-  public Adapter createRightAdapter()
+  public Adapter createRigthAdapter()
   {
     return null;
   }

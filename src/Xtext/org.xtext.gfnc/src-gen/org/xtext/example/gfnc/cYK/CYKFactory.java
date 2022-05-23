@@ -33,24 +33,6 @@ public interface CYKFactory extends EFactory
   GFNC createGFNC();
 
   /**
-   * Returns a new object of class '<em>Initial</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Initial</em>'.
-   * @generated
-   */
-  Initial createInitial();
-
-  /**
-   * Returns a new object of class '<em>Lambda</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lambda</em>'.
-   * @generated
-   */
-  Lambda createLambda();
-
-  /**
    * Returns a new object of class '<em>Production</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -60,13 +42,13 @@ public interface CYKFactory extends EFactory
   Production createProduction();
 
   /**
-   * Returns a new object of class '<em>Right</em>'.
+   * Returns a new object of class '<em>Rigth</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Right</em>'.
+   * @return a new object of class '<em>Rigth</em>'.
    * @generated
    */
-  Right createRight();
+  Rigth createRigth();
 
   /**
    * Returns a new object of class '<em>Simple</em>'.

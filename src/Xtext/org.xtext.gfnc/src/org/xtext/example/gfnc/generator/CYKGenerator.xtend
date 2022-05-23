@@ -32,7 +32,6 @@ class CYKGenerator extends AbstractGenerator {
 	
 	def getNoTerminals(GFNC grammar){
 		var noTerminals = newArrayList()
-		noTerminals.add(grammar.init.left)
 		
 		for(production : grammar.productions){
 			noTerminals.add(production.left.^noTerminals)

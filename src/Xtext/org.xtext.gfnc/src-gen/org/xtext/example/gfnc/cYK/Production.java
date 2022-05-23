@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.gfnc.cYK.Production#getLeft <em>Left</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.Production#getRight <em>Right</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.Production#getRigth <em>Rigth</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.gfnc.cYK.CYKPackage#getProduction()
@@ -49,15 +49,15 @@ public interface Production extends EObject
   void setLeft(NonTerminal value);
 
   /**
-   * Returns the value of the '<em><b>Right</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.gfnc.cYK.Right}.
+   * Returns the value of the '<em><b>Rigth</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.gfnc.cYK.Rigth}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Right</em>' containment reference list.
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getProduction_Right()
+   * @return the value of the '<em>Rigth</em>' containment reference list.
+   * @see org.xtext.example.gfnc.cYK.CYKPackage#getProduction_Rigth()
    * @model containment="true"
    * @generated
    */
-  EList<Right> getRight();
+  EList<Rigth> getRigth();
 
 } // Production

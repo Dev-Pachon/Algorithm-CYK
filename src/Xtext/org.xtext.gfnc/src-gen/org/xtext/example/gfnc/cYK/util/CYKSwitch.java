@@ -80,20 +80,6 @@ public class CYKSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CYKPackage.INITIAL:
-      {
-        Initial initial = (Initial)theEObject;
-        T result = caseInitial(initial);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CYKPackage.LAMBDA:
-      {
-        Lambda lambda = (Lambda)theEObject;
-        T result = caseLambda(lambda);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CYKPackage.PRODUCTION:
       {
         Production production = (Production)theEObject;
@@ -101,11 +87,10 @@ public class CYKSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CYKPackage.RIGHT:
+      case CYKPackage.RIGTH:
       {
-        Right right = (Right)theEObject;
-        T result = caseRight(right);
-        if (result == null) result = caseLambda(right);
+        Rigth rigth = (Rigth)theEObject;
+        T result = caseRigth(rigth);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -151,38 +136,6 @@ public class CYKSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Initial</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Initial</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInitial(Initial object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Lambda</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Lambda</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLambda(Lambda object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Production</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -199,17 +152,17 @@ public class CYKSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Right</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rigth</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Right</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rigth</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseRight(Right object)
+  public T caseRigth(Rigth object)
   {
     return null;
   }

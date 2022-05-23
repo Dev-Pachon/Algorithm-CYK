@@ -50,7 +50,6 @@ public class CYKGenerator extends AbstractGenerator {
     ArrayList<String> _xblockexpression = null;
     {
       ArrayList<String> noTerminals = CollectionLiterals.<String>newArrayList();
-      noTerminals.add(grammar.getInit().getLeft());
       EList<Production> _productions = grammar.getProductions();
       for (final Production production : _productions) {
         noTerminals.add(production.getLeft().getNoTerminals());
