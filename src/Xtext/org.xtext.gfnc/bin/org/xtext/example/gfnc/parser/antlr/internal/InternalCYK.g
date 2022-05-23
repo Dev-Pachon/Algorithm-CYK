@@ -194,18 +194,18 @@ ruleProduction returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_2_0());
 				}
-				lv_rigth_2_0=ruleRigth
+				lv_right_2_0=ruleRight
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getProductionRule());
 					}
 					add(
 						$current,
-						"rigth",
-						lv_rigth_2_0,
-						"org.xtext.example.gfnc.CYK.Rigth");
+						"right",
+						lv_right_2_0,
+						"org.xtext.example.gfnc.CYK.Right");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -220,18 +220,18 @@ ruleProduction returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_3_1_0());
 					}
-					lv_rigth_4_0=ruleRigth
+					lv_right_4_0=ruleRight
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getProductionRule());
 						}
 						add(
 							$current,
-							"rigth",
-							lv_rigth_4_0,
-							"org.xtext.example.gfnc.CYK.Rigth");
+							"right",
+							lv_right_4_0,
+							"org.xtext.example.gfnc.CYK.Right");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -240,15 +240,15 @@ ruleProduction returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleRigth
-entryRuleRigth returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRigthRule()); }
-	iv_ruleRigth=ruleRigth
-	{ $current=$iv_ruleRigth.current; }
+// Entry rule entryRuleRight
+entryRuleRight returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRightRule()); }
+	iv_ruleRight=ruleRight
+	{ $current=$iv_ruleRight.current; }
 	EOF;
 
-// Rule Rigth
-ruleRigth returns [EObject current=null]
+// Rule Right
+ruleRight returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -259,12 +259,12 @@ ruleRigth returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRigthAccess().getSimpleSimpleParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0());
 				}
 				lv_simple_0_0=ruleSimple
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRigthRule());
+						$current = createModelElementForParent(grammarAccess.getRightRule());
 					}
 					set(
 						$current,
@@ -279,12 +279,12 @@ ruleRigth returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRigthAccess().getBinaryBinaryParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getRightAccess().getBinaryBinaryParserRuleCall_1_0());
 				}
 				lv_binary_1_0=ruleBinary
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRigthRule());
+						$current = createModelElementForParent(grammarAccess.getRightRule());
 					}
 					set(
 						$current,
@@ -300,11 +300,11 @@ ruleRigth returns [EObject current=null]
 			(
 				lv_lambda_2_0='_'
 				{
-					newLeafNode(lv_lambda_2_0, grammarAccess.getRigthAccess().getLambda_Keyword_2_0());
+					newLeafNode(lv_lambda_2_0, grammarAccess.getRightAccess().getLambda_Keyword_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRigthRule());
+						$current = createModelElement(grammarAccess.getRightRule());
 					}
 					setWithLastConsumed($current, "lambda", lv_lambda_2_0, "_");
 				}

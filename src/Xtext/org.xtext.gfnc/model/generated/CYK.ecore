@@ -10,10 +10,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Production">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//NonTerminal"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rigth" upperBound="-1"
-        eType="#//Rigth" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" upperBound="-1"
+        eType="#//Right" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Rigth">
+  <eClassifiers xsi:type="ecore:EClass" name="Right">
     <eStructuralFeatures xsi:type="ecore:EReference" name="simple" eType="#//Simple"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="binary" eType="#//Binary"

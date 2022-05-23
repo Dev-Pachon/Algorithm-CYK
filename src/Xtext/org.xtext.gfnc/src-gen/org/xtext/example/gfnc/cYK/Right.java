@@ -7,23 +7,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rigth</b></em>'.
+ * A representation of the model object '<em><b>Right</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.gfnc.cYK.Rigth#getSimple <em>Simple</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.Rigth#getBinary <em>Binary</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.Rigth#getLambda <em>Lambda</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.Right#getSimple <em>Simple</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.Right#getBinary <em>Binary</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.Right#getLambda <em>Lambda</em>}</li>
  * </ul>
  *
- * @see org.xtext.example.gfnc.cYK.CYKPackage#getRigth()
+ * @see org.xtext.example.gfnc.cYK.CYKPackage#getRight()
  * @model
  * @generated
  */
-public interface Rigth extends EObject
+public interface Right extends EObject
 {
   /**
    * Returns the value of the '<em><b>Simple</b></em>' containment reference.
@@ -31,14 +31,14 @@ public interface Rigth extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Simple</em>' containment reference.
    * @see #setSimple(Simple)
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getRigth_Simple()
+   * @see org.xtext.example.gfnc.cYK.CYKPackage#getRight_Simple()
    * @model containment="true"
    * @generated
    */
   Simple getSimple();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Rigth#getSimple <em>Simple</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Right#getSimple <em>Simple</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Simple</em>' containment reference.
@@ -53,14 +53,14 @@ public interface Rigth extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Binary</em>' containment reference.
    * @see #setBinary(Binary)
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getRigth_Binary()
+   * @see org.xtext.example.gfnc.cYK.CYKPackage#getRight_Binary()
    * @model containment="true"
    * @generated
    */
   Binary getBinary();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Rigth#getBinary <em>Binary</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Right#getBinary <em>Binary</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Binary</em>' containment reference.
@@ -75,14 +75,14 @@ public interface Rigth extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Lambda</em>' attribute.
    * @see #setLambda(String)
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getRigth_Lambda()
+   * @see org.xtext.example.gfnc.cYK.CYKPackage#getRight_Lambda()
    * @model
    * @generated
    */
   String getLambda();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Rigth#getLambda <em>Lambda</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Right#getLambda <em>Lambda</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Lambda</em>' attribute.
@@ -91,4 +91,4 @@ public interface Rigth extends EObject
    */
   void setLambda(String value);
 
-} // Rigth
+} // Right

@@ -392,7 +392,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProduction"
-    // InternalCYK.g:163:1: ruleProduction returns [EObject current=null] : ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_rigth_2_0= ruleRigth ) ) ( (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) ) )* ) ;
+    // InternalCYK.g:163:1: ruleProduction returns [EObject current=null] : ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* ) ;
     public final EObject ruleProduction() throws RecognitionException {
         EObject current = null;
 
@@ -400,20 +400,20 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         EObject lv_left_0_0 = null;
 
-        EObject lv_rigth_2_0 = null;
+        EObject lv_right_2_0 = null;
 
-        EObject lv_rigth_4_0 = null;
+        EObject lv_right_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCYK.g:169:2: ( ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_rigth_2_0= ruleRigth ) ) ( (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) ) )* ) )
-            // InternalCYK.g:170:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_rigth_2_0= ruleRigth ) ) ( (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) ) )* )
+            // InternalCYK.g:169:2: ( ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* ) )
+            // InternalCYK.g:170:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* )
             {
-            // InternalCYK.g:170:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_rigth_2_0= ruleRigth ) ) ( (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) ) )* )
-            // InternalCYK.g:171:3: ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_rigth_2_0= ruleRigth ) ) ( (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) ) )*
+            // InternalCYK.g:170:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* )
+            // InternalCYK.g:171:3: ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )*
             {
             // InternalCYK.g:171:3: ( (lv_left_0_0= ruleNonTerminal ) )
             // InternalCYK.g:172:4: (lv_left_0_0= ruleNonTerminal )
@@ -450,17 +450,17 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getProductionAccess().getHyphenMinusGreaterThanSignKeyword_1());
             		
-            // InternalCYK.g:194:3: ( (lv_rigth_2_0= ruleRigth ) )
-            // InternalCYK.g:195:4: (lv_rigth_2_0= ruleRigth )
+            // InternalCYK.g:194:3: ( (lv_right_2_0= ruleRight ) )
+            // InternalCYK.g:195:4: (lv_right_2_0= ruleRight )
             {
-            // InternalCYK.g:195:4: (lv_rigth_2_0= ruleRigth )
-            // InternalCYK.g:196:5: lv_rigth_2_0= ruleRigth
+            // InternalCYK.g:195:4: (lv_right_2_0= ruleRight )
+            // InternalCYK.g:196:5: lv_right_2_0= ruleRight
             {
 
-            					newCompositeNode(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_9);
-            lv_rigth_2_0=ruleRigth();
+            lv_right_2_0=ruleRight();
 
             state._fsp--;
 
@@ -470,9 +470,9 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             					}
             					add(
             						current,
-            						"rigth",
-            						lv_rigth_2_0,
-            						"org.xtext.example.gfnc.CYK.Rigth");
+            						"right",
+            						lv_right_2_0,
+            						"org.xtext.example.gfnc.CYK.Right");
             					afterParserOrEnumRuleCall();
             				
 
@@ -481,7 +481,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:213:3: ( (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) ) )*
+            // InternalCYK.g:213:3: ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )*
             loop4:
             do {
                 int alt4=2;
@@ -494,7 +494,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalCYK.g:214:4: (otherlv_3= '|' )+ ( (lv_rigth_4_0= ruleRigth ) )
+            	    // InternalCYK.g:214:4: (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) )
             	    {
             	    // InternalCYK.g:214:4: (otherlv_3= '|' )+
             	    int cnt3=0;
@@ -529,17 +529,17 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	        cnt3++;
             	    } while (true);
 
-            	    // InternalCYK.g:220:4: ( (lv_rigth_4_0= ruleRigth ) )
-            	    // InternalCYK.g:221:5: (lv_rigth_4_0= ruleRigth )
+            	    // InternalCYK.g:220:4: ( (lv_right_4_0= ruleRight ) )
+            	    // InternalCYK.g:221:5: (lv_right_4_0= ruleRight )
             	    {
-            	    // InternalCYK.g:221:5: (lv_rigth_4_0= ruleRigth )
-            	    // InternalCYK.g:222:6: lv_rigth_4_0= ruleRigth
+            	    // InternalCYK.g:221:5: (lv_right_4_0= ruleRight )
+            	    // InternalCYK.g:222:6: lv_right_4_0= ruleRight
             	    {
 
-            	    						newCompositeNode(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_3_1_0());
+            	    						newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_3_1_0());
             	    					
             	    pushFollow(FOLLOW_9);
-            	    lv_rigth_4_0=ruleRigth();
+            	    lv_right_4_0=ruleRight();
 
             	    state._fsp--;
 
@@ -549,9 +549,9 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	    						}
             	    						add(
             	    							current,
-            	    							"rigth",
-            	    							lv_rigth_4_0,
-            	    							"org.xtext.example.gfnc.CYK.Rigth");
+            	    							"right",
+            	    							lv_right_4_0,
+            	    							"org.xtext.example.gfnc.CYK.Right");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -591,25 +591,25 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleProduction"
 
 
-    // $ANTLR start "entryRuleRigth"
-    // InternalCYK.g:244:1: entryRuleRigth returns [EObject current=null] : iv_ruleRigth= ruleRigth EOF ;
-    public final EObject entryRuleRigth() throws RecognitionException {
+    // $ANTLR start "entryRuleRight"
+    // InternalCYK.g:244:1: entryRuleRight returns [EObject current=null] : iv_ruleRight= ruleRight EOF ;
+    public final EObject entryRuleRight() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleRigth = null;
+        EObject iv_ruleRight = null;
 
 
         try {
-            // InternalCYK.g:244:46: (iv_ruleRigth= ruleRigth EOF )
-            // InternalCYK.g:245:2: iv_ruleRigth= ruleRigth EOF
+            // InternalCYK.g:244:46: (iv_ruleRight= ruleRight EOF )
+            // InternalCYK.g:245:2: iv_ruleRight= ruleRight EOF
             {
-             newCompositeNode(grammarAccess.getRigthRule()); 
+             newCompositeNode(grammarAccess.getRightRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleRigth=ruleRigth();
+            iv_ruleRight=ruleRight();
 
             state._fsp--;
 
-             current =iv_ruleRigth; 
+             current =iv_ruleRight; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -624,12 +624,12 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleRigth"
+    // $ANTLR end "entryRuleRight"
 
 
-    // $ANTLR start "ruleRigth"
-    // InternalCYK.g:251:1: ruleRigth returns [EObject current=null] : ( ( (lv_simple_0_0= ruleSimple ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) ;
-    public final EObject ruleRigth() throws RecognitionException {
+    // $ANTLR start "ruleRight"
+    // InternalCYK.g:251:1: ruleRight returns [EObject current=null] : ( ( (lv_simple_0_0= ruleSimple ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) ;
+    public final EObject ruleRight() throws RecognitionException {
         EObject current = null;
 
         Token lv_lambda_2_0=null;
@@ -730,7 +730,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     // InternalCYK.g:261:5: lv_simple_0_0= ruleSimple
                     {
 
-                    					newCompositeNode(grammarAccess.getRigthAccess().getSimpleSimpleParserRuleCall_0_0());
+                    					newCompositeNode(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0());
                     				
                     pushFollow(FOLLOW_2);
                     lv_simple_0_0=ruleSimple();
@@ -739,7 +739,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
                     					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getRigthRule());
+                    						current = createModelElementForParent(grammarAccess.getRightRule());
                     					}
                     					set(
                     						current,
@@ -767,7 +767,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     // InternalCYK.g:281:5: lv_binary_1_0= ruleBinary
                     {
 
-                    					newCompositeNode(grammarAccess.getRigthAccess().getBinaryBinaryParserRuleCall_1_0());
+                    					newCompositeNode(grammarAccess.getRightAccess().getBinaryBinaryParserRuleCall_1_0());
                     				
                     pushFollow(FOLLOW_2);
                     lv_binary_1_0=ruleBinary();
@@ -776,7 +776,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
                     					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getRigthRule());
+                    						current = createModelElementForParent(grammarAccess.getRightRule());
                     					}
                     					set(
                     						current,
@@ -805,11 +805,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_lambda_2_0=(Token)match(input,16,FOLLOW_2); 
 
-                    					newLeafNode(lv_lambda_2_0, grammarAccess.getRigthAccess().getLambda_Keyword_2_0());
+                    					newLeafNode(lv_lambda_2_0, grammarAccess.getRightAccess().getLambda_Keyword_2_0());
                     				
 
                     					if (current==null) {
-                    						current = createModelElement(grammarAccess.getRigthRule());
+                    						current = createModelElement(grammarAccess.getRightRule());
                     					}
                     					setWithLastConsumed(current, "lambda", lv_lambda_2_0, "_");
                     				
@@ -841,7 +841,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleRigth"
+    // $ANTLR end "ruleRight"
 
 
     // $ANTLR start "entryRuleSimple"

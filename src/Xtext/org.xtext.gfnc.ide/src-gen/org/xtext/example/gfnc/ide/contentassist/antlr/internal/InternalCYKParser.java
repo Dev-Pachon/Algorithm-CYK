@@ -277,20 +277,20 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleProduction"
 
 
-    // $ANTLR start "entryRuleRigth"
-    // InternalCYK.g:103:1: entryRuleRigth : ruleRigth EOF ;
-    public final void entryRuleRigth() throws RecognitionException {
+    // $ANTLR start "entryRuleRight"
+    // InternalCYK.g:103:1: entryRuleRight : ruleRight EOF ;
+    public final void entryRuleRight() throws RecognitionException {
         try {
-            // InternalCYK.g:104:1: ( ruleRigth EOF )
-            // InternalCYK.g:105:1: ruleRigth EOF
+            // InternalCYK.g:104:1: ( ruleRight EOF )
+            // InternalCYK.g:105:1: ruleRight EOF
             {
-             before(grammarAccess.getRigthRule()); 
+             before(grammarAccess.getRightRule()); 
             pushFollow(FOLLOW_1);
-            ruleRigth();
+            ruleRight();
 
             state._fsp--;
 
-             after(grammarAccess.getRigthRule()); 
+             after(grammarAccess.getRightRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -304,35 +304,35 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleRigth"
+    // $ANTLR end "entryRuleRight"
 
 
-    // $ANTLR start "ruleRigth"
-    // InternalCYK.g:112:1: ruleRigth : ( ( rule__Rigth__Alternatives ) ) ;
-    public final void ruleRigth() throws RecognitionException {
+    // $ANTLR start "ruleRight"
+    // InternalCYK.g:112:1: ruleRight : ( ( rule__Right__Alternatives ) ) ;
+    public final void ruleRight() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:116:2: ( ( ( rule__Rigth__Alternatives ) ) )
-            // InternalCYK.g:117:2: ( ( rule__Rigth__Alternatives ) )
+            // InternalCYK.g:116:2: ( ( ( rule__Right__Alternatives ) ) )
+            // InternalCYK.g:117:2: ( ( rule__Right__Alternatives ) )
             {
-            // InternalCYK.g:117:2: ( ( rule__Rigth__Alternatives ) )
-            // InternalCYK.g:118:3: ( rule__Rigth__Alternatives )
+            // InternalCYK.g:117:2: ( ( rule__Right__Alternatives ) )
+            // InternalCYK.g:118:3: ( rule__Right__Alternatives )
             {
-             before(grammarAccess.getRigthAccess().getAlternatives()); 
-            // InternalCYK.g:119:3: ( rule__Rigth__Alternatives )
-            // InternalCYK.g:119:4: rule__Rigth__Alternatives
+             before(grammarAccess.getRightAccess().getAlternatives()); 
+            // InternalCYK.g:119:3: ( rule__Right__Alternatives )
+            // InternalCYK.g:119:4: rule__Right__Alternatives
             {
             pushFollow(FOLLOW_2);
-            rule__Rigth__Alternatives();
+            rule__Right__Alternatives();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRigthAccess().getAlternatives()); 
+             after(grammarAccess.getRightAccess().getAlternatives()); 
 
             }
 
@@ -351,7 +351,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleRigth"
+    // $ANTLR end "ruleRight"
 
 
     // $ANTLR start "entryRuleSimple"
@@ -585,14 +585,14 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleBinary"
 
 
-    // $ANTLR start "rule__Rigth__Alternatives"
-    // InternalCYK.g:202:1: rule__Rigth__Alternatives : ( ( ( rule__Rigth__SimpleAssignment_0 ) ) | ( ( rule__Rigth__BinaryAssignment_1 ) ) | ( ( rule__Rigth__LambdaAssignment_2 ) ) );
-    public final void rule__Rigth__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Right__Alternatives"
+    // InternalCYK.g:202:1: rule__Right__Alternatives : ( ( ( rule__Right__SimpleAssignment_0 ) ) | ( ( rule__Right__BinaryAssignment_1 ) ) | ( ( rule__Right__LambdaAssignment_2 ) ) );
+    public final void rule__Right__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:206:1: ( ( ( rule__Rigth__SimpleAssignment_0 ) ) | ( ( rule__Rigth__BinaryAssignment_1 ) ) | ( ( rule__Rigth__LambdaAssignment_2 ) ) )
+            // InternalCYK.g:206:1: ( ( ( rule__Right__SimpleAssignment_0 ) ) | ( ( rule__Right__BinaryAssignment_1 ) ) | ( ( rule__Right__LambdaAssignment_2 ) ) )
             int alt1=3;
             switch ( input.LA(1) ) {
             case 11:
@@ -668,24 +668,24 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
             switch (alt1) {
                 case 1 :
-                    // InternalCYK.g:207:2: ( ( rule__Rigth__SimpleAssignment_0 ) )
+                    // InternalCYK.g:207:2: ( ( rule__Right__SimpleAssignment_0 ) )
                     {
-                    // InternalCYK.g:207:2: ( ( rule__Rigth__SimpleAssignment_0 ) )
-                    // InternalCYK.g:208:3: ( rule__Rigth__SimpleAssignment_0 )
+                    // InternalCYK.g:207:2: ( ( rule__Right__SimpleAssignment_0 ) )
+                    // InternalCYK.g:208:3: ( rule__Right__SimpleAssignment_0 )
                     {
-                     before(grammarAccess.getRigthAccess().getSimpleAssignment_0()); 
-                    // InternalCYK.g:209:3: ( rule__Rigth__SimpleAssignment_0 )
-                    // InternalCYK.g:209:4: rule__Rigth__SimpleAssignment_0
+                     before(grammarAccess.getRightAccess().getSimpleAssignment_0()); 
+                    // InternalCYK.g:209:3: ( rule__Right__SimpleAssignment_0 )
+                    // InternalCYK.g:209:4: rule__Right__SimpleAssignment_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Rigth__SimpleAssignment_0();
+                    rule__Right__SimpleAssignment_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getRigthAccess().getSimpleAssignment_0()); 
+                     after(grammarAccess.getRightAccess().getSimpleAssignment_0()); 
 
                     }
 
@@ -693,24 +693,24 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalCYK.g:213:2: ( ( rule__Rigth__BinaryAssignment_1 ) )
+                    // InternalCYK.g:213:2: ( ( rule__Right__BinaryAssignment_1 ) )
                     {
-                    // InternalCYK.g:213:2: ( ( rule__Rigth__BinaryAssignment_1 ) )
-                    // InternalCYK.g:214:3: ( rule__Rigth__BinaryAssignment_1 )
+                    // InternalCYK.g:213:2: ( ( rule__Right__BinaryAssignment_1 ) )
+                    // InternalCYK.g:214:3: ( rule__Right__BinaryAssignment_1 )
                     {
-                     before(grammarAccess.getRigthAccess().getBinaryAssignment_1()); 
-                    // InternalCYK.g:215:3: ( rule__Rigth__BinaryAssignment_1 )
-                    // InternalCYK.g:215:4: rule__Rigth__BinaryAssignment_1
+                     before(grammarAccess.getRightAccess().getBinaryAssignment_1()); 
+                    // InternalCYK.g:215:3: ( rule__Right__BinaryAssignment_1 )
+                    // InternalCYK.g:215:4: rule__Right__BinaryAssignment_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Rigth__BinaryAssignment_1();
+                    rule__Right__BinaryAssignment_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getRigthAccess().getBinaryAssignment_1()); 
+                     after(grammarAccess.getRightAccess().getBinaryAssignment_1()); 
 
                     }
 
@@ -718,24 +718,24 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalCYK.g:219:2: ( ( rule__Rigth__LambdaAssignment_2 ) )
+                    // InternalCYK.g:219:2: ( ( rule__Right__LambdaAssignment_2 ) )
                     {
-                    // InternalCYK.g:219:2: ( ( rule__Rigth__LambdaAssignment_2 ) )
-                    // InternalCYK.g:220:3: ( rule__Rigth__LambdaAssignment_2 )
+                    // InternalCYK.g:219:2: ( ( rule__Right__LambdaAssignment_2 ) )
+                    // InternalCYK.g:220:3: ( rule__Right__LambdaAssignment_2 )
                     {
-                     before(grammarAccess.getRigthAccess().getLambdaAssignment_2()); 
-                    // InternalCYK.g:221:3: ( rule__Rigth__LambdaAssignment_2 )
-                    // InternalCYK.g:221:4: rule__Rigth__LambdaAssignment_2
+                     before(grammarAccess.getRightAccess().getLambdaAssignment_2()); 
+                    // InternalCYK.g:221:3: ( rule__Right__LambdaAssignment_2 )
+                    // InternalCYK.g:221:4: rule__Right__LambdaAssignment_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Rigth__LambdaAssignment_2();
+                    rule__Right__LambdaAssignment_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getRigthAccess().getLambdaAssignment_2()); 
+                     after(grammarAccess.getRightAccess().getLambdaAssignment_2()); 
 
                     }
 
@@ -756,7 +756,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Rigth__Alternatives"
+    // $ANTLR end "rule__Right__Alternatives"
 
 
     // $ANTLR start "rule__Simple__TerminalsAlternatives_1_0"
@@ -2634,31 +2634,31 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Production__Group__2__Impl"
-    // InternalCYK.g:808:1: rule__Production__Group__2__Impl : ( ( rule__Production__RigthAssignment_2 ) ) ;
+    // InternalCYK.g:808:1: rule__Production__Group__2__Impl : ( ( rule__Production__RightAssignment_2 ) ) ;
     public final void rule__Production__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:812:1: ( ( ( rule__Production__RigthAssignment_2 ) ) )
-            // InternalCYK.g:813:1: ( ( rule__Production__RigthAssignment_2 ) )
+            // InternalCYK.g:812:1: ( ( ( rule__Production__RightAssignment_2 ) ) )
+            // InternalCYK.g:813:1: ( ( rule__Production__RightAssignment_2 ) )
             {
-            // InternalCYK.g:813:1: ( ( rule__Production__RigthAssignment_2 ) )
-            // InternalCYK.g:814:2: ( rule__Production__RigthAssignment_2 )
+            // InternalCYK.g:813:1: ( ( rule__Production__RightAssignment_2 ) )
+            // InternalCYK.g:814:2: ( rule__Production__RightAssignment_2 )
             {
-             before(grammarAccess.getProductionAccess().getRigthAssignment_2()); 
-            // InternalCYK.g:815:2: ( rule__Production__RigthAssignment_2 )
-            // InternalCYK.g:815:3: rule__Production__RigthAssignment_2
+             before(grammarAccess.getProductionAccess().getRightAssignment_2()); 
+            // InternalCYK.g:815:2: ( rule__Production__RightAssignment_2 )
+            // InternalCYK.g:815:3: rule__Production__RightAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Production__RigthAssignment_2();
+            rule__Production__RightAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getProductionAccess().getRigthAssignment_2()); 
+             after(grammarAccess.getProductionAccess().getRightAssignment_2()); 
 
             }
 
@@ -2932,31 +2932,31 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Production__Group_3__1__Impl"
-    // InternalCYK.g:895:1: rule__Production__Group_3__1__Impl : ( ( rule__Production__RigthAssignment_3_1 ) ) ;
+    // InternalCYK.g:895:1: rule__Production__Group_3__1__Impl : ( ( rule__Production__RightAssignment_3_1 ) ) ;
     public final void rule__Production__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:899:1: ( ( ( rule__Production__RigthAssignment_3_1 ) ) )
-            // InternalCYK.g:900:1: ( ( rule__Production__RigthAssignment_3_1 ) )
+            // InternalCYK.g:899:1: ( ( ( rule__Production__RightAssignment_3_1 ) ) )
+            // InternalCYK.g:900:1: ( ( rule__Production__RightAssignment_3_1 ) )
             {
-            // InternalCYK.g:900:1: ( ( rule__Production__RigthAssignment_3_1 ) )
-            // InternalCYK.g:901:2: ( rule__Production__RigthAssignment_3_1 )
+            // InternalCYK.g:900:1: ( ( rule__Production__RightAssignment_3_1 ) )
+            // InternalCYK.g:901:2: ( rule__Production__RightAssignment_3_1 )
             {
-             before(grammarAccess.getProductionAccess().getRigthAssignment_3_1()); 
-            // InternalCYK.g:902:2: ( rule__Production__RigthAssignment_3_1 )
-            // InternalCYK.g:902:3: rule__Production__RigthAssignment_3_1
+             before(grammarAccess.getProductionAccess().getRightAssignment_3_1()); 
+            // InternalCYK.g:902:2: ( rule__Production__RightAssignment_3_1 )
+            // InternalCYK.g:902:3: rule__Production__RightAssignment_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__Production__RigthAssignment_3_1();
+            rule__Production__RightAssignment_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getProductionAccess().getRigthAssignment_3_1()); 
+             after(grammarAccess.getProductionAccess().getRightAssignment_3_1()); 
 
             }
 
@@ -3772,26 +3772,26 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Production__LeftAssignment_0"
 
 
-    // $ANTLR start "rule__Production__RigthAssignment_2"
-    // InternalCYK.g:1187:1: rule__Production__RigthAssignment_2 : ( ruleRigth ) ;
-    public final void rule__Production__RigthAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Production__RightAssignment_2"
+    // InternalCYK.g:1187:1: rule__Production__RightAssignment_2 : ( ruleRight ) ;
+    public final void rule__Production__RightAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1191:1: ( ( ruleRigth ) )
-            // InternalCYK.g:1192:2: ( ruleRigth )
+            // InternalCYK.g:1191:1: ( ( ruleRight ) )
+            // InternalCYK.g:1192:2: ( ruleRight )
             {
-            // InternalCYK.g:1192:2: ( ruleRigth )
-            // InternalCYK.g:1193:3: ruleRigth
+            // InternalCYK.g:1192:2: ( ruleRight )
+            // InternalCYK.g:1193:3: ruleRight
             {
-             before(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_2_0()); 
+             before(grammarAccess.getProductionAccess().getRightRightParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleRigth();
+            ruleRight();
 
             state._fsp--;
 
-             after(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_2_0()); 
+             after(grammarAccess.getProductionAccess().getRightRightParserRuleCall_2_0()); 
 
             }
 
@@ -3810,29 +3810,29 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Production__RigthAssignment_2"
+    // $ANTLR end "rule__Production__RightAssignment_2"
 
 
-    // $ANTLR start "rule__Production__RigthAssignment_3_1"
-    // InternalCYK.g:1202:1: rule__Production__RigthAssignment_3_1 : ( ruleRigth ) ;
-    public final void rule__Production__RigthAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Production__RightAssignment_3_1"
+    // InternalCYK.g:1202:1: rule__Production__RightAssignment_3_1 : ( ruleRight ) ;
+    public final void rule__Production__RightAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1206:1: ( ( ruleRigth ) )
-            // InternalCYK.g:1207:2: ( ruleRigth )
+            // InternalCYK.g:1206:1: ( ( ruleRight ) )
+            // InternalCYK.g:1207:2: ( ruleRight )
             {
-            // InternalCYK.g:1207:2: ( ruleRigth )
-            // InternalCYK.g:1208:3: ruleRigth
+            // InternalCYK.g:1207:2: ( ruleRight )
+            // InternalCYK.g:1208:3: ruleRight
             {
-             before(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_3_1_0()); 
+             before(grammarAccess.getProductionAccess().getRightRightParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleRigth();
+            ruleRight();
 
             state._fsp--;
 
-             after(grammarAccess.getProductionAccess().getRigthRigthParserRuleCall_3_1_0()); 
+             after(grammarAccess.getProductionAccess().getRightRightParserRuleCall_3_1_0()); 
 
             }
 
@@ -3851,12 +3851,12 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Production__RigthAssignment_3_1"
+    // $ANTLR end "rule__Production__RightAssignment_3_1"
 
 
-    // $ANTLR start "rule__Rigth__SimpleAssignment_0"
-    // InternalCYK.g:1217:1: rule__Rigth__SimpleAssignment_0 : ( ruleSimple ) ;
-    public final void rule__Rigth__SimpleAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Right__SimpleAssignment_0"
+    // InternalCYK.g:1217:1: rule__Right__SimpleAssignment_0 : ( ruleSimple ) ;
+    public final void rule__Right__SimpleAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3867,13 +3867,13 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
             // InternalCYK.g:1222:2: ( ruleSimple )
             // InternalCYK.g:1223:3: ruleSimple
             {
-             before(grammarAccess.getRigthAccess().getSimpleSimpleParserRuleCall_0_0()); 
+             before(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
             ruleSimple();
 
             state._fsp--;
 
-             after(grammarAccess.getRigthAccess().getSimpleSimpleParserRuleCall_0_0()); 
+             after(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0()); 
 
             }
 
@@ -3892,12 +3892,12 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Rigth__SimpleAssignment_0"
+    // $ANTLR end "rule__Right__SimpleAssignment_0"
 
 
-    // $ANTLR start "rule__Rigth__BinaryAssignment_1"
-    // InternalCYK.g:1232:1: rule__Rigth__BinaryAssignment_1 : ( ruleBinary ) ;
-    public final void rule__Rigth__BinaryAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Right__BinaryAssignment_1"
+    // InternalCYK.g:1232:1: rule__Right__BinaryAssignment_1 : ( ruleBinary ) ;
+    public final void rule__Right__BinaryAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3908,13 +3908,13 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
             // InternalCYK.g:1237:2: ( ruleBinary )
             // InternalCYK.g:1238:3: ruleBinary
             {
-             before(grammarAccess.getRigthAccess().getBinaryBinaryParserRuleCall_1_0()); 
+             before(grammarAccess.getRightAccess().getBinaryBinaryParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleBinary();
 
             state._fsp--;
 
-             after(grammarAccess.getRigthAccess().getBinaryBinaryParserRuleCall_1_0()); 
+             after(grammarAccess.getRightAccess().getBinaryBinaryParserRuleCall_1_0()); 
 
             }
 
@@ -3933,12 +3933,12 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Rigth__BinaryAssignment_1"
+    // $ANTLR end "rule__Right__BinaryAssignment_1"
 
 
-    // $ANTLR start "rule__Rigth__LambdaAssignment_2"
-    // InternalCYK.g:1247:1: rule__Rigth__LambdaAssignment_2 : ( ( '_' ) ) ;
-    public final void rule__Rigth__LambdaAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Right__LambdaAssignment_2"
+    // InternalCYK.g:1247:1: rule__Right__LambdaAssignment_2 : ( ( '_' ) ) ;
+    public final void rule__Right__LambdaAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3949,17 +3949,17 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
             // InternalCYK.g:1252:2: ( ( '_' ) )
             // InternalCYK.g:1253:3: ( '_' )
             {
-             before(grammarAccess.getRigthAccess().getLambda_Keyword_2_0()); 
+             before(grammarAccess.getRightAccess().getLambda_Keyword_2_0()); 
             // InternalCYK.g:1254:3: ( '_' )
             // InternalCYK.g:1255:4: '_'
             {
-             before(grammarAccess.getRigthAccess().getLambda_Keyword_2_0()); 
+             before(grammarAccess.getRightAccess().getLambda_Keyword_2_0()); 
             match(input,65,FOLLOW_2); 
-             after(grammarAccess.getRigthAccess().getLambda_Keyword_2_0()); 
+             after(grammarAccess.getRightAccess().getLambda_Keyword_2_0()); 
 
             }
 
-             after(grammarAccess.getRigthAccess().getLambda_Keyword_2_0()); 
+             after(grammarAccess.getRightAccess().getLambda_Keyword_2_0()); 
 
             }
 
@@ -3978,7 +3978,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Rigth__LambdaAssignment_2"
+    // $ANTLR end "rule__Right__LambdaAssignment_2"
 
 
     // $ANTLR start "rule__Simple__TerminalsAssignment_1"

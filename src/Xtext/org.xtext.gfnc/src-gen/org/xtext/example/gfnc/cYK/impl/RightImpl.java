@@ -14,25 +14,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.gfnc.cYK.Binary;
 import org.xtext.example.gfnc.cYK.CYKPackage;
-import org.xtext.example.gfnc.cYK.Rigth;
+import org.xtext.example.gfnc.cYK.Right;
 import org.xtext.example.gfnc.cYK.Simple;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rigth</b></em>'.
+ * An implementation of the model object '<em><b>Right</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.RigthImpl#getSimple <em>Simple</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.RigthImpl#getBinary <em>Binary</em>}</li>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.RigthImpl#getLambda <em>Lambda</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.impl.RightImpl#getSimple <em>Simple</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.impl.RightImpl#getBinary <em>Binary</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.impl.RightImpl#getLambda <em>Lambda</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
+public class RightImpl extends MinimalEObjectImpl.Container implements Right
 {
   /**
    * The cached value of the '{@link #getSimple() <em>Simple</em>}' containment reference.
@@ -79,7 +79,7 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
    * <!-- end-user-doc -->
    * @generated
    */
-  protected RigthImpl()
+  protected RightImpl()
   {
     super();
   }
@@ -92,7 +92,7 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
   @Override
   protected EClass eStaticClass()
   {
-    return CYKPackage.Literals.RIGTH;
+    return CYKPackage.Literals.RIGHT;
   }
 
   /**
@@ -117,7 +117,7 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
     simple = newSimple;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CYKPackage.RIGTH__SIMPLE, oldSimple, newSimple);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CYKPackage.RIGHT__SIMPLE, oldSimple, newSimple);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -135,14 +135,14 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
     {
       NotificationChain msgs = null;
       if (simple != null)
-        msgs = ((InternalEObject)simple).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGTH__SIMPLE, null, msgs);
+        msgs = ((InternalEObject)simple).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGHT__SIMPLE, null, msgs);
       if (newSimple != null)
-        msgs = ((InternalEObject)newSimple).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGTH__SIMPLE, null, msgs);
+        msgs = ((InternalEObject)newSimple).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGHT__SIMPLE, null, msgs);
       msgs = basicSetSimple(newSimple, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.RIGTH__SIMPLE, newSimple, newSimple));
+      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.RIGHT__SIMPLE, newSimple, newSimple));
   }
 
   /**
@@ -167,7 +167,7 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
     binary = newBinary;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CYKPackage.RIGTH__BINARY, oldBinary, newBinary);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CYKPackage.RIGHT__BINARY, oldBinary, newBinary);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -185,14 +185,14 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
     {
       NotificationChain msgs = null;
       if (binary != null)
-        msgs = ((InternalEObject)binary).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGTH__BINARY, null, msgs);
+        msgs = ((InternalEObject)binary).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGHT__BINARY, null, msgs);
       if (newBinary != null)
-        msgs = ((InternalEObject)newBinary).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGTH__BINARY, null, msgs);
+        msgs = ((InternalEObject)newBinary).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CYKPackage.RIGHT__BINARY, null, msgs);
       msgs = basicSetBinary(newBinary, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.RIGTH__BINARY, newBinary, newBinary));
+      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.RIGHT__BINARY, newBinary, newBinary));
   }
 
   /**
@@ -217,7 +217,7 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
     String oldLambda = lambda;
     lambda = newLambda;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.RIGTH__LAMBDA, oldLambda, lambda));
+      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.RIGHT__LAMBDA, oldLambda, lambda));
   }
 
   /**
@@ -230,9 +230,9 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
   {
     switch (featureID)
     {
-      case CYKPackage.RIGTH__SIMPLE:
+      case CYKPackage.RIGHT__SIMPLE:
         return basicSetSimple(null, msgs);
-      case CYKPackage.RIGTH__BINARY:
+      case CYKPackage.RIGHT__BINARY:
         return basicSetBinary(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -248,11 +248,11 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
   {
     switch (featureID)
     {
-      case CYKPackage.RIGTH__SIMPLE:
+      case CYKPackage.RIGHT__SIMPLE:
         return getSimple();
-      case CYKPackage.RIGTH__BINARY:
+      case CYKPackage.RIGHT__BINARY:
         return getBinary();
-      case CYKPackage.RIGTH__LAMBDA:
+      case CYKPackage.RIGHT__LAMBDA:
         return getLambda();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -268,13 +268,13 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
   {
     switch (featureID)
     {
-      case CYKPackage.RIGTH__SIMPLE:
+      case CYKPackage.RIGHT__SIMPLE:
         setSimple((Simple)newValue);
         return;
-      case CYKPackage.RIGTH__BINARY:
+      case CYKPackage.RIGHT__BINARY:
         setBinary((Binary)newValue);
         return;
-      case CYKPackage.RIGTH__LAMBDA:
+      case CYKPackage.RIGHT__LAMBDA:
         setLambda((String)newValue);
         return;
     }
@@ -291,13 +291,13 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
   {
     switch (featureID)
     {
-      case CYKPackage.RIGTH__SIMPLE:
+      case CYKPackage.RIGHT__SIMPLE:
         setSimple((Simple)null);
         return;
-      case CYKPackage.RIGTH__BINARY:
+      case CYKPackage.RIGHT__BINARY:
         setBinary((Binary)null);
         return;
-      case CYKPackage.RIGTH__LAMBDA:
+      case CYKPackage.RIGHT__LAMBDA:
         setLambda(LAMBDA_EDEFAULT);
         return;
     }
@@ -314,11 +314,11 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
   {
     switch (featureID)
     {
-      case CYKPackage.RIGTH__SIMPLE:
+      case CYKPackage.RIGHT__SIMPLE:
         return simple != null;
-      case CYKPackage.RIGTH__BINARY:
+      case CYKPackage.RIGHT__BINARY:
         return binary != null;
-      case CYKPackage.RIGTH__LAMBDA:
+      case CYKPackage.RIGHT__LAMBDA:
         return LAMBDA_EDEFAULT == null ? lambda != null : !LAMBDA_EDEFAULT.equals(lambda);
     }
     return super.eIsSet(featureID);
@@ -341,4 +341,4 @@ public class RigthImpl extends MinimalEObjectImpl.Container implements Rigth
     return result.toString();
   }
 
-} //RigthImpl
+} //RightImpl

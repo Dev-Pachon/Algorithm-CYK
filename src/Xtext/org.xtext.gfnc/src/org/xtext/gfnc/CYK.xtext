@@ -8,10 +8,10 @@ GFNC:
 ;
 
 Production:
-	left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
+	left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
 ;
 
-Rigth: 
+Right: 
 	simple=Simple | binary=Binary | lambda = '_'
 ;
 

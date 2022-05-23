@@ -42,13 +42,13 @@ public interface CYKFactory extends EFactory
   Production createProduction();
 
   /**
-   * Returns a new object of class '<em>Rigth</em>'.
+   * Returns a new object of class '<em>Right</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rigth</em>'.
+   * @return a new object of class '<em>Right</em>'.
    * @generated
    */
-  Rigth createRigth();
+  Right createRight();
 
   /**
    * Returns a new object of class '<em>Simple</em>'.

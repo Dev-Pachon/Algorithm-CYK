@@ -22,10 +22,10 @@ public class CYKValidator extends AbstractCYKValidator {
 
 	@Check
 	public void checkUniqueNonTerminals(Production production) {
-		GFNC superEntity = ((GFNC) production.eContainer());
-		if (superEntity != null) {
+		GFNC grammar = ((GFNC) production.eContainer());
+		if (grammar != null) {
 			int cont = 0;
-			for (Production other : superEntity.getProductions()) {
+			for (Production other : grammar.getProductions()) {
 				if (production.getLeft().getNoTerminals().equals(other.getLeft().getNoTerminals())) {
 					cont++;
 				}
@@ -38,28 +38,27 @@ public class CYKValidator extends AbstractCYKValidator {
 	}
 
 	@Check
-	public void checkUniqueLambda(Rigth rigth) {
-		GFNC superEntity = ((GFNC) rigth.eContainer().eContainer());
-		if (superEntity != null && rigth.getLambda() != null) {
+	public void checkUniqueLambda(Right right) {
+		GFNC grammar = ((GFNC) right.eContainer().eContainer());
+		if (grammar != null && right.getLambda() != null) {
 			int cont = 0;
 			int numProduction = 0;
-			if (!superEntity.getProductions().isEmpty())
-				for (Production other : superEntity.getProductions()) {
+			if (!grammar.getProductions().isEmpty())
+				for (Production other : grammar.getProductions()) {
 					numProduction++;
-					for (Rigth r : other.getRigth()) {
+					for (Right r : other.getRight()) {
 						if (r.getLambda() != null) {
 							cont++;
 						}
 					}
 					if (numProduction == 1 && cont > 1) {
-						error("The production lambda is duplicated", CYKPackage.Literals.RIGTH__LAMBDA);
+						error("The production lambda is duplicated", CYKPackage.Literals.RIGHT__LAMBDA);
 						return;
 					} else if (cont > 1) {
-						error("The lambda must be only in the first production", CYKPackage.Literals.RIGTH__LAMBDA);
+						error("The lambda must be only in the first production", CYKPackage.Literals.RIGHT__LAMBDA);
 						return;
 					}
-				}
-
+			}
 		}
 	}
 	
@@ -70,8 +69,8 @@ public class CYKValidator extends AbstractCYKValidator {
 				boolean belongs = false;
 				if(!grammar.getProductions().isEmpty()) {
 					for(Production production:grammar.getProductions()) {
-						for(Rigth rigth: production.getRigth()) {
-							if(rigth.getSimple()!=null&&rigth.getSimple().getTerminals().equals(ter.getTerminals())) {
+						for(Right right: production.getRight()) {
+							if(right.getSimple()!=null&&right.getSimple().getTerminals().equals(ter.getTerminals())) {
 								belongs = true;
 							}
 						}

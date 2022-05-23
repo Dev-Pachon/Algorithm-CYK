@@ -86,9 +86,9 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
         return createProductionAdapter();
       }
       @Override
-      public Adapter caseRigth(Rigth object)
+      public Adapter caseRight(Right object)
       {
-        return createRigthAdapter();
+        return createRightAdapter();
       }
       @Override
       public Adapter caseSimple(Simple object)
@@ -158,16 +158,16 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Rigth <em>Rigth</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Right <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.gfnc.cYK.Rigth
+   * @see org.xtext.example.gfnc.cYK.Right
    * @generated
    */
-  public Adapter createRigthAdapter()
+  public Adapter createRightAdapter()
   {
     return null;
   }

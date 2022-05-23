@@ -52,7 +52,7 @@ public class CYKSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '|'+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     rigth+=Rigth (ambiguity) rigth+=Rigth
+	 *     right+=Right (ambiguity) right+=Right
 	 
 	 * </pre>
 	 */

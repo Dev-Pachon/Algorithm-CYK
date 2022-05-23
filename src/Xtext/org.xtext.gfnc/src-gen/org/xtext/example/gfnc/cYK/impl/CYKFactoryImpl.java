@@ -67,7 +67,7 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
     {
       case CYKPackage.GFNC: return createGFNC();
       case CYKPackage.PRODUCTION: return createProduction();
-      case CYKPackage.RIGTH: return createRigth();
+      case CYKPackage.RIGHT: return createRight();
       case CYKPackage.SIMPLE: return createSimple();
       case CYKPackage.NON_TERMINAL: return createNonTerminal();
       case CYKPackage.BINARY: return createBinary();
@@ -106,10 +106,10 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
    * @generated
    */
   @Override
-  public Rigth createRigth()
+  public Right createRight()
   {
-    RigthImpl rigth = new RigthImpl();
-    return rigth;
+    RightImpl right = new RightImpl();
+    return right;
   }
 
   /**

@@ -84,19 +84,19 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Assignment cLeftAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cLeftNonTerminalParserRuleCall_0_0 = (RuleCall)cLeftAssignment_0.eContents().get(0);
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cRigthAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cRigthRigthParserRuleCall_2_0 = (RuleCall)cRigthAssignment_2.eContents().get(0);
+		private final Assignment cRightAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRightRightParserRuleCall_2_0 = (RuleCall)cRightAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cVerticalLineKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cRigthAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cRigthRigthParserRuleCall_3_1_0 = (RuleCall)cRigthAssignment_3_1.eContents().get(0);
+		private final Assignment cRightAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cRightRightParserRuleCall_3_1_0 = (RuleCall)cRightAssignment_3_1.eContents().get(0);
 		
 		//Production:
-		//    left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
+		//    left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
+		//left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
 		public Group getGroup() { return cGroup; }
 		
 		//left=NonTerminal
@@ -108,26 +108,26 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'->'
 		public Keyword getHyphenMinusGreaterThanSignKeyword_1() { return cHyphenMinusGreaterThanSignKeyword_1; }
 		
-		//rigth+=(Rigth)
-		public Assignment getRigthAssignment_2() { return cRigthAssignment_2; }
+		//right +=(Right)
+		public Assignment getRightAssignment_2() { return cRightAssignment_2; }
 		
-		//(Rigth)
-		public RuleCall getRigthRigthParserRuleCall_2_0() { return cRigthRigthParserRuleCall_2_0; }
+		//(Right)
+		public RuleCall getRightRightParserRuleCall_2_0() { return cRightRightParserRuleCall_2_0; }
 		
-		//('|' + rigth+=Rigth)*
+		//('|' + right+=Right)*
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//'|' +
 		public Keyword getVerticalLineKeyword_3_0() { return cVerticalLineKeyword_3_0; }
 		
-		//rigth+=Rigth
-		public Assignment getRigthAssignment_3_1() { return cRigthAssignment_3_1; }
+		//right+=Right
+		public Assignment getRightAssignment_3_1() { return cRightAssignment_3_1; }
 		
-		//Rigth
-		public RuleCall getRigthRigthParserRuleCall_3_1_0() { return cRigthRigthParserRuleCall_3_1_0; }
+		//Right
+		public RuleCall getRightRightParserRuleCall_3_1_0() { return cRightRightParserRuleCall_3_1_0; }
 	}
-	public class RigthElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Rigth");
+	public class RightElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Right");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cSimpleAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cSimpleSimpleParserRuleCall_0_0 = (RuleCall)cSimpleAssignment_0.eContents().get(0);
@@ -136,7 +136,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Assignment cLambdaAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
 		private final Keyword cLambda_Keyword_2_0 = (Keyword)cLambdaAssignment_2.eContents().get(0);
 		
-		//Rigth:
+		//Right:
 		//    simple=Simple | binary=Binary | lambda = '_'
 		//;
 		@Override public ParserRule getRule() { return rule; }
@@ -462,7 +462,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	private final GFNCElements pGFNC;
 	private final ProductionElements pProduction;
-	private final RigthElements pRigth;
+	private final RightElements pRight;
 	private final SimpleElements pSimple;
 	private final NonTerminalElements pNonTerminal;
 	private final BinaryElements pBinary;
@@ -478,7 +478,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.gaTerminals = gaTerminals;
 		this.pGFNC = new GFNCElements();
 		this.pProduction = new ProductionElements();
-		this.pRigth = new RigthElements();
+		this.pRight = new RightElements();
 		this.pSimple = new SimpleElements();
 		this.pNonTerminal = new NonTerminalElements();
 		this.pBinary = new BinaryElements();
@@ -524,7 +524,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Production:
-	//    left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
+	//    left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
 	//;
 	public ProductionElements getProductionAccess() {
 		return pProduction;
@@ -534,15 +534,15 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getProductionAccess().getRule();
 	}
 	
-	//Rigth:
+	//Right:
 	//    simple=Simple | binary=Binary | lambda = '_'
 	//;
-	public RigthElements getRigthAccess() {
-		return pRigth;
+	public RightElements getRightAccess() {
+		return pRight;
 	}
 	
-	public ParserRule getRigthRule() {
-		return getRigthAccess().getRule();
+	public ParserRule getRightRule() {
+		return getRightAccess().getRule();
 	}
 	
 	//Simple:

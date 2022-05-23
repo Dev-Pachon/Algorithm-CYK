@@ -12,12 +12,12 @@
     </genClasses>
     <genClasses ecoreClass="CYK.ecore#//Production">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Production/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Production/rigth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Production/right"/>
     </genClasses>
-    <genClasses ecoreClass="CYK.ecore#//Rigth">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Rigth/simple"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Rigth/binary"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//Rigth/lambda"/>
+    <genClasses ecoreClass="CYK.ecore#//Right">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Right/simple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Right/binary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//Right/lambda"/>
     </genClasses>
     <genClasses ecoreClass="CYK.ecore#//Simple">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//Simple/terminals"/>

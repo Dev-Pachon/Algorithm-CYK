@@ -19,7 +19,7 @@ import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.GFNC;
 import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
-import org.xtext.example.gfnc.cYK.Rigth;
+import org.xtext.example.gfnc.cYK.Right;
 import org.xtext.example.gfnc.cYK.Simple;
 import org.xtext.example.gfnc.services.CYKGrammarAccess;
 
@@ -49,8 +49,8 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case CYKPackage.PRODUCTION:
 				sequence_Production(context, (Production) semanticObject); 
 				return; 
-			case CYKPackage.RIGTH:
-				sequence_Rigth(context, (Rigth) semanticObject); 
+			case CYKPackage.RIGHT:
+				sequence_Right(context, (Right) semanticObject); 
 				return; 
 			case CYKPackage.SIMPLE:
 				sequence_Simple(context, (Simple) semanticObject); 
@@ -144,7 +144,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Production returns Production
 	 *
 	 * Constraint:
-	 *     (left=NonTerminal rigth+=Rigth rigth+=Rigth*)
+	 *     (left=NonTerminal right+=Right right+=Right*)
 	 * </pre>
 	 */
 	protected void sequence_Production(ISerializationContext context, Production semanticObject) {
@@ -155,13 +155,13 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Rigth returns Rigth
+	 *     Right returns Right
 	 *
 	 * Constraint:
 	 *     (simple=Simple | binary=Binary | lambda='_')
 	 * </pre>
 	 */
-	protected void sequence_Rigth(ISerializationContext context, Rigth semanticObject) {
+	protected void sequence_Right(ISerializationContext context, Right semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
