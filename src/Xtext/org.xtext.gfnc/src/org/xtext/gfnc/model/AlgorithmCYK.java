@@ -1,6 +1,7 @@
 package org.xtext.gfnc.model;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.xtext.example.gfnc.cYK.*;
@@ -8,7 +9,7 @@ import org.xtext.example.gfnc.cYK.*;
 public class AlgorithmCYK {
 
     public static String CYK(GFNC grammar){
-    	ArrayList<NonTerminal> table[][] = initialize(grammar);
+    	Set<NonTerminal> table[][] = initialize(grammar);
     	
     	table = step2(grammar, table);
     	
@@ -16,16 +17,16 @@ public class AlgorithmCYK {
     }
 
     @SuppressWarnings("unchecked")
-	private static ArrayList<NonTerminal>[][] initialize(GFNC grammar){
+	private static Set<NonTerminal>[][] initialize(GFNC grammar){
         int n = grammar.getW().size();
         
-        ArrayList<NonTerminal> table[][] = new ArrayList[n][];
+        Set<NonTerminal> table[][] = new LinkedHashSet[n][];
         
         for (int i = 0; i < table.length; i++) {
-            table[i] = new ArrayList[n-i];
+            table[i] = new LinkedHashSet[n-i];
             
             for(int j = 0; j< table[i].length; j++) {
-            	table[i][j] = new ArrayList<>();
+            	table[i][j] = new LinkedHashSet<NonTerminal>();
             }
         }
 
@@ -38,9 +39,9 @@ public class AlgorithmCYK {
         
     }
 
-    private static ArrayList<NonTerminal> produces(GFNC grammar, int i) {
+    private static Set<NonTerminal> produces(GFNC grammar, int i) {
     	String terminal = grammar.getW().get(i).getTerminals();
-    	ArrayList<NonTerminal> producedBy = new ArrayList<>();
+    	Set<NonTerminal> producedBy = new LinkedHashSet<>();
 		for(Production p : grammar.getProductions()) {
 			boolean produced = false;
 			EList<Right> rightProductions = p.getRight();
@@ -55,11 +56,11 @@ public class AlgorithmCYK {
 		return producedBy;
 	}
 
-	private static ArrayList<NonTerminal>[][] step2(GFNC grammar, ArrayList<NonTerminal>[][] table){
+	private static Set<NonTerminal>[][] step2(GFNC grammar, Set<NonTerminal>[][] table){
         int n = grammar.getW().size();
         for (int j = 1; j < n; j++) {
             for (int i = 0; i < n - j; i++) {
-            	ArrayList<NonTerminal> temp = new ArrayList<>();
+            	Set<NonTerminal> temp = new LinkedHashSet<NonTerminal>();
                 for (int k = 0; k < j; k++) {
                     //X(i,j) := conjunto de variables A tales que A → BC es una producción de G,
                 	//con B ∈ X(i,k) y C ∈ X(i+k,j−k), considerando todos los k tales que 1 ≤ k < j − 1.
@@ -73,8 +74,8 @@ public class AlgorithmCYK {
 	
 	
 	
-	private static ArrayList<NonTerminal> producesStep2(GFNC grammar, ArrayList<NonTerminal> B, ArrayList<NonTerminal> C) {
-		ArrayList<NonTerminal> producedBy = new ArrayList<>();
+	private static Set<NonTerminal> producesStep2(GFNC grammar, Set<NonTerminal> B, Set<NonTerminal> C) {
+		Set<NonTerminal> producedBy = new LinkedHashSet<NonTerminal>();
 		for(Production p : grammar.getProductions()) {
 			boolean produced = false;
 			EList<Right> rightProductions = p.getRight();
@@ -95,7 +96,7 @@ public class AlgorithmCYK {
 		return producedBy;
 	}
 
-	public static String showTable(ArrayList<NonTerminal> table[][]) {
+	public static String showTable(Set<NonTerminal> table[][]) {
 		String msg = "";
 		for (int i = 0; i < table.length; i++) {
 			for(int j = 0; j< table[i].length; j++) {
