@@ -33,6 +33,15 @@ public interface CYKFactory extends EFactory
   GFNC createGFNC();
 
   /**
+   * Returns a new object of class '<em>W</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>W</em>'.
+   * @generated
+   */
+  W createW();
+
+  /**
    * Returns a new object of class '<em>Production</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

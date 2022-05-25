@@ -3,8 +3,12 @@ grammar org.xtext.example.gfnc.CYK with org.eclipse.xtext.common.Terminals
 generate cYK "http://www.xtext.org/example/gfnc/CYK"
 
 GFNC:
-	'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
-	'G' ':'  productions+=Production*
+	'W' ':'	w=W //W is the string which will be analyzed by CYK
+	'G' ':' productions+=Production*
+;
+
+W:
+	lambda=Lambda | w+=(Terminal)(w+=Terminal)*
 ;
 
 Production:
@@ -12,7 +16,11 @@ Production:
 ;
 
 Right: 
-	simple=Terminal | binary=Binary | lambda = '_'
+	simple=Terminal | binary=Binary | lambda = Lambda
+;
+
+Lambda:
+	'_'
 ;
 
 Terminal:

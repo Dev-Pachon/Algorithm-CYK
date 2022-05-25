@@ -31,10 +31,12 @@ public class CYKParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CYKGrammarAccess grammarAccess) {
+			builder.put(grammarAccess.getWAccess().getAlternatives(), "rule__W__Alternatives");
 			builder.put(grammarAccess.getRightAccess().getAlternatives(), "rule__Right__Alternatives");
 			builder.put(grammarAccess.getTerminalAccess().getTerminalsAlternatives_1_0(), "rule__Terminal__TerminalsAlternatives_1_0");
 			builder.put(grammarAccess.getNonTerminalAccess().getNonTerminalsAlternatives_1_0(), "rule__NonTerminal__NonTerminalsAlternatives_1_0");
 			builder.put(grammarAccess.getGFNCAccess().getGroup(), "rule__GFNC__Group__0");
+			builder.put(grammarAccess.getWAccess().getGroup_1(), "rule__W__Group_1__0");
 			builder.put(grammarAccess.getProductionAccess().getGroup(), "rule__Production__Group__0");
 			builder.put(grammarAccess.getProductionAccess().getGroup_3(), "rule__Production__Group_3__0");
 			builder.put(grammarAccess.getTerminalAccess().getGroup(), "rule__Terminal__Group__0");
@@ -42,8 +44,10 @@ public class CYKParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getBinaryAccess().getGroup(), "rule__Binary__Group__0");
 			builder.put(grammarAccess.getBinaryAccess().getGroup_1(), "rule__Binary__Group_1__0");
 			builder.put(grammarAccess.getGFNCAccess().getWAssignment_2(), "rule__GFNC__WAssignment_2");
-			builder.put(grammarAccess.getGFNCAccess().getWAssignment_3(), "rule__GFNC__WAssignment_3");
-			builder.put(grammarAccess.getGFNCAccess().getProductionsAssignment_6(), "rule__GFNC__ProductionsAssignment_6");
+			builder.put(grammarAccess.getGFNCAccess().getProductionsAssignment_5(), "rule__GFNC__ProductionsAssignment_5");
+			builder.put(grammarAccess.getWAccess().getLambdaAssignment_0(), "rule__W__LambdaAssignment_0");
+			builder.put(grammarAccess.getWAccess().getWAssignment_1_0(), "rule__W__WAssignment_1_0");
+			builder.put(grammarAccess.getWAccess().getWAssignment_1_1(), "rule__W__WAssignment_1_1");
 			builder.put(grammarAccess.getProductionAccess().getLeftAssignment_0(), "rule__Production__LeftAssignment_0");
 			builder.put(grammarAccess.getProductionAccess().getRightAssignment_2(), "rule__Production__RightAssignment_2");
 			builder.put(grammarAccess.getProductionAccess().getRightAssignment_3_1(), "rule__Production__RightAssignment_3_1");

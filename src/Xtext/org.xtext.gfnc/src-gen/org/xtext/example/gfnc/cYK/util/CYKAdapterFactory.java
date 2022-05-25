@@ -81,6 +81,11 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
         return createGFNCAdapter();
       }
       @Override
+      public Adapter caseW(W object)
+      {
+        return createWAdapter();
+      }
+      @Override
       public Adapter caseProduction(Production object)
       {
         return createProductionAdapter();
@@ -138,6 +143,21 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGFNCAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.W <em>W</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.gfnc.cYK.W
+   * @generated
+   */
+  public Adapter createWAdapter()
   {
     return null;
   }

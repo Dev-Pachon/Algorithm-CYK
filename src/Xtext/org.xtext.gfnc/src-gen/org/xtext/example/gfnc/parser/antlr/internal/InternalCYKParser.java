@@ -163,30 +163,28 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGFNC"
-    // InternalCYK.g:71:1: ruleGFNC returns [EObject current=null] : (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* ) ;
+    // InternalCYK.g:71:1: ruleGFNC returns [EObject current=null] : (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleW ) ) otherlv_3= 'G' otherlv_4= ':' ( (lv_productions_5_0= ruleProduction ) )* ) ;
     public final EObject ruleGFNC() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
+        Token otherlv_3=null;
         Token otherlv_4=null;
-        Token otherlv_5=null;
         EObject lv_w_2_0 = null;
 
-        EObject lv_w_3_0 = null;
-
-        EObject lv_productions_6_0 = null;
+        EObject lv_productions_5_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCYK.g:77:2: ( (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* ) )
-            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* )
+            // InternalCYK.g:77:2: ( (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleW ) ) otherlv_3= 'G' otherlv_4= ':' ( (lv_productions_5_0= ruleProduction ) )* ) )
+            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleW ) ) otherlv_3= 'G' otherlv_4= ':' ( (lv_productions_5_0= ruleProduction ) )* )
             {
-            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* )
-            // InternalCYK.g:79:3: otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )*
+            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleW ) ) otherlv_3= 'G' otherlv_4= ':' ( (lv_productions_5_0= ruleProduction ) )* )
+            // InternalCYK.g:79:3: otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleW ) ) otherlv_3= 'G' otherlv_4= ':' ( (lv_productions_5_0= ruleProduction ) )*
             {
             otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
@@ -196,17 +194,17 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getGFNCAccess().getColonKeyword_1());
             		
-            // InternalCYK.g:87:3: ( (lv_w_2_0= ruleTerminal ) )
-            // InternalCYK.g:88:4: (lv_w_2_0= ruleTerminal )
+            // InternalCYK.g:87:3: ( (lv_w_2_0= ruleW ) )
+            // InternalCYK.g:88:4: (lv_w_2_0= ruleW )
             {
-            // InternalCYK.g:88:4: (lv_w_2_0= ruleTerminal )
-            // InternalCYK.g:89:5: lv_w_2_0= ruleTerminal
+            // InternalCYK.g:88:4: (lv_w_2_0= ruleW )
+            // InternalCYK.g:89:5: lv_w_2_0= ruleW
             {
 
-            					newCompositeNode(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getGFNCAccess().getWWParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_5);
-            lv_w_2_0=ruleTerminal();
+            lv_w_2_0=ruleW();
 
             state._fsp--;
 
@@ -214,11 +212,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             					if (current==null) {
             						current = createModelElementForParent(grammarAccess.getGFNCRule());
             					}
-            					add(
+            					set(
             						current,
             						"w",
             						lv_w_2_0,
-            						"org.xtext.example.gfnc.CYK.Terminal");
+            						"org.xtext.example.gfnc.CYK.W");
             					afterParserOrEnumRuleCall();
             				
 
@@ -227,86 +225,37 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:106:3: ( (lv_w_3_0= ruleTerminal ) )*
+            otherlv_3=(Token)match(input,13,FOLLOW_3); 
+
+            			newLeafNode(otherlv_3, grammarAccess.getGFNCAccess().getGKeyword_3());
+            		
+            otherlv_4=(Token)match(input,12,FOLLOW_6); 
+
+            			newLeafNode(otherlv_4, grammarAccess.getGFNCAccess().getColonKeyword_4());
+            		
+            // InternalCYK.g:114:3: ( (lv_productions_5_0= ruleProduction ) )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=17 && LA1_0<=41)) ) {
+                if ( (LA1_0==11||LA1_0==13||(LA1_0>=42 && LA1_0<=65)) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalCYK.g:107:4: (lv_w_3_0= ruleTerminal )
+            	    // InternalCYK.g:115:4: (lv_productions_5_0= ruleProduction )
             	    {
-            	    // InternalCYK.g:107:4: (lv_w_3_0= ruleTerminal )
-            	    // InternalCYK.g:108:5: lv_w_3_0= ruleTerminal
-            	    {
-
-            	    					newCompositeNode(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_3_0());
-            	    				
-            	    pushFollow(FOLLOW_5);
-            	    lv_w_3_0=ruleTerminal();
-
-            	    state._fsp--;
-
-
-            	    					if (current==null) {
-            	    						current = createModelElementForParent(grammarAccess.getGFNCRule());
-            	    					}
-            	    					add(
-            	    						current,
-            	    						"w",
-            	    						lv_w_3_0,
-            	    						"org.xtext.example.gfnc.CYK.Terminal");
-            	    					afterParserOrEnumRuleCall();
-            	    				
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-            otherlv_4=(Token)match(input,13,FOLLOW_3); 
-
-            			newLeafNode(otherlv_4, grammarAccess.getGFNCAccess().getGKeyword_4());
-            		
-            otherlv_5=(Token)match(input,12,FOLLOW_6); 
-
-            			newLeafNode(otherlv_5, grammarAccess.getGFNCAccess().getColonKeyword_5());
-            		
-            // InternalCYK.g:133:3: ( (lv_productions_6_0= ruleProduction ) )*
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
-
-                if ( (LA2_0==11||LA2_0==13||(LA2_0>=42 && LA2_0<=65)) ) {
-                    alt2=1;
-                }
-
-
-                switch (alt2) {
-            	case 1 :
-            	    // InternalCYK.g:134:4: (lv_productions_6_0= ruleProduction )
-            	    {
-            	    // InternalCYK.g:134:4: (lv_productions_6_0= ruleProduction )
-            	    // InternalCYK.g:135:5: lv_productions_6_0= ruleProduction
+            	    // InternalCYK.g:115:4: (lv_productions_5_0= ruleProduction )
+            	    // InternalCYK.g:116:5: lv_productions_5_0= ruleProduction
             	    {
 
-            	    					newCompositeNode(grammarAccess.getGFNCAccess().getProductionsProductionParserRuleCall_6_0());
+            	    					newCompositeNode(grammarAccess.getGFNCAccess().getProductionsProductionParserRuleCall_5_0());
             	    				
             	    pushFollow(FOLLOW_6);
-            	    lv_productions_6_0=ruleProduction();
+            	    lv_productions_5_0=ruleProduction();
 
             	    state._fsp--;
 
@@ -317,7 +266,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	    					add(
             	    						current,
             	    						"productions",
-            	    						lv_productions_6_0,
+            	    						lv_productions_5_0,
             	    						"org.xtext.example.gfnc.CYK.Production");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -329,7 +278,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop1;
                 }
             } while (true);
 
@@ -355,8 +304,231 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGFNC"
 
 
+    // $ANTLR start "entryRuleW"
+    // InternalCYK.g:137:1: entryRuleW returns [EObject current=null] : iv_ruleW= ruleW EOF ;
+    public final EObject entryRuleW() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleW = null;
+
+
+        try {
+            // InternalCYK.g:137:42: (iv_ruleW= ruleW EOF )
+            // InternalCYK.g:138:2: iv_ruleW= ruleW EOF
+            {
+             newCompositeNode(grammarAccess.getWRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleW=ruleW();
+
+            state._fsp--;
+
+             current =iv_ruleW; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleW"
+
+
+    // $ANTLR start "ruleW"
+    // InternalCYK.g:144:1: ruleW returns [EObject current=null] : ( ( (lv_lambda_0_0= ruleLambda ) ) | ( ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )* ) ) ;
+    public final EObject ruleW() throws RecognitionException {
+        EObject current = null;
+
+        AntlrDatatypeRuleToken lv_lambda_0_0 = null;
+
+        EObject lv_w_1_0 = null;
+
+        EObject lv_w_2_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalCYK.g:150:2: ( ( ( (lv_lambda_0_0= ruleLambda ) ) | ( ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )* ) ) )
+            // InternalCYK.g:151:2: ( ( (lv_lambda_0_0= ruleLambda ) ) | ( ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )* ) )
+            {
+            // InternalCYK.g:151:2: ( ( (lv_lambda_0_0= ruleLambda ) ) | ( ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )* ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0==16) ) {
+                alt3=1;
+            }
+            else if ( ((LA3_0>=17 && LA3_0<=41)) ) {
+                alt3=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 3, 0, input);
+
+                throw nvae;
+            }
+            switch (alt3) {
+                case 1 :
+                    // InternalCYK.g:152:3: ( (lv_lambda_0_0= ruleLambda ) )
+                    {
+                    // InternalCYK.g:152:3: ( (lv_lambda_0_0= ruleLambda ) )
+                    // InternalCYK.g:153:4: (lv_lambda_0_0= ruleLambda )
+                    {
+                    // InternalCYK.g:153:4: (lv_lambda_0_0= ruleLambda )
+                    // InternalCYK.g:154:5: lv_lambda_0_0= ruleLambda
+                    {
+
+                    					newCompositeNode(grammarAccess.getWAccess().getLambdaLambdaParserRuleCall_0_0());
+                    				
+                    pushFollow(FOLLOW_2);
+                    lv_lambda_0_0=ruleLambda();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getWRule());
+                    					}
+                    					set(
+                    						current,
+                    						"lambda",
+                    						lv_lambda_0_0,
+                    						"org.xtext.example.gfnc.CYK.Lambda");
+                    					afterParserOrEnumRuleCall();
+                    				
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalCYK.g:172:3: ( ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )* )
+                    {
+                    // InternalCYK.g:172:3: ( ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )* )
+                    // InternalCYK.g:173:4: ( (lv_w_1_0= ruleTerminal ) ) ( (lv_w_2_0= ruleTerminal ) )*
+                    {
+                    // InternalCYK.g:173:4: ( (lv_w_1_0= ruleTerminal ) )
+                    // InternalCYK.g:174:5: (lv_w_1_0= ruleTerminal )
+                    {
+                    // InternalCYK.g:174:5: (lv_w_1_0= ruleTerminal )
+                    // InternalCYK.g:175:6: lv_w_1_0= ruleTerminal
+                    {
+
+                    						newCompositeNode(grammarAccess.getWAccess().getWTerminalParserRuleCall_1_0_0());
+                    					
+                    pushFollow(FOLLOW_7);
+                    lv_w_1_0=ruleTerminal();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getWRule());
+                    						}
+                    						add(
+                    							current,
+                    							"w",
+                    							lv_w_1_0,
+                    							"org.xtext.example.gfnc.CYK.Terminal");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+                    // InternalCYK.g:192:4: ( (lv_w_2_0= ruleTerminal ) )*
+                    loop2:
+                    do {
+                        int alt2=2;
+                        int LA2_0 = input.LA(1);
+
+                        if ( ((LA2_0>=17 && LA2_0<=41)) ) {
+                            alt2=1;
+                        }
+
+
+                        switch (alt2) {
+                    	case 1 :
+                    	    // InternalCYK.g:193:5: (lv_w_2_0= ruleTerminal )
+                    	    {
+                    	    // InternalCYK.g:193:5: (lv_w_2_0= ruleTerminal )
+                    	    // InternalCYK.g:194:6: lv_w_2_0= ruleTerminal
+                    	    {
+
+                    	    						newCompositeNode(grammarAccess.getWAccess().getWTerminalParserRuleCall_1_1_0());
+                    	    					
+                    	    pushFollow(FOLLOW_7);
+                    	    lv_w_2_0=ruleTerminal();
+
+                    	    state._fsp--;
+
+
+                    	    						if (current==null) {
+                    	    							current = createModelElementForParent(grammarAccess.getWRule());
+                    	    						}
+                    	    						add(
+                    	    							current,
+                    	    							"w",
+                    	    							lv_w_2_0,
+                    	    							"org.xtext.example.gfnc.CYK.Terminal");
+                    	    						afterParserOrEnumRuleCall();
+                    	    					
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop2;
+                        }
+                    } while (true);
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleW"
+
+
     // $ANTLR start "entryRuleProduction"
-    // InternalCYK.g:156:1: entryRuleProduction returns [EObject current=null] : iv_ruleProduction= ruleProduction EOF ;
+    // InternalCYK.g:216:1: entryRuleProduction returns [EObject current=null] : iv_ruleProduction= ruleProduction EOF ;
     public final EObject entryRuleProduction() throws RecognitionException {
         EObject current = null;
 
@@ -364,8 +536,8 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCYK.g:156:51: (iv_ruleProduction= ruleProduction EOF )
-            // InternalCYK.g:157:2: iv_ruleProduction= ruleProduction EOF
+            // InternalCYK.g:216:51: (iv_ruleProduction= ruleProduction EOF )
+            // InternalCYK.g:217:2: iv_ruleProduction= ruleProduction EOF
             {
              newCompositeNode(grammarAccess.getProductionRule()); 
             pushFollow(FOLLOW_1);
@@ -392,7 +564,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProduction"
-    // InternalCYK.g:163:1: ruleProduction returns [EObject current=null] : ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* ) ;
+    // InternalCYK.g:223:1: ruleProduction returns [EObject current=null] : ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* ) ;
     public final EObject ruleProduction() throws RecognitionException {
         EObject current = null;
 
@@ -409,22 +581,22 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCYK.g:169:2: ( ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* ) )
-            // InternalCYK.g:170:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* )
+            // InternalCYK.g:229:2: ( ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* ) )
+            // InternalCYK.g:230:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* )
             {
-            // InternalCYK.g:170:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* )
-            // InternalCYK.g:171:3: ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )*
+            // InternalCYK.g:230:2: ( ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )* )
+            // InternalCYK.g:231:3: ( (lv_left_0_0= ruleNonTerminal ) ) otherlv_1= '->' ( (lv_right_2_0= ruleRight ) ) ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )*
             {
-            // InternalCYK.g:171:3: ( (lv_left_0_0= ruleNonTerminal ) )
-            // InternalCYK.g:172:4: (lv_left_0_0= ruleNonTerminal )
+            // InternalCYK.g:231:3: ( (lv_left_0_0= ruleNonTerminal ) )
+            // InternalCYK.g:232:4: (lv_left_0_0= ruleNonTerminal )
             {
-            // InternalCYK.g:172:4: (lv_left_0_0= ruleNonTerminal )
-            // InternalCYK.g:173:5: lv_left_0_0= ruleNonTerminal
+            // InternalCYK.g:232:4: (lv_left_0_0= ruleNonTerminal )
+            // InternalCYK.g:233:5: lv_left_0_0= ruleNonTerminal
             {
 
             					newCompositeNode(grammarAccess.getProductionAccess().getLeftNonTerminalParserRuleCall_0_0());
             				
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_8);
             lv_left_0_0=ruleNonTerminal();
 
             state._fsp--;
@@ -446,20 +618,20 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,14,FOLLOW_8); 
+            otherlv_1=(Token)match(input,14,FOLLOW_9); 
 
             			newLeafNode(otherlv_1, grammarAccess.getProductionAccess().getHyphenMinusGreaterThanSignKeyword_1());
             		
-            // InternalCYK.g:194:3: ( (lv_right_2_0= ruleRight ) )
-            // InternalCYK.g:195:4: (lv_right_2_0= ruleRight )
+            // InternalCYK.g:254:3: ( (lv_right_2_0= ruleRight ) )
+            // InternalCYK.g:255:4: (lv_right_2_0= ruleRight )
             {
-            // InternalCYK.g:195:4: (lv_right_2_0= ruleRight )
-            // InternalCYK.g:196:5: lv_right_2_0= ruleRight
+            // InternalCYK.g:255:4: (lv_right_2_0= ruleRight )
+            // InternalCYK.g:256:5: lv_right_2_0= ruleRight
             {
 
             					newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             lv_right_2_0=ruleRight();
 
             state._fsp--;
@@ -481,38 +653,38 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:213:3: ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )*
-            loop4:
+            // InternalCYK.g:273:3: ( (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) ) )*
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA4_0==15) ) {
-                    alt4=1;
+                if ( (LA5_0==15) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // InternalCYK.g:214:4: (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) )
+            	    // InternalCYK.g:274:4: (otherlv_3= '|' )+ ( (lv_right_4_0= ruleRight ) )
             	    {
-            	    // InternalCYK.g:214:4: (otherlv_3= '|' )+
-            	    int cnt3=0;
-            	    loop3:
+            	    // InternalCYK.g:274:4: (otherlv_3= '|' )+
+            	    int cnt4=0;
+            	    loop4:
             	    do {
-            	        int alt3=2;
-            	        int LA3_0 = input.LA(1);
+            	        int alt4=2;
+            	        int LA4_0 = input.LA(1);
 
-            	        if ( (LA3_0==15) ) {
-            	            alt3=1;
+            	        if ( (LA4_0==15) ) {
+            	            alt4=1;
             	        }
 
 
-            	        switch (alt3) {
+            	        switch (alt4) {
             	    	case 1 :
-            	    	    // InternalCYK.g:215:5: otherlv_3= '|'
+            	    	    // InternalCYK.g:275:5: otherlv_3= '|'
             	    	    {
-            	    	    otherlv_3=(Token)match(input,15,FOLLOW_10); 
+            	    	    otherlv_3=(Token)match(input,15,FOLLOW_11); 
 
             	    	    					newLeafNode(otherlv_3, grammarAccess.getProductionAccess().getVerticalLineKeyword_3_0());
             	    	    				
@@ -521,24 +693,24 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt3 >= 1 ) break loop3;
+            	    	    if ( cnt4 >= 1 ) break loop4;
             	                EarlyExitException eee =
-            	                    new EarlyExitException(3, input);
+            	                    new EarlyExitException(4, input);
             	                throw eee;
             	        }
-            	        cnt3++;
+            	        cnt4++;
             	    } while (true);
 
-            	    // InternalCYK.g:220:4: ( (lv_right_4_0= ruleRight ) )
-            	    // InternalCYK.g:221:5: (lv_right_4_0= ruleRight )
+            	    // InternalCYK.g:280:4: ( (lv_right_4_0= ruleRight ) )
+            	    // InternalCYK.g:281:5: (lv_right_4_0= ruleRight )
             	    {
-            	    // InternalCYK.g:221:5: (lv_right_4_0= ruleRight )
-            	    // InternalCYK.g:222:6: lv_right_4_0= ruleRight
+            	    // InternalCYK.g:281:5: (lv_right_4_0= ruleRight )
+            	    // InternalCYK.g:282:6: lv_right_4_0= ruleRight
             	    {
 
             	    						newCompositeNode(grammarAccess.getProductionAccess().getRightRightParserRuleCall_3_1_0());
             	    					
-            	    pushFollow(FOLLOW_9);
+            	    pushFollow(FOLLOW_10);
             	    lv_right_4_0=ruleRight();
 
             	    state._fsp--;
@@ -565,7 +737,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
@@ -592,7 +764,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRight"
-    // InternalCYK.g:244:1: entryRuleRight returns [EObject current=null] : iv_ruleRight= ruleRight EOF ;
+    // InternalCYK.g:304:1: entryRuleRight returns [EObject current=null] : iv_ruleRight= ruleRight EOF ;
     public final EObject entryRuleRight() throws RecognitionException {
         EObject current = null;
 
@@ -600,8 +772,8 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCYK.g:244:46: (iv_ruleRight= ruleRight EOF )
-            // InternalCYK.g:245:2: iv_ruleRight= ruleRight EOF
+            // InternalCYK.g:304:46: (iv_ruleRight= ruleRight EOF )
+            // InternalCYK.g:305:2: iv_ruleRight= ruleRight EOF
             {
              newCompositeNode(grammarAccess.getRightRule()); 
             pushFollow(FOLLOW_1);
@@ -628,25 +800,26 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRight"
-    // InternalCYK.g:251:1: ruleRight returns [EObject current=null] : ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) ;
+    // InternalCYK.g:311:1: ruleRight returns [EObject current=null] : ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= ruleLambda ) ) ) ;
     public final EObject ruleRight() throws RecognitionException {
         EObject current = null;
 
-        Token lv_lambda_2_0=null;
         EObject lv_simple_0_0 = null;
 
         EObject lv_binary_1_0 = null;
+
+        AntlrDatatypeRuleToken lv_lambda_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalCYK.g:257:2: ( ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) )
-            // InternalCYK.g:258:2: ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) )
+            // InternalCYK.g:317:2: ( ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= ruleLambda ) ) ) )
+            // InternalCYK.g:318:2: ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= ruleLambda ) ) )
             {
-            // InternalCYK.g:258:2: ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) )
-            int alt5=3;
+            // InternalCYK.g:318:2: ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= ruleLambda ) ) )
+            int alt6=3;
             switch ( input.LA(1) ) {
             case 17:
             case 18:
@@ -674,7 +847,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             case 40:
             case 41:
                 {
-                alt5=1;
+                alt6=1;
                 }
                 break;
             case 11:
@@ -704,30 +877,30 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             case 64:
             case 65:
                 {
-                alt5=2;
+                alt6=2;
                 }
                 break;
             case 16:
                 {
-                alt5=3;
+                alt6=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // InternalCYK.g:259:3: ( (lv_simple_0_0= ruleTerminal ) )
+                    // InternalCYK.g:319:3: ( (lv_simple_0_0= ruleTerminal ) )
                     {
-                    // InternalCYK.g:259:3: ( (lv_simple_0_0= ruleTerminal ) )
-                    // InternalCYK.g:260:4: (lv_simple_0_0= ruleTerminal )
+                    // InternalCYK.g:319:3: ( (lv_simple_0_0= ruleTerminal ) )
+                    // InternalCYK.g:320:4: (lv_simple_0_0= ruleTerminal )
                     {
-                    // InternalCYK.g:260:4: (lv_simple_0_0= ruleTerminal )
-                    // InternalCYK.g:261:5: lv_simple_0_0= ruleTerminal
+                    // InternalCYK.g:320:4: (lv_simple_0_0= ruleTerminal )
+                    // InternalCYK.g:321:5: lv_simple_0_0= ruleTerminal
                     {
 
                     					newCompositeNode(grammarAccess.getRightAccess().getSimpleTerminalParserRuleCall_0_0());
@@ -758,13 +931,13 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCYK.g:279:3: ( (lv_binary_1_0= ruleBinary ) )
+                    // InternalCYK.g:339:3: ( (lv_binary_1_0= ruleBinary ) )
                     {
-                    // InternalCYK.g:279:3: ( (lv_binary_1_0= ruleBinary ) )
-                    // InternalCYK.g:280:4: (lv_binary_1_0= ruleBinary )
+                    // InternalCYK.g:339:3: ( (lv_binary_1_0= ruleBinary ) )
+                    // InternalCYK.g:340:4: (lv_binary_1_0= ruleBinary )
                     {
-                    // InternalCYK.g:280:4: (lv_binary_1_0= ruleBinary )
-                    // InternalCYK.g:281:5: lv_binary_1_0= ruleBinary
+                    // InternalCYK.g:340:4: (lv_binary_1_0= ruleBinary )
+                    // InternalCYK.g:341:5: lv_binary_1_0= ruleBinary
                     {
 
                     					newCompositeNode(grammarAccess.getRightAccess().getBinaryBinaryParserRuleCall_1_0());
@@ -795,23 +968,32 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCYK.g:299:3: ( (lv_lambda_2_0= '_' ) )
+                    // InternalCYK.g:359:3: ( (lv_lambda_2_0= ruleLambda ) )
                     {
-                    // InternalCYK.g:299:3: ( (lv_lambda_2_0= '_' ) )
-                    // InternalCYK.g:300:4: (lv_lambda_2_0= '_' )
+                    // InternalCYK.g:359:3: ( (lv_lambda_2_0= ruleLambda ) )
+                    // InternalCYK.g:360:4: (lv_lambda_2_0= ruleLambda )
                     {
-                    // InternalCYK.g:300:4: (lv_lambda_2_0= '_' )
-                    // InternalCYK.g:301:5: lv_lambda_2_0= '_'
+                    // InternalCYK.g:360:4: (lv_lambda_2_0= ruleLambda )
+                    // InternalCYK.g:361:5: lv_lambda_2_0= ruleLambda
                     {
-                    lv_lambda_2_0=(Token)match(input,16,FOLLOW_2); 
 
-                    					newLeafNode(lv_lambda_2_0, grammarAccess.getRightAccess().getLambda_Keyword_2_0());
+                    					newCompositeNode(grammarAccess.getRightAccess().getLambdaLambdaParserRuleCall_2_0());
                     				
+                    pushFollow(FOLLOW_2);
+                    lv_lambda_2_0=ruleLambda();
+
+                    state._fsp--;
+
 
                     					if (current==null) {
-                    						current = createModelElement(grammarAccess.getRightRule());
+                    						current = createModelElementForParent(grammarAccess.getRightRule());
                     					}
-                    					setWithLastConsumed(current, "lambda", lv_lambda_2_0, "_");
+                    					set(
+                    						current,
+                    						"lambda",
+                    						lv_lambda_2_0,
+                    						"org.xtext.example.gfnc.CYK.Lambda");
+                    					afterParserOrEnumRuleCall();
                     				
 
                     }
@@ -844,8 +1026,82 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleRight"
 
 
+    // $ANTLR start "entryRuleLambda"
+    // InternalCYK.g:382:1: entryRuleLambda returns [String current=null] : iv_ruleLambda= ruleLambda EOF ;
+    public final String entryRuleLambda() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleLambda = null;
+
+
+        try {
+            // InternalCYK.g:382:46: (iv_ruleLambda= ruleLambda EOF )
+            // InternalCYK.g:383:2: iv_ruleLambda= ruleLambda EOF
+            {
+             newCompositeNode(grammarAccess.getLambdaRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleLambda=ruleLambda();
+
+            state._fsp--;
+
+             current =iv_ruleLambda.getText(); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleLambda"
+
+
+    // $ANTLR start "ruleLambda"
+    // InternalCYK.g:389:1: ruleLambda returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= '_' ;
+    public final AntlrDatatypeRuleToken ruleLambda() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token kw=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalCYK.g:395:2: (kw= '_' )
+            // InternalCYK.g:396:2: kw= '_'
+            {
+            kw=(Token)match(input,16,FOLLOW_2); 
+
+            		current.merge(kw);
+            		newLeafNode(kw, grammarAccess.getLambdaAccess().get_Keyword());
+            	
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleLambda"
+
+
     // $ANTLR start "entryRuleTerminal"
-    // InternalCYK.g:317:1: entryRuleTerminal returns [EObject current=null] : iv_ruleTerminal= ruleTerminal EOF ;
+    // InternalCYK.g:404:1: entryRuleTerminal returns [EObject current=null] : iv_ruleTerminal= ruleTerminal EOF ;
     public final EObject entryRuleTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -853,8 +1109,8 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCYK.g:317:49: (iv_ruleTerminal= ruleTerminal EOF )
-            // InternalCYK.g:318:2: iv_ruleTerminal= ruleTerminal EOF
+            // InternalCYK.g:404:49: (iv_ruleTerminal= ruleTerminal EOF )
+            // InternalCYK.g:405:2: iv_ruleTerminal= ruleTerminal EOF
             {
              newCompositeNode(grammarAccess.getTerminalRule()); 
             pushFollow(FOLLOW_1);
@@ -881,7 +1137,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminal"
-    // InternalCYK.g:324:1: ruleTerminal returns [EObject current=null] : ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) ) ;
+    // InternalCYK.g:411:1: ruleTerminal returns [EObject current=null] : ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) ) ;
     public final EObject ruleTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -915,14 +1171,14 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCYK.g:330:2: ( ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) ) )
-            // InternalCYK.g:331:2: ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) )
+            // InternalCYK.g:417:2: ( ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) ) )
+            // InternalCYK.g:418:2: ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) )
             {
-            // InternalCYK.g:331:2: ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) )
-            // InternalCYK.g:332:3: () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) )
+            // InternalCYK.g:418:2: ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) )
+            // InternalCYK.g:419:3: () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) )
             {
-            // InternalCYK.g:332:3: ()
-            // InternalCYK.g:333:4: 
+            // InternalCYK.g:419:3: ()
+            // InternalCYK.g:420:4: 
             {
 
             				current = forceCreateModelElement(
@@ -932,150 +1188,150 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:339:3: ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) )
-            // InternalCYK.g:340:4: ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) )
+            // InternalCYK.g:426:3: ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) )
+            // InternalCYK.g:427:4: ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) )
             {
-            // InternalCYK.g:340:4: ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) )
-            // InternalCYK.g:341:5: (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' )
+            // InternalCYK.g:427:4: ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) )
+            // InternalCYK.g:428:5: (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' )
             {
-            // InternalCYK.g:341:5: (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' )
-            int alt6=25;
+            // InternalCYK.g:428:5: (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' )
+            int alt7=25;
             switch ( input.LA(1) ) {
             case 17:
                 {
-                alt6=1;
+                alt7=1;
                 }
                 break;
             case 18:
                 {
-                alt6=2;
+                alt7=2;
                 }
                 break;
             case 19:
                 {
-                alt6=3;
+                alt7=3;
                 }
                 break;
             case 20:
                 {
-                alt6=4;
+                alt7=4;
                 }
                 break;
             case 21:
                 {
-                alt6=5;
+                alt7=5;
                 }
                 break;
             case 22:
                 {
-                alt6=6;
+                alt7=6;
                 }
                 break;
             case 23:
                 {
-                alt6=7;
+                alt7=7;
                 }
                 break;
             case 24:
                 {
-                alt6=8;
+                alt7=8;
                 }
                 break;
             case 25:
                 {
-                alt6=9;
+                alt7=9;
                 }
                 break;
             case 26:
                 {
-                alt6=10;
+                alt7=10;
                 }
                 break;
             case 27:
                 {
-                alt6=11;
+                alt7=11;
                 }
                 break;
             case 28:
                 {
-                alt6=12;
+                alt7=12;
                 }
                 break;
             case 29:
                 {
-                alt6=13;
+                alt7=13;
                 }
                 break;
             case 30:
                 {
-                alt6=14;
+                alt7=14;
                 }
                 break;
             case 31:
                 {
-                alt6=15;
+                alt7=15;
                 }
                 break;
             case 32:
                 {
-                alt6=16;
+                alt7=16;
                 }
                 break;
             case 33:
                 {
-                alt6=17;
+                alt7=17;
                 }
                 break;
             case 34:
                 {
-                alt6=18;
+                alt7=18;
                 }
                 break;
             case 35:
                 {
-                alt6=19;
+                alt7=19;
                 }
                 break;
             case 36:
                 {
-                alt6=20;
+                alt7=20;
                 }
                 break;
             case 37:
                 {
-                alt6=21;
+                alt7=21;
                 }
                 break;
             case 38:
                 {
-                alt6=22;
+                alt7=22;
                 }
                 break;
             case 39:
                 {
-                alt6=23;
+                alt7=23;
                 }
                 break;
             case 40:
                 {
-                alt6=24;
+                alt7=24;
                 }
                 break;
             case 41:
                 {
-                alt6=25;
+                alt7=25;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // InternalCYK.g:342:6: lv_terminals_1_1= 'a'
+                    // InternalCYK.g:429:6: lv_terminals_1_1= 'a'
                     {
                     lv_terminals_1_1=(Token)match(input,17,FOLLOW_2); 
 
@@ -1091,7 +1347,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCYK.g:353:6: lv_terminals_1_2= 'b'
+                    // InternalCYK.g:440:6: lv_terminals_1_2= 'b'
                     {
                     lv_terminals_1_2=(Token)match(input,18,FOLLOW_2); 
 
@@ -1107,7 +1363,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCYK.g:364:6: lv_terminals_1_3= 'c'
+                    // InternalCYK.g:451:6: lv_terminals_1_3= 'c'
                     {
                     lv_terminals_1_3=(Token)match(input,19,FOLLOW_2); 
 
@@ -1123,7 +1379,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalCYK.g:375:6: lv_terminals_1_4= 'd'
+                    // InternalCYK.g:462:6: lv_terminals_1_4= 'd'
                     {
                     lv_terminals_1_4=(Token)match(input,20,FOLLOW_2); 
 
@@ -1139,7 +1395,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalCYK.g:386:6: lv_terminals_1_5= 'e'
+                    // InternalCYK.g:473:6: lv_terminals_1_5= 'e'
                     {
                     lv_terminals_1_5=(Token)match(input,21,FOLLOW_2); 
 
@@ -1155,7 +1411,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalCYK.g:397:6: lv_terminals_1_6= 'f'
+                    // InternalCYK.g:484:6: lv_terminals_1_6= 'f'
                     {
                     lv_terminals_1_6=(Token)match(input,22,FOLLOW_2); 
 
@@ -1171,7 +1427,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalCYK.g:408:6: lv_terminals_1_7= 'g'
+                    // InternalCYK.g:495:6: lv_terminals_1_7= 'g'
                     {
                     lv_terminals_1_7=(Token)match(input,23,FOLLOW_2); 
 
@@ -1187,7 +1443,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalCYK.g:419:6: lv_terminals_1_8= 'h'
+                    // InternalCYK.g:506:6: lv_terminals_1_8= 'h'
                     {
                     lv_terminals_1_8=(Token)match(input,24,FOLLOW_2); 
 
@@ -1203,7 +1459,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalCYK.g:430:6: lv_terminals_1_9= 'i'
+                    // InternalCYK.g:517:6: lv_terminals_1_9= 'i'
                     {
                     lv_terminals_1_9=(Token)match(input,25,FOLLOW_2); 
 
@@ -1219,7 +1475,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalCYK.g:441:6: lv_terminals_1_10= 'j'
+                    // InternalCYK.g:528:6: lv_terminals_1_10= 'j'
                     {
                     lv_terminals_1_10=(Token)match(input,26,FOLLOW_2); 
 
@@ -1235,7 +1491,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalCYK.g:452:6: lv_terminals_1_11= 'k'
+                    // InternalCYK.g:539:6: lv_terminals_1_11= 'k'
                     {
                     lv_terminals_1_11=(Token)match(input,27,FOLLOW_2); 
 
@@ -1251,7 +1507,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalCYK.g:463:6: lv_terminals_1_12= 'l'
+                    // InternalCYK.g:550:6: lv_terminals_1_12= 'l'
                     {
                     lv_terminals_1_12=(Token)match(input,28,FOLLOW_2); 
 
@@ -1267,7 +1523,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalCYK.g:474:6: lv_terminals_1_13= 'm'
+                    // InternalCYK.g:561:6: lv_terminals_1_13= 'm'
                     {
                     lv_terminals_1_13=(Token)match(input,29,FOLLOW_2); 
 
@@ -1283,7 +1539,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalCYK.g:485:6: lv_terminals_1_14= 'n'
+                    // InternalCYK.g:572:6: lv_terminals_1_14= 'n'
                     {
                     lv_terminals_1_14=(Token)match(input,30,FOLLOW_2); 
 
@@ -1299,7 +1555,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalCYK.g:496:6: lv_terminals_1_15= 'o'
+                    // InternalCYK.g:583:6: lv_terminals_1_15= 'o'
                     {
                     lv_terminals_1_15=(Token)match(input,31,FOLLOW_2); 
 
@@ -1315,7 +1571,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalCYK.g:507:6: lv_terminals_1_16= 'p'
+                    // InternalCYK.g:594:6: lv_terminals_1_16= 'p'
                     {
                     lv_terminals_1_16=(Token)match(input,32,FOLLOW_2); 
 
@@ -1331,7 +1587,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalCYK.g:518:6: lv_terminals_1_17= 'q'
+                    // InternalCYK.g:605:6: lv_terminals_1_17= 'q'
                     {
                     lv_terminals_1_17=(Token)match(input,33,FOLLOW_2); 
 
@@ -1347,7 +1603,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalCYK.g:529:6: lv_terminals_1_18= 'r'
+                    // InternalCYK.g:616:6: lv_terminals_1_18= 'r'
                     {
                     lv_terminals_1_18=(Token)match(input,34,FOLLOW_2); 
 
@@ -1363,7 +1619,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // InternalCYK.g:540:6: lv_terminals_1_19= 's'
+                    // InternalCYK.g:627:6: lv_terminals_1_19= 's'
                     {
                     lv_terminals_1_19=(Token)match(input,35,FOLLOW_2); 
 
@@ -1379,7 +1635,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // InternalCYK.g:551:6: lv_terminals_1_20= 't'
+                    // InternalCYK.g:638:6: lv_terminals_1_20= 't'
                     {
                     lv_terminals_1_20=(Token)match(input,36,FOLLOW_2); 
 
@@ -1395,7 +1651,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // InternalCYK.g:562:6: lv_terminals_1_21= 'v'
+                    // InternalCYK.g:649:6: lv_terminals_1_21= 'v'
                     {
                     lv_terminals_1_21=(Token)match(input,37,FOLLOW_2); 
 
@@ -1411,7 +1667,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // InternalCYK.g:573:6: lv_terminals_1_22= 'w'
+                    // InternalCYK.g:660:6: lv_terminals_1_22= 'w'
                     {
                     lv_terminals_1_22=(Token)match(input,38,FOLLOW_2); 
 
@@ -1427,7 +1683,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // InternalCYK.g:584:6: lv_terminals_1_23= 'x'
+                    // InternalCYK.g:671:6: lv_terminals_1_23= 'x'
                     {
                     lv_terminals_1_23=(Token)match(input,39,FOLLOW_2); 
 
@@ -1443,7 +1699,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // InternalCYK.g:595:6: lv_terminals_1_24= 'y'
+                    // InternalCYK.g:682:6: lv_terminals_1_24= 'y'
                     {
                     lv_terminals_1_24=(Token)match(input,40,FOLLOW_2); 
 
@@ -1459,7 +1715,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 25 :
-                    // InternalCYK.g:606:6: lv_terminals_1_25= 'z'
+                    // InternalCYK.g:693:6: lv_terminals_1_25= 'z'
                     {
                     lv_terminals_1_25=(Token)match(input,41,FOLLOW_2); 
 
@@ -1506,7 +1762,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNonTerminal"
-    // InternalCYK.g:623:1: entryRuleNonTerminal returns [EObject current=null] : iv_ruleNonTerminal= ruleNonTerminal EOF ;
+    // InternalCYK.g:710:1: entryRuleNonTerminal returns [EObject current=null] : iv_ruleNonTerminal= ruleNonTerminal EOF ;
     public final EObject entryRuleNonTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -1514,8 +1770,8 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCYK.g:623:52: (iv_ruleNonTerminal= ruleNonTerminal EOF )
-            // InternalCYK.g:624:2: iv_ruleNonTerminal= ruleNonTerminal EOF
+            // InternalCYK.g:710:52: (iv_ruleNonTerminal= ruleNonTerminal EOF )
+            // InternalCYK.g:711:2: iv_ruleNonTerminal= ruleNonTerminal EOF
             {
              newCompositeNode(grammarAccess.getNonTerminalRule()); 
             pushFollow(FOLLOW_1);
@@ -1542,7 +1798,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNonTerminal"
-    // InternalCYK.g:630:1: ruleNonTerminal returns [EObject current=null] : ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) ) ;
+    // InternalCYK.g:717:1: ruleNonTerminal returns [EObject current=null] : ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) ) ;
     public final EObject ruleNonTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -1577,14 +1833,14 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCYK.g:636:2: ( ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) ) )
-            // InternalCYK.g:637:2: ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) )
+            // InternalCYK.g:723:2: ( ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) ) )
+            // InternalCYK.g:724:2: ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) )
             {
-            // InternalCYK.g:637:2: ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) )
-            // InternalCYK.g:638:3: () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) )
+            // InternalCYK.g:724:2: ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) )
+            // InternalCYK.g:725:3: () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) )
             {
-            // InternalCYK.g:638:3: ()
-            // InternalCYK.g:639:4: 
+            // InternalCYK.g:725:3: ()
+            // InternalCYK.g:726:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1594,155 +1850,155 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:645:3: ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) )
-            // InternalCYK.g:646:4: ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) )
+            // InternalCYK.g:732:3: ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) )
+            // InternalCYK.g:733:4: ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) )
             {
-            // InternalCYK.g:646:4: ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) )
-            // InternalCYK.g:647:5: (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' )
+            // InternalCYK.g:733:4: ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) )
+            // InternalCYK.g:734:5: (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' )
             {
-            // InternalCYK.g:647:5: (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' )
-            int alt7=26;
+            // InternalCYK.g:734:5: (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' )
+            int alt8=26;
             switch ( input.LA(1) ) {
             case 42:
                 {
-                alt7=1;
+                alt8=1;
                 }
                 break;
             case 43:
                 {
-                alt7=2;
+                alt8=2;
                 }
                 break;
             case 44:
                 {
-                alt7=3;
+                alt8=3;
                 }
                 break;
             case 45:
                 {
-                alt7=4;
+                alt8=4;
                 }
                 break;
             case 46:
                 {
-                alt7=5;
+                alt8=5;
                 }
                 break;
             case 47:
                 {
-                alt7=6;
+                alt8=6;
                 }
                 break;
             case 13:
                 {
-                alt7=7;
+                alt8=7;
                 }
                 break;
             case 48:
                 {
-                alt7=8;
+                alt8=8;
                 }
                 break;
             case 49:
                 {
-                alt7=9;
+                alt8=9;
                 }
                 break;
             case 50:
                 {
-                alt7=10;
+                alt8=10;
                 }
                 break;
             case 51:
                 {
-                alt7=11;
+                alt8=11;
                 }
                 break;
             case 52:
                 {
-                alt7=12;
+                alt8=12;
                 }
                 break;
             case 53:
                 {
-                alt7=13;
+                alt8=13;
                 }
                 break;
             case 54:
                 {
-                alt7=14;
+                alt8=14;
                 }
                 break;
             case 55:
                 {
-                alt7=15;
+                alt8=15;
                 }
                 break;
             case 56:
                 {
-                alt7=16;
+                alt8=16;
                 }
                 break;
             case 57:
                 {
-                alt7=17;
+                alt8=17;
                 }
                 break;
             case 58:
                 {
-                alt7=18;
+                alt8=18;
                 }
                 break;
             case 59:
                 {
-                alt7=19;
+                alt8=19;
                 }
                 break;
             case 60:
                 {
-                alt7=20;
+                alt8=20;
                 }
                 break;
             case 61:
                 {
-                alt7=21;
+                alt8=21;
                 }
                 break;
             case 62:
                 {
-                alt7=22;
+                alt8=22;
                 }
                 break;
             case 11:
                 {
-                alt7=23;
+                alt8=23;
                 }
                 break;
             case 63:
                 {
-                alt7=24;
+                alt8=24;
                 }
                 break;
             case 64:
                 {
-                alt7=25;
+                alt8=25;
                 }
                 break;
             case 65:
                 {
-                alt7=26;
+                alt8=26;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // InternalCYK.g:648:6: lv_nonTerminals_1_1= 'A'
+                    // InternalCYK.g:735:6: lv_nonTerminals_1_1= 'A'
                     {
                     lv_nonTerminals_1_1=(Token)match(input,42,FOLLOW_2); 
 
@@ -1758,7 +2014,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCYK.g:659:6: lv_nonTerminals_1_2= 'B'
+                    // InternalCYK.g:746:6: lv_nonTerminals_1_2= 'B'
                     {
                     lv_nonTerminals_1_2=(Token)match(input,43,FOLLOW_2); 
 
@@ -1774,7 +2030,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCYK.g:670:6: lv_nonTerminals_1_3= 'C'
+                    // InternalCYK.g:757:6: lv_nonTerminals_1_3= 'C'
                     {
                     lv_nonTerminals_1_3=(Token)match(input,44,FOLLOW_2); 
 
@@ -1790,7 +2046,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalCYK.g:681:6: lv_nonTerminals_1_4= 'D'
+                    // InternalCYK.g:768:6: lv_nonTerminals_1_4= 'D'
                     {
                     lv_nonTerminals_1_4=(Token)match(input,45,FOLLOW_2); 
 
@@ -1806,7 +2062,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalCYK.g:692:6: lv_nonTerminals_1_5= 'E'
+                    // InternalCYK.g:779:6: lv_nonTerminals_1_5= 'E'
                     {
                     lv_nonTerminals_1_5=(Token)match(input,46,FOLLOW_2); 
 
@@ -1822,7 +2078,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalCYK.g:703:6: lv_nonTerminals_1_6= 'F'
+                    // InternalCYK.g:790:6: lv_nonTerminals_1_6= 'F'
                     {
                     lv_nonTerminals_1_6=(Token)match(input,47,FOLLOW_2); 
 
@@ -1838,7 +2094,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalCYK.g:714:6: lv_nonTerminals_1_7= 'G'
+                    // InternalCYK.g:801:6: lv_nonTerminals_1_7= 'G'
                     {
                     lv_nonTerminals_1_7=(Token)match(input,13,FOLLOW_2); 
 
@@ -1854,7 +2110,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalCYK.g:725:6: lv_nonTerminals_1_8= 'H'
+                    // InternalCYK.g:812:6: lv_nonTerminals_1_8= 'H'
                     {
                     lv_nonTerminals_1_8=(Token)match(input,48,FOLLOW_2); 
 
@@ -1870,7 +2126,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalCYK.g:736:6: lv_nonTerminals_1_9= 'I'
+                    // InternalCYK.g:823:6: lv_nonTerminals_1_9= 'I'
                     {
                     lv_nonTerminals_1_9=(Token)match(input,49,FOLLOW_2); 
 
@@ -1886,7 +2142,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalCYK.g:747:6: lv_nonTerminals_1_10= 'J'
+                    // InternalCYK.g:834:6: lv_nonTerminals_1_10= 'J'
                     {
                     lv_nonTerminals_1_10=(Token)match(input,50,FOLLOW_2); 
 
@@ -1902,7 +2158,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalCYK.g:758:6: lv_nonTerminals_1_11= 'K'
+                    // InternalCYK.g:845:6: lv_nonTerminals_1_11= 'K'
                     {
                     lv_nonTerminals_1_11=(Token)match(input,51,FOLLOW_2); 
 
@@ -1918,7 +2174,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalCYK.g:769:6: lv_nonTerminals_1_12= 'L'
+                    // InternalCYK.g:856:6: lv_nonTerminals_1_12= 'L'
                     {
                     lv_nonTerminals_1_12=(Token)match(input,52,FOLLOW_2); 
 
@@ -1934,7 +2190,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalCYK.g:780:6: lv_nonTerminals_1_13= 'M'
+                    // InternalCYK.g:867:6: lv_nonTerminals_1_13= 'M'
                     {
                     lv_nonTerminals_1_13=(Token)match(input,53,FOLLOW_2); 
 
@@ -1950,7 +2206,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalCYK.g:791:6: lv_nonTerminals_1_14= 'N'
+                    // InternalCYK.g:878:6: lv_nonTerminals_1_14= 'N'
                     {
                     lv_nonTerminals_1_14=(Token)match(input,54,FOLLOW_2); 
 
@@ -1966,7 +2222,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalCYK.g:802:6: lv_nonTerminals_1_15= 'O'
+                    // InternalCYK.g:889:6: lv_nonTerminals_1_15= 'O'
                     {
                     lv_nonTerminals_1_15=(Token)match(input,55,FOLLOW_2); 
 
@@ -1982,7 +2238,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalCYK.g:813:6: lv_nonTerminals_1_16= 'P'
+                    // InternalCYK.g:900:6: lv_nonTerminals_1_16= 'P'
                     {
                     lv_nonTerminals_1_16=(Token)match(input,56,FOLLOW_2); 
 
@@ -1998,7 +2254,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // InternalCYK.g:824:6: lv_nonTerminals_1_17= 'Q'
+                    // InternalCYK.g:911:6: lv_nonTerminals_1_17= 'Q'
                     {
                     lv_nonTerminals_1_17=(Token)match(input,57,FOLLOW_2); 
 
@@ -2014,7 +2270,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // InternalCYK.g:835:6: lv_nonTerminals_1_18= 'R'
+                    // InternalCYK.g:922:6: lv_nonTerminals_1_18= 'R'
                     {
                     lv_nonTerminals_1_18=(Token)match(input,58,FOLLOW_2); 
 
@@ -2030,7 +2286,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // InternalCYK.g:846:6: lv_nonTerminals_1_19= 'S'
+                    // InternalCYK.g:933:6: lv_nonTerminals_1_19= 'S'
                     {
                     lv_nonTerminals_1_19=(Token)match(input,59,FOLLOW_2); 
 
@@ -2046,7 +2302,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // InternalCYK.g:857:6: lv_nonTerminals_1_20= 'T'
+                    // InternalCYK.g:944:6: lv_nonTerminals_1_20= 'T'
                     {
                     lv_nonTerminals_1_20=(Token)match(input,60,FOLLOW_2); 
 
@@ -2062,7 +2318,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // InternalCYK.g:868:6: lv_nonTerminals_1_21= 'U'
+                    // InternalCYK.g:955:6: lv_nonTerminals_1_21= 'U'
                     {
                     lv_nonTerminals_1_21=(Token)match(input,61,FOLLOW_2); 
 
@@ -2078,7 +2334,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // InternalCYK.g:879:6: lv_nonTerminals_1_22= 'V'
+                    // InternalCYK.g:966:6: lv_nonTerminals_1_22= 'V'
                     {
                     lv_nonTerminals_1_22=(Token)match(input,62,FOLLOW_2); 
 
@@ -2094,7 +2350,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // InternalCYK.g:890:6: lv_nonTerminals_1_23= 'W'
+                    // InternalCYK.g:977:6: lv_nonTerminals_1_23= 'W'
                     {
                     lv_nonTerminals_1_23=(Token)match(input,11,FOLLOW_2); 
 
@@ -2110,7 +2366,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // InternalCYK.g:901:6: lv_nonTerminals_1_24= 'X'
+                    // InternalCYK.g:988:6: lv_nonTerminals_1_24= 'X'
                     {
                     lv_nonTerminals_1_24=(Token)match(input,63,FOLLOW_2); 
 
@@ -2126,7 +2382,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 25 :
-                    // InternalCYK.g:912:6: lv_nonTerminals_1_25= 'Y'
+                    // InternalCYK.g:999:6: lv_nonTerminals_1_25= 'Y'
                     {
                     lv_nonTerminals_1_25=(Token)match(input,64,FOLLOW_2); 
 
@@ -2142,7 +2398,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 26 :
-                    // InternalCYK.g:923:6: lv_nonTerminals_1_26= 'Z'
+                    // InternalCYK.g:1010:6: lv_nonTerminals_1_26= 'Z'
                     {
                     lv_nonTerminals_1_26=(Token)match(input,65,FOLLOW_2); 
 
@@ -2189,7 +2445,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBinary"
-    // InternalCYK.g:940:1: entryRuleBinary returns [EObject current=null] : iv_ruleBinary= ruleBinary EOF ;
+    // InternalCYK.g:1027:1: entryRuleBinary returns [EObject current=null] : iv_ruleBinary= ruleBinary EOF ;
     public final EObject entryRuleBinary() throws RecognitionException {
         EObject current = null;
 
@@ -2197,8 +2453,8 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalCYK.g:940:47: (iv_ruleBinary= ruleBinary EOF )
-            // InternalCYK.g:941:2: iv_ruleBinary= ruleBinary EOF
+            // InternalCYK.g:1027:47: (iv_ruleBinary= ruleBinary EOF )
+            // InternalCYK.g:1028:2: iv_ruleBinary= ruleBinary EOF
             {
              newCompositeNode(grammarAccess.getBinaryRule()); 
             pushFollow(FOLLOW_1);
@@ -2225,7 +2481,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBinary"
-    // InternalCYK.g:947:1: ruleBinary returns [EObject current=null] : ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) ) ;
+    // InternalCYK.g:1034:1: ruleBinary returns [EObject current=null] : ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) ) ;
     public final EObject ruleBinary() throws RecognitionException {
         EObject current = null;
 
@@ -2238,14 +2494,14 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCYK.g:953:2: ( ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) ) )
-            // InternalCYK.g:954:2: ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) )
+            // InternalCYK.g:1040:2: ( ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) ) )
+            // InternalCYK.g:1041:2: ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) )
             {
-            // InternalCYK.g:954:2: ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) )
-            // InternalCYK.g:955:3: () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) )
+            // InternalCYK.g:1041:2: ( () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) ) )
+            // InternalCYK.g:1042:3: () ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) )
             {
-            // InternalCYK.g:955:3: ()
-            // InternalCYK.g:956:4: 
+            // InternalCYK.g:1042:3: ()
+            // InternalCYK.g:1043:4: 
             {
 
             				current = forceCreateModelElement(
@@ -2255,19 +2511,19 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:962:3: ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) )
-            // InternalCYK.g:963:4: ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) )
+            // InternalCYK.g:1049:3: ( ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) ) )
+            // InternalCYK.g:1050:4: ( (lv_first_1_0= ruleNonTerminal ) ) ( (lv_second_2_0= ruleNonTerminal ) )
             {
-            // InternalCYK.g:963:4: ( (lv_first_1_0= ruleNonTerminal ) )
-            // InternalCYK.g:964:5: (lv_first_1_0= ruleNonTerminal )
+            // InternalCYK.g:1050:4: ( (lv_first_1_0= ruleNonTerminal ) )
+            // InternalCYK.g:1051:5: (lv_first_1_0= ruleNonTerminal )
             {
-            // InternalCYK.g:964:5: (lv_first_1_0= ruleNonTerminal )
-            // InternalCYK.g:965:6: lv_first_1_0= ruleNonTerminal
+            // InternalCYK.g:1051:5: (lv_first_1_0= ruleNonTerminal )
+            // InternalCYK.g:1052:6: lv_first_1_0= ruleNonTerminal
             {
 
             						newCompositeNode(grammarAccess.getBinaryAccess().getFirstNonTerminalParserRuleCall_1_0_0());
             					
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             lv_first_1_0=ruleNonTerminal();
 
             state._fsp--;
@@ -2289,11 +2545,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:982:4: ( (lv_second_2_0= ruleNonTerminal ) )
-            // InternalCYK.g:983:5: (lv_second_2_0= ruleNonTerminal )
+            // InternalCYK.g:1069:4: ( (lv_second_2_0= ruleNonTerminal ) )
+            // InternalCYK.g:1070:5: (lv_second_2_0= ruleNonTerminal )
             {
-            // InternalCYK.g:983:5: (lv_second_2_0= ruleNonTerminal )
-            // InternalCYK.g:984:6: lv_second_2_0= ruleNonTerminal
+            // InternalCYK.g:1070:5: (lv_second_2_0= ruleNonTerminal )
+            // InternalCYK.g:1071:6: lv_second_2_0= ruleNonTerminal
             {
 
             						newCompositeNode(grammarAccess.getBinaryAccess().getSecondNonTerminalParserRuleCall_1_1_0());
@@ -2352,13 +2608,14 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x000003FFFFFE0000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x000003FFFFFE2000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x000003FFFFFF0000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0xFFFFFC0000002802L,0x0000000000000003L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0xFFFFFFFFFFFF2800L,0x0000000000000003L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0xFFFFFFFFFFFFA800L,0x0000000000000003L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0xFFFFFC0000002800L,0x0000000000000003L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000003FFFFFF0002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0xFFFFFFFFFFFF2800L,0x0000000000000003L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0xFFFFFFFFFFFFA800L,0x0000000000000003L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0xFFFFFC0000002800L,0x0000000000000003L});
 
 }

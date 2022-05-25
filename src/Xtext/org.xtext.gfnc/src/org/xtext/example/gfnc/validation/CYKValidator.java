@@ -51,10 +51,13 @@ public class CYKValidator extends AbstractCYKValidator {
 							cont++;
 						}
 					}
-					if (numProduction == 1 && cont > 1) {
-						error("The production lambda is duplicated", CYKPackage.Literals.RIGHT__LAMBDA);
-						return;
-					} else if (cont > 1) {
+					if (numProduction == 1) {
+						if(cont>1) {
+							error("The production lambda is duplicated", CYKPackage.Literals.RIGHT__LAMBDA);
+							return;	
+						}
+						cont = 0;
+					} else if (cont > 0) {
 						error("The lambda must be only in the first production", CYKPackage.Literals.RIGHT__LAMBDA);
 						return;
 					}
@@ -64,8 +67,11 @@ public class CYKValidator extends AbstractCYKValidator {
 	
 	@Check
 	public void checkString(GFNC grammar) {
-		if(!grammar.getW().isEmpty()) {
-			for(Terminal ter: grammar.getW()) {
+		if(!grammar.getW().getW().isEmpty()) {
+			if(grammar.getW().getLambda()!=null) {
+				return;
+			}
+			for(Terminal ter: grammar.getW().getW()) {
 				boolean belongs = false;
 				if(!grammar.getProductions().isEmpty()) {
 					for(Production production:grammar.getProductions()) {

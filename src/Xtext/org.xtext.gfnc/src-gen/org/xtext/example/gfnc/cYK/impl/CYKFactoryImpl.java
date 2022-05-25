@@ -66,6 +66,7 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
     switch (eClass.getClassifierID())
     {
       case CYKPackage.GFNC: return createGFNC();
+      case CYKPackage.W: return createW();
       case CYKPackage.PRODUCTION: return createProduction();
       case CYKPackage.RIGHT: return createRight();
       case CYKPackage.TERMINAL: return createTerminal();
@@ -86,6 +87,18 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
   {
     GFNCImpl gfnc = new GFNCImpl();
     return gfnc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public W createW()
+  {
+    WImpl w = new WImpl();
+    return w;
   }
 
   /**

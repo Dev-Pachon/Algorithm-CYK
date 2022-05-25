@@ -21,6 +21,7 @@ import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
 import org.xtext.example.gfnc.cYK.Right;
 import org.xtext.example.gfnc.cYK.Terminal;
+import org.xtext.example.gfnc.cYK.W;
 import org.xtext.example.gfnc.services.CYKGrammarAccess;
 
 @SuppressWarnings("all")
@@ -54,6 +55,9 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case CYKPackage.TERMINAL:
 				sequence_Terminal(context, (Terminal) semanticObject); 
+				return; 
+			case CYKPackage.W:
+				sequence_W(context, (W) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -89,7 +93,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     GFNC returns GFNC
 	 *
 	 * Constraint:
-	 *     (w+=Terminal w+=Terminal* productions+=Production*)
+	 *     (w=W productions+=Production*)
 	 * </pre>
 	 */
 	protected void sequence_GFNC(ISerializationContext context, GFNC semanticObject) {
@@ -158,7 +162,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Right returns Right
 	 *
 	 * Constraint:
-	 *     (simple=Terminal | binary=Binary | lambda='_')
+	 *     (simple=Terminal | binary=Binary | lambda=Lambda)
 	 * </pre>
 	 */
 	protected void sequence_Right(ISerializationContext context, Right semanticObject) {
@@ -202,6 +206,20 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * </pre>
 	 */
 	protected void sequence_Terminal(ISerializationContext context, Terminal semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     W returns W
+	 *
+	 * Constraint:
+	 *     (lambda=Lambda | (w+=Terminal w+=Terminal*))
+	 * </pre>
+	 */
+	protected void sequence_W(ISerializationContext context, W semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

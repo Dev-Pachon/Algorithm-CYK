@@ -29,22 +29,20 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cWKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cWAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cWTerminalParserRuleCall_2_0 = (RuleCall)cWAssignment_2.eContents().get(0);
-		private final Assignment cWAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cWTerminalParserRuleCall_3_0 = (RuleCall)cWAssignment_3.eContents().get(0);
-		private final Keyword cGKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cProductionsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cProductionsProductionParserRuleCall_6_0 = (RuleCall)cProductionsAssignment_6.eContents().get(0);
+		private final RuleCall cWWParserRuleCall_2_0 = (RuleCall)cWAssignment_2.eContents().get(0);
+		private final Keyword cGKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cColonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cProductionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cProductionsProductionParserRuleCall_5_0 = (RuleCall)cProductionsAssignment_5.eContents().get(0);
 		
 		//GFNC:
-		//    'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
-		//    'G' ':'  productions+=Production*
+		//    'W' ':'    w=W //W is the string which will be analyzed by CYK
+		//    'G' ':' productions+=Production*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
-		//'G' ':'  productions+=Production*
+		//'W' ':'    w=W //W is the string which will be analyzed by CYK
+		//'G' ':' productions+=Production*
 		public Group getGroup() { return cGroup; }
 		
 		//'W'
@@ -53,30 +51,64 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 		
-		//w+=(Terminal)
+		//w=W
 		public Assignment getWAssignment_2() { return cWAssignment_2; }
 		
-		//(Terminal)
-		public RuleCall getWTerminalParserRuleCall_2_0() { return cWTerminalParserRuleCall_2_0; }
-		
-		//(w+=Terminal)*
-		public Assignment getWAssignment_3() { return cWAssignment_3; }
-		
-		//Terminal
-		public RuleCall getWTerminalParserRuleCall_3_0() { return cWTerminalParserRuleCall_3_0; }
+		//W
+		public RuleCall getWWParserRuleCall_2_0() { return cWWParserRuleCall_2_0; }
 		
 		////W is the string which will be analyzed by CYK
 		//   'G'
-		public Keyword getGKeyword_4() { return cGKeyword_4; }
+		public Keyword getGKeyword_3() { return cGKeyword_3; }
 		
 		//':'
-		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
 		
 		//productions+=Production*
-		public Assignment getProductionsAssignment_6() { return cProductionsAssignment_6; }
+		public Assignment getProductionsAssignment_5() { return cProductionsAssignment_5; }
 		
 		//Production
-		public RuleCall getProductionsProductionParserRuleCall_6_0() { return cProductionsProductionParserRuleCall_6_0; }
+		public RuleCall getProductionsProductionParserRuleCall_5_0() { return cProductionsProductionParserRuleCall_5_0; }
+	}
+	public class WElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.W");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cLambdaAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cLambdaLambdaParserRuleCall_0_0 = (RuleCall)cLambdaAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cWAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cWTerminalParserRuleCall_1_0_0 = (RuleCall)cWAssignment_1_0.eContents().get(0);
+		private final Assignment cWAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cWTerminalParserRuleCall_1_1_0 = (RuleCall)cWAssignment_1_1.eContents().get(0);
+		
+		//W:
+		//    lambda=Lambda | w+=(Terminal)(w+=Terminal)*
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//lambda=Lambda | w+=(Terminal)(w+=Terminal)*
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//lambda=Lambda
+		public Assignment getLambdaAssignment_0() { return cLambdaAssignment_0; }
+		
+		//Lambda
+		public RuleCall getLambdaLambdaParserRuleCall_0_0() { return cLambdaLambdaParserRuleCall_0_0; }
+		
+		//w+=(Terminal)(w+=Terminal)*
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//w+=(Terminal)
+		public Assignment getWAssignment_1_0() { return cWAssignment_1_0; }
+		
+		//(Terminal)
+		public RuleCall getWTerminalParserRuleCall_1_0_0() { return cWTerminalParserRuleCall_1_0_0; }
+		
+		//(w+=Terminal)*
+		public Assignment getWAssignment_1_1() { return cWAssignment_1_1; }
+		
+		//Terminal
+		public RuleCall getWTerminalParserRuleCall_1_1_0() { return cWTerminalParserRuleCall_1_1_0; }
 	}
 	public class ProductionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Production");
@@ -134,14 +166,14 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Assignment cBinaryAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cBinaryBinaryParserRuleCall_1_0 = (RuleCall)cBinaryAssignment_1.eContents().get(0);
 		private final Assignment cLambdaAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cLambda_Keyword_2_0 = (Keyword)cLambdaAssignment_2.eContents().get(0);
+		private final RuleCall cLambdaLambdaParserRuleCall_2_0 = (RuleCall)cLambdaAssignment_2.eContents().get(0);
 		
 		//Right:
-		//    simple=Terminal | binary=Binary | lambda = '_'
+		//    simple=Terminal | binary=Binary | lambda = Lambda
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//simple=Terminal | binary=Binary | lambda = '_'
+		//simple=Terminal | binary=Binary | lambda = Lambda
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//simple=Terminal
@@ -156,11 +188,23 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//Binary
 		public RuleCall getBinaryBinaryParserRuleCall_1_0() { return cBinaryBinaryParserRuleCall_1_0; }
 		
-		//lambda = '_'
+		//lambda = Lambda
 		public Assignment getLambdaAssignment_2() { return cLambdaAssignment_2; }
 		
+		//Lambda
+		public RuleCall getLambdaLambdaParserRuleCall_2_0() { return cLambdaLambdaParserRuleCall_2_0; }
+	}
+	public class LambdaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Lambda");
+		private final Keyword c_Keyword = (Keyword)rule.eContents().get(1);
+		
+		//Lambda:
+		//    '_'
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
 		//'_'
-		public Keyword getLambda_Keyword_2_0() { return cLambda_Keyword_2_0; }
+		public Keyword get_Keyword() { return c_Keyword; }
 	}
 	public class TerminalElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Terminal");
@@ -461,8 +505,10 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	
 	private final GFNCElements pGFNC;
+	private final WElements pW;
 	private final ProductionElements pProduction;
 	private final RightElements pRight;
+	private final LambdaElements pLambda;
 	private final TerminalElements pTerminal;
 	private final NonTerminalElements pNonTerminal;
 	private final BinaryElements pBinary;
@@ -477,8 +523,10 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pGFNC = new GFNCElements();
+		this.pW = new WElements();
 		this.pProduction = new ProductionElements();
 		this.pRight = new RightElements();
+		this.pLambda = new LambdaElements();
 		this.pTerminal = new TerminalElements();
 		this.pNonTerminal = new NonTerminalElements();
 		this.pBinary = new BinaryElements();
@@ -512,8 +560,8 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 
 	
 	//GFNC:
-	//    'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
-	//    'G' ':'  productions+=Production*
+	//    'W' ':'    w=W //W is the string which will be analyzed by CYK
+	//    'G' ':' productions+=Production*
 	//;
 	public GFNCElements getGFNCAccess() {
 		return pGFNC;
@@ -521,6 +569,17 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	public ParserRule getGFNCRule() {
 		return getGFNCAccess().getRule();
+	}
+	
+	//W:
+	//    lambda=Lambda | w+=(Terminal)(w+=Terminal)*
+	//;
+	public WElements getWAccess() {
+		return pW;
+	}
+	
+	public ParserRule getWRule() {
+		return getWAccess().getRule();
 	}
 	
 	//Production:
@@ -535,7 +594,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Right:
-	//    simple=Terminal | binary=Binary | lambda = '_'
+	//    simple=Terminal | binary=Binary | lambda = Lambda
 	//;
 	public RightElements getRightAccess() {
 		return pRight;
@@ -543,6 +602,17 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	public ParserRule getRightRule() {
 		return getRightAccess().getRule();
+	}
+	
+	//Lambda:
+	//    '_'
+	//;
+	public LambdaElements getLambdaAccess() {
+		return pLambda;
+	}
+	
+	public ParserRule getLambdaRule() {
+		return getLambdaAccess().getRule();
 	}
 	
 	//Terminal:

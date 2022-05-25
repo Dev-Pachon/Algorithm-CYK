@@ -68,7 +68,7 @@ public interface CYKPackage extends EPackage
   int GFNC = 0;
 
   /**
-   * The feature id for the '<em><b>W</b></em>' containment reference list.
+   * The feature id for the '<em><b>W</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -95,6 +95,43 @@ public interface CYKPackage extends EPackage
   int GFNC_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.WImpl <em>W</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.gfnc.cYK.impl.WImpl
+   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getW()
+   * @generated
+   */
+  int W = 1;
+
+  /**
+   * The feature id for the '<em><b>Lambda</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int W__LAMBDA = 0;
+
+  /**
+   * The feature id for the '<em><b>W</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int W__W = 1;
+
+  /**
+   * The number of structural features of the '<em>W</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int W_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl <em>Production</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -102,7 +139,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getProduction()
    * @generated
    */
-  int PRODUCTION = 1;
+  int PRODUCTION = 2;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -139,7 +176,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getRight()
    * @generated
    */
-  int RIGHT = 2;
+  int RIGHT = 3;
 
   /**
    * The feature id for the '<em><b>Simple</b></em>' containment reference.
@@ -185,7 +222,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getTerminal()
    * @generated
    */
-  int TERMINAL = 3;
+  int TERMINAL = 4;
 
   /**
    * The feature id for the '<em><b>Terminals</b></em>' attribute.
@@ -213,7 +250,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getNonTerminal()
    * @generated
    */
-  int NON_TERMINAL = 4;
+  int NON_TERMINAL = 5;
 
   /**
    * The feature id for the '<em><b>Non Terminals</b></em>' attribute.
@@ -241,7 +278,7 @@ public interface CYKPackage extends EPackage
    * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getBinary()
    * @generated
    */
-  int BINARY = 5;
+  int BINARY = 6;
 
   /**
    * The feature id for the '<em><b>First</b></em>' containment reference.
@@ -282,10 +319,10 @@ public interface CYKPackage extends EPackage
   EClass getGFNC();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.gfnc.cYK.GFNC#getW <em>W</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.gfnc.cYK.GFNC#getW <em>W</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>W</em>'.
+   * @return the meta object for the containment reference '<em>W</em>'.
    * @see org.xtext.example.gfnc.cYK.GFNC#getW()
    * @see #getGFNC()
    * @generated
@@ -302,6 +339,38 @@ public interface CYKPackage extends EPackage
    * @generated
    */
   EReference getGFNC_Productions();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.W <em>W</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>W</em>'.
+   * @see org.xtext.example.gfnc.cYK.W
+   * @generated
+   */
+  EClass getW();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.W#getLambda <em>Lambda</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Lambda</em>'.
+   * @see org.xtext.example.gfnc.cYK.W#getLambda()
+   * @see #getW()
+   * @generated
+   */
+  EAttribute getW_Lambda();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.gfnc.cYK.W#getW <em>W</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>W</em>'.
+   * @see org.xtext.example.gfnc.cYK.W#getW()
+   * @see #getW()
+   * @generated
+   */
+  EReference getW_W();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Production <em>Production</em>}'.
@@ -486,7 +555,7 @@ public interface CYKPackage extends EPackage
     EClass GFNC = eINSTANCE.getGFNC();
 
     /**
-     * The meta object literal for the '<em><b>W</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>W</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -500,6 +569,32 @@ public interface CYKPackage extends EPackage
      * @generated
      */
     EReference GFNC__PRODUCTIONS = eINSTANCE.getGFNC_Productions();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.WImpl <em>W</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.gfnc.cYK.impl.WImpl
+     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getW()
+     * @generated
+     */
+    EClass W = eINSTANCE.getW();
+
+    /**
+     * The meta object literal for the '<em><b>Lambda</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute W__LAMBDA = eINSTANCE.getW_Lambda();
+
+    /**
+     * The meta object literal for the '<em><b>W</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference W__W = eINSTANCE.getW_W();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.ProductionImpl <em>Production</em>}' class.

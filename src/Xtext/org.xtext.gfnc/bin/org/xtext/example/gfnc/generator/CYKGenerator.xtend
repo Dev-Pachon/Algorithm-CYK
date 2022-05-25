@@ -24,7 +24,7 @@ class CYKGenerator extends AbstractGenerator {
 	
 	def getInput(GFNC grammar) {
 		var input = ""
-		for(terminal : grammar.w){
+		for(terminal : grammar.w.w){
 			input += terminal.^terminals
 		}
 		input

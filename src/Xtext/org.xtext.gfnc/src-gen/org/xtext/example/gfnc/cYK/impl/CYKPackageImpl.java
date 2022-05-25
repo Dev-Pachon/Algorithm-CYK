@@ -38,6 +38,13 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass wEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass productionEClass = null;
 
   /**
@@ -162,6 +169,39 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
   public EReference getGFNC_Productions()
   {
     return (EReference)gfncEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getW()
+  {
+    return wEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getW_Lambda()
+  {
+    return (EAttribute)wEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getW_W()
+  {
+    return (EReference)wEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -353,6 +393,10 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
     createEReference(gfncEClass, GFNC__W);
     createEReference(gfncEClass, GFNC__PRODUCTIONS);
 
+    wEClass = createEClass(W);
+    createEAttribute(wEClass, W__LAMBDA);
+    createEReference(wEClass, W__W);
+
     productionEClass = createEClass(PRODUCTION);
     createEReference(productionEClass, PRODUCTION__LEFT);
     createEReference(productionEClass, PRODUCTION__RIGHT);
@@ -405,8 +449,12 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(gfncEClass, org.xtext.example.gfnc.cYK.GFNC.class, "GFNC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGFNC_W(), this.getTerminal(), null, "w", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGFNC_W(), this.getW(), null, "w", null, 0, 1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGFNC_Productions(), this.getProduction(), null, "productions", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(wEClass, org.xtext.example.gfnc.cYK.W.class, "W", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getW_Lambda(), ecorePackage.getEString(), "lambda", null, 0, 1, org.xtext.example.gfnc.cYK.W.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getW_W(), this.getTerminal(), null, "w", null, 0, -1, org.xtext.example.gfnc.cYK.W.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(productionEClass, Production.class, "Production", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getProduction_Left(), this.getNonTerminal(), null, "left", null, 0, 1, Production.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

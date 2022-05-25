@@ -27,16 +27,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface GFNC extends EObject
 {
   /**
-   * Returns the value of the '<em><b>W</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.gfnc.cYK.Terminal}.
+   * Returns the value of the '<em><b>W</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>W</em>' containment reference list.
+   * @return the value of the '<em>W</em>' containment reference.
+   * @see #setW(W)
    * @see org.xtext.example.gfnc.cYK.CYKPackage#getGFNC_W()
    * @model containment="true"
    * @generated
    */
-  EList<Terminal> getW();
+  W getW();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.GFNC#getW <em>W</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>W</em>' containment reference.
+   * @see #getW()
+   * @generated
+   */
+  void setW(W value);
 
   /**
    * Returns the value of the '<em><b>Productions</b></em>' containment reference list.

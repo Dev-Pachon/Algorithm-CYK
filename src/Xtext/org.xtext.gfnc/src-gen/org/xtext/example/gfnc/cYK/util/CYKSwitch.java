@@ -80,6 +80,13 @@ public class CYKSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CYKPackage.W:
+      {
+        W w = (W)theEObject;
+        T result = caseW(w);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CYKPackage.PRODUCTION:
       {
         Production production = (Production)theEObject;
@@ -131,6 +138,22 @@ public class CYKSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseGFNC(GFNC object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>W</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>W</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseW(W object)
   {
     return null;
   }

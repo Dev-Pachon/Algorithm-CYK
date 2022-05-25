@@ -33,7 +33,7 @@ public class CYKGenerator extends AbstractGenerator {
     String _xblockexpression = null;
     {
       String input = "";
-      EList<Terminal> _w = grammar.getW();
+      EList<Terminal> _w = grammar.getW().getW();
       for (final Terminal terminal : _w) {
         String _input = input;
         String _terminals = terminal.getTerminals();
