@@ -354,20 +354,20 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleRight"
 
 
-    // $ANTLR start "entryRuleSimple"
-    // InternalCYK.g:128:1: entryRuleSimple : ruleSimple EOF ;
-    public final void entryRuleSimple() throws RecognitionException {
+    // $ANTLR start "entryRuleTerminal"
+    // InternalCYK.g:128:1: entryRuleTerminal : ruleTerminal EOF ;
+    public final void entryRuleTerminal() throws RecognitionException {
         try {
-            // InternalCYK.g:129:1: ( ruleSimple EOF )
-            // InternalCYK.g:130:1: ruleSimple EOF
+            // InternalCYK.g:129:1: ( ruleTerminal EOF )
+            // InternalCYK.g:130:1: ruleTerminal EOF
             {
-             before(grammarAccess.getSimpleRule()); 
+             before(grammarAccess.getTerminalRule()); 
             pushFollow(FOLLOW_1);
-            ruleSimple();
+            ruleTerminal();
 
             state._fsp--;
 
-             after(grammarAccess.getSimpleRule()); 
+             after(grammarAccess.getTerminalRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -381,35 +381,35 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleSimple"
+    // $ANTLR end "entryRuleTerminal"
 
 
-    // $ANTLR start "ruleSimple"
-    // InternalCYK.g:137:1: ruleSimple : ( ( rule__Simple__Group__0 ) ) ;
-    public final void ruleSimple() throws RecognitionException {
+    // $ANTLR start "ruleTerminal"
+    // InternalCYK.g:137:1: ruleTerminal : ( ( rule__Terminal__Group__0 ) ) ;
+    public final void ruleTerminal() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:141:2: ( ( ( rule__Simple__Group__0 ) ) )
-            // InternalCYK.g:142:2: ( ( rule__Simple__Group__0 ) )
+            // InternalCYK.g:141:2: ( ( ( rule__Terminal__Group__0 ) ) )
+            // InternalCYK.g:142:2: ( ( rule__Terminal__Group__0 ) )
             {
-            // InternalCYK.g:142:2: ( ( rule__Simple__Group__0 ) )
-            // InternalCYK.g:143:3: ( rule__Simple__Group__0 )
+            // InternalCYK.g:142:2: ( ( rule__Terminal__Group__0 ) )
+            // InternalCYK.g:143:3: ( rule__Terminal__Group__0 )
             {
-             before(grammarAccess.getSimpleAccess().getGroup()); 
-            // InternalCYK.g:144:3: ( rule__Simple__Group__0 )
-            // InternalCYK.g:144:4: rule__Simple__Group__0
+             before(grammarAccess.getTerminalAccess().getGroup()); 
+            // InternalCYK.g:144:3: ( rule__Terminal__Group__0 )
+            // InternalCYK.g:144:4: rule__Terminal__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Simple__Group__0();
+            rule__Terminal__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleAccess().getGroup()); 
+             after(grammarAccess.getTerminalAccess().getGroup()); 
 
             }
 
@@ -428,7 +428,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleSimple"
+    // $ANTLR end "ruleTerminal"
 
 
     // $ANTLR start "entryRuleNonTerminal"
@@ -759,9 +759,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Right__Alternatives"
 
 
-    // $ANTLR start "rule__Simple__TerminalsAlternatives_1_0"
-    // InternalCYK.g:229:1: rule__Simple__TerminalsAlternatives_1_0 : ( ( 'a' ) | ( 'b' ) | ( 'c' ) | ( 'd' ) | ( 'e' ) | ( 'f' ) | ( 'g' ) | ( 'h' ) | ( 'i' ) | ( 'j' ) | ( 'k' ) | ( 'l' ) | ( 'm' ) | ( 'n' ) | ( 'o' ) | ( 'p' ) | ( 'q' ) | ( 'r' ) | ( 's' ) | ( 't' ) | ( 'v' ) | ( 'w' ) | ( 'x' ) | ( 'y' ) | ( 'z' ) );
-    public final void rule__Simple__TerminalsAlternatives_1_0() throws RecognitionException {
+    // $ANTLR start "rule__Terminal__TerminalsAlternatives_1_0"
+    // InternalCYK.g:229:1: rule__Terminal__TerminalsAlternatives_1_0 : ( ( 'a' ) | ( 'b' ) | ( 'c' ) | ( 'd' ) | ( 'e' ) | ( 'f' ) | ( 'g' ) | ( 'h' ) | ( 'i' ) | ( 'j' ) | ( 'k' ) | ( 'l' ) | ( 'm' ) | ( 'n' ) | ( 'o' ) | ( 'p' ) | ( 'q' ) | ( 'r' ) | ( 's' ) | ( 't' ) | ( 'v' ) | ( 'w' ) | ( 'x' ) | ( 'y' ) | ( 'z' ) );
+    public final void rule__Terminal__TerminalsAlternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -908,9 +908,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:234:2: ( 'a' )
                     // InternalCYK.g:235:3: 'a'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsAKeyword_1_0_0()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsAKeyword_1_0_0()); 
                     match(input,11,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsAKeyword_1_0_0()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsAKeyword_1_0_0()); 
 
                     }
 
@@ -923,9 +923,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:240:2: ( 'b' )
                     // InternalCYK.g:241:3: 'b'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsBKeyword_1_0_1()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsBKeyword_1_0_1()); 
                     match(input,12,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsBKeyword_1_0_1()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsBKeyword_1_0_1()); 
 
                     }
 
@@ -938,9 +938,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:246:2: ( 'c' )
                     // InternalCYK.g:247:3: 'c'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsCKeyword_1_0_2()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsCKeyword_1_0_2()); 
                     match(input,13,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsCKeyword_1_0_2()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsCKeyword_1_0_2()); 
 
                     }
 
@@ -953,9 +953,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:252:2: ( 'd' )
                     // InternalCYK.g:253:3: 'd'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsDKeyword_1_0_3()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsDKeyword_1_0_3()); 
                     match(input,14,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsDKeyword_1_0_3()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsDKeyword_1_0_3()); 
 
                     }
 
@@ -968,9 +968,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:258:2: ( 'e' )
                     // InternalCYK.g:259:3: 'e'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsEKeyword_1_0_4()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsEKeyword_1_0_4()); 
                     match(input,15,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsEKeyword_1_0_4()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsEKeyword_1_0_4()); 
 
                     }
 
@@ -983,9 +983,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:264:2: ( 'f' )
                     // InternalCYK.g:265:3: 'f'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsFKeyword_1_0_5()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsFKeyword_1_0_5()); 
                     match(input,16,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsFKeyword_1_0_5()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsFKeyword_1_0_5()); 
 
                     }
 
@@ -998,9 +998,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:270:2: ( 'g' )
                     // InternalCYK.g:271:3: 'g'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsGKeyword_1_0_6()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsGKeyword_1_0_6()); 
                     match(input,17,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsGKeyword_1_0_6()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsGKeyword_1_0_6()); 
 
                     }
 
@@ -1013,9 +1013,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:276:2: ( 'h' )
                     // InternalCYK.g:277:3: 'h'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsHKeyword_1_0_7()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsHKeyword_1_0_7()); 
                     match(input,18,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsHKeyword_1_0_7()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsHKeyword_1_0_7()); 
 
                     }
 
@@ -1028,9 +1028,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:282:2: ( 'i' )
                     // InternalCYK.g:283:3: 'i'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsIKeyword_1_0_8()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsIKeyword_1_0_8()); 
                     match(input,19,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsIKeyword_1_0_8()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsIKeyword_1_0_8()); 
 
                     }
 
@@ -1043,9 +1043,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:288:2: ( 'j' )
                     // InternalCYK.g:289:3: 'j'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsJKeyword_1_0_9()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsJKeyword_1_0_9()); 
                     match(input,20,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsJKeyword_1_0_9()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsJKeyword_1_0_9()); 
 
                     }
 
@@ -1058,9 +1058,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:294:2: ( 'k' )
                     // InternalCYK.g:295:3: 'k'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsKKeyword_1_0_10()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsKKeyword_1_0_10()); 
                     match(input,21,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsKKeyword_1_0_10()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsKKeyword_1_0_10()); 
 
                     }
 
@@ -1073,9 +1073,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:300:2: ( 'l' )
                     // InternalCYK.g:301:3: 'l'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsLKeyword_1_0_11()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsLKeyword_1_0_11()); 
                     match(input,22,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsLKeyword_1_0_11()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsLKeyword_1_0_11()); 
 
                     }
 
@@ -1088,9 +1088,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:306:2: ( 'm' )
                     // InternalCYK.g:307:3: 'm'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsMKeyword_1_0_12()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsMKeyword_1_0_12()); 
                     match(input,23,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsMKeyword_1_0_12()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsMKeyword_1_0_12()); 
 
                     }
 
@@ -1103,9 +1103,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:312:2: ( 'n' )
                     // InternalCYK.g:313:3: 'n'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsNKeyword_1_0_13()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsNKeyword_1_0_13()); 
                     match(input,24,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsNKeyword_1_0_13()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsNKeyword_1_0_13()); 
 
                     }
 
@@ -1118,9 +1118,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:318:2: ( 'o' )
                     // InternalCYK.g:319:3: 'o'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsOKeyword_1_0_14()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsOKeyword_1_0_14()); 
                     match(input,25,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsOKeyword_1_0_14()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsOKeyword_1_0_14()); 
 
                     }
 
@@ -1133,9 +1133,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:324:2: ( 'p' )
                     // InternalCYK.g:325:3: 'p'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsPKeyword_1_0_15()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsPKeyword_1_0_15()); 
                     match(input,26,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsPKeyword_1_0_15()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsPKeyword_1_0_15()); 
 
                     }
 
@@ -1148,9 +1148,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:330:2: ( 'q' )
                     // InternalCYK.g:331:3: 'q'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsQKeyword_1_0_16()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsQKeyword_1_0_16()); 
                     match(input,27,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsQKeyword_1_0_16()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsQKeyword_1_0_16()); 
 
                     }
 
@@ -1163,9 +1163,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:336:2: ( 'r' )
                     // InternalCYK.g:337:3: 'r'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsRKeyword_1_0_17()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsRKeyword_1_0_17()); 
                     match(input,28,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsRKeyword_1_0_17()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsRKeyword_1_0_17()); 
 
                     }
 
@@ -1178,9 +1178,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:342:2: ( 's' )
                     // InternalCYK.g:343:3: 's'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsSKeyword_1_0_18()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsSKeyword_1_0_18()); 
                     match(input,29,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsSKeyword_1_0_18()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsSKeyword_1_0_18()); 
 
                     }
 
@@ -1193,9 +1193,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:348:2: ( 't' )
                     // InternalCYK.g:349:3: 't'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsTKeyword_1_0_19()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsTKeyword_1_0_19()); 
                     match(input,30,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsTKeyword_1_0_19()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsTKeyword_1_0_19()); 
 
                     }
 
@@ -1208,9 +1208,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:354:2: ( 'v' )
                     // InternalCYK.g:355:3: 'v'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsVKeyword_1_0_20()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsVKeyword_1_0_20()); 
                     match(input,31,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsVKeyword_1_0_20()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsVKeyword_1_0_20()); 
 
                     }
 
@@ -1223,9 +1223,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:360:2: ( 'w' )
                     // InternalCYK.g:361:3: 'w'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsWKeyword_1_0_21()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsWKeyword_1_0_21()); 
                     match(input,32,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsWKeyword_1_0_21()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsWKeyword_1_0_21()); 
 
                     }
 
@@ -1238,9 +1238,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:366:2: ( 'x' )
                     // InternalCYK.g:367:3: 'x'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsXKeyword_1_0_22()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsXKeyword_1_0_22()); 
                     match(input,33,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsXKeyword_1_0_22()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsXKeyword_1_0_22()); 
 
                     }
 
@@ -1253,9 +1253,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:372:2: ( 'y' )
                     // InternalCYK.g:373:3: 'y'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsYKeyword_1_0_23()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsYKeyword_1_0_23()); 
                     match(input,34,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsYKeyword_1_0_23()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsYKeyword_1_0_23()); 
 
                     }
 
@@ -1268,9 +1268,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:378:2: ( 'z' )
                     // InternalCYK.g:379:3: 'z'
                     {
-                     before(grammarAccess.getSimpleAccess().getTerminalsZKeyword_1_0_24()); 
+                     before(grammarAccess.getTerminalAccess().getTerminalsZKeyword_1_0_24()); 
                     match(input,35,FOLLOW_2); 
-                     after(grammarAccess.getSimpleAccess().getTerminalsZKeyword_1_0_24()); 
+                     after(grammarAccess.getTerminalAccess().getTerminalsZKeyword_1_0_24()); 
 
                     }
 
@@ -1291,12 +1291,12 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Simple__TerminalsAlternatives_1_0"
+    // $ANTLR end "rule__Terminal__TerminalsAlternatives_1_0"
 
 
-    // $ANTLR start "rule__NonTerminal__NoTerminalsAlternatives_1_0"
-    // InternalCYK.g:388:1: rule__NonTerminal__NoTerminalsAlternatives_1_0 : ( ( 'A' ) | ( 'B' ) | ( 'C' ) | ( 'D' ) | ( 'E' ) | ( 'F' ) | ( 'G' ) | ( 'H' ) | ( 'I' ) | ( 'J' ) | ( 'K' ) | ( 'L' ) | ( 'M' ) | ( 'N' ) | ( 'O' ) | ( 'P' ) | ( 'Q' ) | ( 'R' ) | ( 'S' ) | ( 'T' ) | ( 'U' ) | ( 'V' ) | ( 'W' ) | ( 'X' ) | ( 'Y' ) | ( 'Z' ) );
-    public final void rule__NonTerminal__NoTerminalsAlternatives_1_0() throws RecognitionException {
+    // $ANTLR start "rule__NonTerminal__NonTerminalsAlternatives_1_0"
+    // InternalCYK.g:388:1: rule__NonTerminal__NonTerminalsAlternatives_1_0 : ( ( 'A' ) | ( 'B' ) | ( 'C' ) | ( 'D' ) | ( 'E' ) | ( 'F' ) | ( 'G' ) | ( 'H' ) | ( 'I' ) | ( 'J' ) | ( 'K' ) | ( 'L' ) | ( 'M' ) | ( 'N' ) | ( 'O' ) | ( 'P' ) | ( 'Q' ) | ( 'R' ) | ( 'S' ) | ( 'T' ) | ( 'U' ) | ( 'V' ) | ( 'W' ) | ( 'X' ) | ( 'Y' ) | ( 'Z' ) );
+    public final void rule__NonTerminal__NonTerminalsAlternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1448,9 +1448,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:393:2: ( 'A' )
                     // InternalCYK.g:394:3: 'A'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsAKeyword_1_0_0()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsAKeyword_1_0_0()); 
                     match(input,36,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsAKeyword_1_0_0()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsAKeyword_1_0_0()); 
 
                     }
 
@@ -1463,9 +1463,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:399:2: ( 'B' )
                     // InternalCYK.g:400:3: 'B'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsBKeyword_1_0_1()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsBKeyword_1_0_1()); 
                     match(input,37,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsBKeyword_1_0_1()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsBKeyword_1_0_1()); 
 
                     }
 
@@ -1478,9 +1478,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:405:2: ( 'C' )
                     // InternalCYK.g:406:3: 'C'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsCKeyword_1_0_2()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsCKeyword_1_0_2()); 
                     match(input,38,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsCKeyword_1_0_2()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsCKeyword_1_0_2()); 
 
                     }
 
@@ -1493,9 +1493,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:411:2: ( 'D' )
                     // InternalCYK.g:412:3: 'D'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsDKeyword_1_0_3()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsDKeyword_1_0_3()); 
                     match(input,39,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsDKeyword_1_0_3()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsDKeyword_1_0_3()); 
 
                     }
 
@@ -1508,9 +1508,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:417:2: ( 'E' )
                     // InternalCYK.g:418:3: 'E'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsEKeyword_1_0_4()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsEKeyword_1_0_4()); 
                     match(input,40,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsEKeyword_1_0_4()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsEKeyword_1_0_4()); 
 
                     }
 
@@ -1523,9 +1523,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:423:2: ( 'F' )
                     // InternalCYK.g:424:3: 'F'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsFKeyword_1_0_5()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsFKeyword_1_0_5()); 
                     match(input,41,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsFKeyword_1_0_5()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsFKeyword_1_0_5()); 
 
                     }
 
@@ -1538,9 +1538,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:429:2: ( 'G' )
                     // InternalCYK.g:430:3: 'G'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsGKeyword_1_0_6()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsGKeyword_1_0_6()); 
                     match(input,42,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsGKeyword_1_0_6()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsGKeyword_1_0_6()); 
 
                     }
 
@@ -1553,9 +1553,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:435:2: ( 'H' )
                     // InternalCYK.g:436:3: 'H'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsHKeyword_1_0_7()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsHKeyword_1_0_7()); 
                     match(input,43,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsHKeyword_1_0_7()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsHKeyword_1_0_7()); 
 
                     }
 
@@ -1568,9 +1568,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:441:2: ( 'I' )
                     // InternalCYK.g:442:3: 'I'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsIKeyword_1_0_8()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsIKeyword_1_0_8()); 
                     match(input,44,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsIKeyword_1_0_8()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsIKeyword_1_0_8()); 
 
                     }
 
@@ -1583,9 +1583,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:447:2: ( 'J' )
                     // InternalCYK.g:448:3: 'J'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsJKeyword_1_0_9()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsJKeyword_1_0_9()); 
                     match(input,45,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsJKeyword_1_0_9()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsJKeyword_1_0_9()); 
 
                     }
 
@@ -1598,9 +1598,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:453:2: ( 'K' )
                     // InternalCYK.g:454:3: 'K'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsKKeyword_1_0_10()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsKKeyword_1_0_10()); 
                     match(input,46,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsKKeyword_1_0_10()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsKKeyword_1_0_10()); 
 
                     }
 
@@ -1613,9 +1613,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:459:2: ( 'L' )
                     // InternalCYK.g:460:3: 'L'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsLKeyword_1_0_11()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsLKeyword_1_0_11()); 
                     match(input,47,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsLKeyword_1_0_11()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsLKeyword_1_0_11()); 
 
                     }
 
@@ -1628,9 +1628,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:465:2: ( 'M' )
                     // InternalCYK.g:466:3: 'M'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsMKeyword_1_0_12()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsMKeyword_1_0_12()); 
                     match(input,48,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsMKeyword_1_0_12()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsMKeyword_1_0_12()); 
 
                     }
 
@@ -1643,9 +1643,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:471:2: ( 'N' )
                     // InternalCYK.g:472:3: 'N'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsNKeyword_1_0_13()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsNKeyword_1_0_13()); 
                     match(input,49,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsNKeyword_1_0_13()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsNKeyword_1_0_13()); 
 
                     }
 
@@ -1658,9 +1658,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:477:2: ( 'O' )
                     // InternalCYK.g:478:3: 'O'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsOKeyword_1_0_14()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsOKeyword_1_0_14()); 
                     match(input,50,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsOKeyword_1_0_14()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsOKeyword_1_0_14()); 
 
                     }
 
@@ -1673,9 +1673,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:483:2: ( 'P' )
                     // InternalCYK.g:484:3: 'P'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsPKeyword_1_0_15()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsPKeyword_1_0_15()); 
                     match(input,51,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsPKeyword_1_0_15()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsPKeyword_1_0_15()); 
 
                     }
 
@@ -1688,9 +1688,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:489:2: ( 'Q' )
                     // InternalCYK.g:490:3: 'Q'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsQKeyword_1_0_16()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsQKeyword_1_0_16()); 
                     match(input,52,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsQKeyword_1_0_16()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsQKeyword_1_0_16()); 
 
                     }
 
@@ -1703,9 +1703,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:495:2: ( 'R' )
                     // InternalCYK.g:496:3: 'R'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsRKeyword_1_0_17()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsRKeyword_1_0_17()); 
                     match(input,53,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsRKeyword_1_0_17()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsRKeyword_1_0_17()); 
 
                     }
 
@@ -1718,9 +1718,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:501:2: ( 'S' )
                     // InternalCYK.g:502:3: 'S'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsSKeyword_1_0_18()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsSKeyword_1_0_18()); 
                     match(input,54,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsSKeyword_1_0_18()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsSKeyword_1_0_18()); 
 
                     }
 
@@ -1733,9 +1733,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:507:2: ( 'T' )
                     // InternalCYK.g:508:3: 'T'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsTKeyword_1_0_19()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsTKeyword_1_0_19()); 
                     match(input,55,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsTKeyword_1_0_19()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsTKeyword_1_0_19()); 
 
                     }
 
@@ -1748,9 +1748,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:513:2: ( 'U' )
                     // InternalCYK.g:514:3: 'U'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsUKeyword_1_0_20()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsUKeyword_1_0_20()); 
                     match(input,56,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsUKeyword_1_0_20()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsUKeyword_1_0_20()); 
 
                     }
 
@@ -1763,9 +1763,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:519:2: ( 'V' )
                     // InternalCYK.g:520:3: 'V'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsVKeyword_1_0_21()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsVKeyword_1_0_21()); 
                     match(input,57,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsVKeyword_1_0_21()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsVKeyword_1_0_21()); 
 
                     }
 
@@ -1778,9 +1778,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:525:2: ( 'W' )
                     // InternalCYK.g:526:3: 'W'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsWKeyword_1_0_22()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsWKeyword_1_0_22()); 
                     match(input,58,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsWKeyword_1_0_22()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsWKeyword_1_0_22()); 
 
                     }
 
@@ -1793,9 +1793,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:531:2: ( 'X' )
                     // InternalCYK.g:532:3: 'X'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsXKeyword_1_0_23()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsXKeyword_1_0_23()); 
                     match(input,59,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsXKeyword_1_0_23()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsXKeyword_1_0_23()); 
 
                     }
 
@@ -1808,9 +1808,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:537:2: ( 'Y' )
                     // InternalCYK.g:538:3: 'Y'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsYKeyword_1_0_24()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsYKeyword_1_0_24()); 
                     match(input,60,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsYKeyword_1_0_24()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsYKeyword_1_0_24()); 
 
                     }
 
@@ -1823,9 +1823,9 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
                     // InternalCYK.g:543:2: ( 'Z' )
                     // InternalCYK.g:544:3: 'Z'
                     {
-                     before(grammarAccess.getNonTerminalAccess().getNoTerminalsZKeyword_1_0_25()); 
+                     before(grammarAccess.getNonTerminalAccess().getNonTerminalsZKeyword_1_0_25()); 
                     match(input,61,FOLLOW_2); 
-                     after(grammarAccess.getNonTerminalAccess().getNoTerminalsZKeyword_1_0_25()); 
+                     after(grammarAccess.getNonTerminalAccess().getNonTerminalsZKeyword_1_0_25()); 
 
                     }
 
@@ -1846,7 +1846,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NonTerminal__NoTerminalsAlternatives_1_0"
+    // $ANTLR end "rule__NonTerminal__NonTerminalsAlternatives_1_0"
 
 
     // $ANTLR start "rule__GFNC__Group__0"
@@ -2978,23 +2978,23 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Production__Group_3__1__Impl"
 
 
-    // $ANTLR start "rule__Simple__Group__0"
-    // InternalCYK.g:911:1: rule__Simple__Group__0 : rule__Simple__Group__0__Impl rule__Simple__Group__1 ;
-    public final void rule__Simple__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Terminal__Group__0"
+    // InternalCYK.g:911:1: rule__Terminal__Group__0 : rule__Terminal__Group__0__Impl rule__Terminal__Group__1 ;
+    public final void rule__Terminal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:915:1: ( rule__Simple__Group__0__Impl rule__Simple__Group__1 )
-            // InternalCYK.g:916:2: rule__Simple__Group__0__Impl rule__Simple__Group__1
+            // InternalCYK.g:915:1: ( rule__Terminal__Group__0__Impl rule__Terminal__Group__1 )
+            // InternalCYK.g:916:2: rule__Terminal__Group__0__Impl rule__Terminal__Group__1
             {
             pushFollow(FOLLOW_4);
-            rule__Simple__Group__0__Impl();
+            rule__Terminal__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Simple__Group__1();
+            rule__Terminal__Group__1();
 
             state._fsp--;
 
@@ -3013,12 +3013,12 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Simple__Group__0"
+    // $ANTLR end "rule__Terminal__Group__0"
 
 
-    // $ANTLR start "rule__Simple__Group__0__Impl"
-    // InternalCYK.g:923:1: rule__Simple__Group__0__Impl : ( () ) ;
-    public final void rule__Simple__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Terminal__Group__0__Impl"
+    // InternalCYK.g:923:1: rule__Terminal__Group__0__Impl : ( () ) ;
+    public final void rule__Terminal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3029,13 +3029,13 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
             // InternalCYK.g:928:1: ( () )
             // InternalCYK.g:929:2: ()
             {
-             before(grammarAccess.getSimpleAccess().getSimpleAction_0()); 
+             before(grammarAccess.getTerminalAccess().getTerminalAction_0()); 
             // InternalCYK.g:930:2: ()
             // InternalCYK.g:930:3: 
             {
             }
 
-             after(grammarAccess.getSimpleAccess().getSimpleAction_0()); 
+             after(grammarAccess.getTerminalAccess().getTerminalAction_0()); 
 
             }
 
@@ -3050,21 +3050,21 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Simple__Group__0__Impl"
+    // $ANTLR end "rule__Terminal__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Simple__Group__1"
-    // InternalCYK.g:938:1: rule__Simple__Group__1 : rule__Simple__Group__1__Impl ;
-    public final void rule__Simple__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Terminal__Group__1"
+    // InternalCYK.g:938:1: rule__Terminal__Group__1 : rule__Terminal__Group__1__Impl ;
+    public final void rule__Terminal__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:942:1: ( rule__Simple__Group__1__Impl )
-            // InternalCYK.g:943:2: rule__Simple__Group__1__Impl
+            // InternalCYK.g:942:1: ( rule__Terminal__Group__1__Impl )
+            // InternalCYK.g:943:2: rule__Terminal__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Simple__Group__1__Impl();
+            rule__Terminal__Group__1__Impl();
 
             state._fsp--;
 
@@ -3083,35 +3083,35 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Simple__Group__1"
+    // $ANTLR end "rule__Terminal__Group__1"
 
 
-    // $ANTLR start "rule__Simple__Group__1__Impl"
-    // InternalCYK.g:949:1: rule__Simple__Group__1__Impl : ( ( rule__Simple__TerminalsAssignment_1 ) ) ;
-    public final void rule__Simple__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Terminal__Group__1__Impl"
+    // InternalCYK.g:949:1: rule__Terminal__Group__1__Impl : ( ( rule__Terminal__TerminalsAssignment_1 ) ) ;
+    public final void rule__Terminal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:953:1: ( ( ( rule__Simple__TerminalsAssignment_1 ) ) )
-            // InternalCYK.g:954:1: ( ( rule__Simple__TerminalsAssignment_1 ) )
+            // InternalCYK.g:953:1: ( ( ( rule__Terminal__TerminalsAssignment_1 ) ) )
+            // InternalCYK.g:954:1: ( ( rule__Terminal__TerminalsAssignment_1 ) )
             {
-            // InternalCYK.g:954:1: ( ( rule__Simple__TerminalsAssignment_1 ) )
-            // InternalCYK.g:955:2: ( rule__Simple__TerminalsAssignment_1 )
+            // InternalCYK.g:954:1: ( ( rule__Terminal__TerminalsAssignment_1 ) )
+            // InternalCYK.g:955:2: ( rule__Terminal__TerminalsAssignment_1 )
             {
-             before(grammarAccess.getSimpleAccess().getTerminalsAssignment_1()); 
-            // InternalCYK.g:956:2: ( rule__Simple__TerminalsAssignment_1 )
-            // InternalCYK.g:956:3: rule__Simple__TerminalsAssignment_1
+             before(grammarAccess.getTerminalAccess().getTerminalsAssignment_1()); 
+            // InternalCYK.g:956:2: ( rule__Terminal__TerminalsAssignment_1 )
+            // InternalCYK.g:956:3: rule__Terminal__TerminalsAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Simple__TerminalsAssignment_1();
+            rule__Terminal__TerminalsAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleAccess().getTerminalsAssignment_1()); 
+             after(grammarAccess.getTerminalAccess().getTerminalsAssignment_1()); 
 
             }
 
@@ -3130,7 +3130,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Simple__Group__1__Impl"
+    // $ANTLR end "rule__Terminal__Group__1__Impl"
 
 
     // $ANTLR start "rule__NonTerminal__Group__0"
@@ -3242,31 +3242,31 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NonTerminal__Group__1__Impl"
-    // InternalCYK.g:1003:1: rule__NonTerminal__Group__1__Impl : ( ( rule__NonTerminal__NoTerminalsAssignment_1 ) ) ;
+    // InternalCYK.g:1003:1: rule__NonTerminal__Group__1__Impl : ( ( rule__NonTerminal__NonTerminalsAssignment_1 ) ) ;
     public final void rule__NonTerminal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1007:1: ( ( ( rule__NonTerminal__NoTerminalsAssignment_1 ) ) )
-            // InternalCYK.g:1008:1: ( ( rule__NonTerminal__NoTerminalsAssignment_1 ) )
+            // InternalCYK.g:1007:1: ( ( ( rule__NonTerminal__NonTerminalsAssignment_1 ) ) )
+            // InternalCYK.g:1008:1: ( ( rule__NonTerminal__NonTerminalsAssignment_1 ) )
             {
-            // InternalCYK.g:1008:1: ( ( rule__NonTerminal__NoTerminalsAssignment_1 ) )
-            // InternalCYK.g:1009:2: ( rule__NonTerminal__NoTerminalsAssignment_1 )
+            // InternalCYK.g:1008:1: ( ( rule__NonTerminal__NonTerminalsAssignment_1 ) )
+            // InternalCYK.g:1009:2: ( rule__NonTerminal__NonTerminalsAssignment_1 )
             {
-             before(grammarAccess.getNonTerminalAccess().getNoTerminalsAssignment_1()); 
-            // InternalCYK.g:1010:2: ( rule__NonTerminal__NoTerminalsAssignment_1 )
-            // InternalCYK.g:1010:3: rule__NonTerminal__NoTerminalsAssignment_1
+             before(grammarAccess.getNonTerminalAccess().getNonTerminalsAssignment_1()); 
+            // InternalCYK.g:1010:2: ( rule__NonTerminal__NonTerminalsAssignment_1 )
+            // InternalCYK.g:1010:3: rule__NonTerminal__NonTerminalsAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__NonTerminal__NoTerminalsAssignment_1();
+            rule__NonTerminal__NonTerminalsAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNonTerminalAccess().getNoTerminalsAssignment_1()); 
+             after(grammarAccess.getNonTerminalAccess().getNonTerminalsAssignment_1()); 
 
             }
 
@@ -3609,25 +3609,25 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GFNC__WAssignment_2"
-    // InternalCYK.g:1127:1: rule__GFNC__WAssignment_2 : ( ruleSimple ) ;
+    // InternalCYK.g:1127:1: rule__GFNC__WAssignment_2 : ( ruleTerminal ) ;
     public final void rule__GFNC__WAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1131:1: ( ( ruleSimple ) )
-            // InternalCYK.g:1132:2: ( ruleSimple )
+            // InternalCYK.g:1131:1: ( ( ruleTerminal ) )
+            // InternalCYK.g:1132:2: ( ruleTerminal )
             {
-            // InternalCYK.g:1132:2: ( ruleSimple )
-            // InternalCYK.g:1133:3: ruleSimple
+            // InternalCYK.g:1132:2: ( ruleTerminal )
+            // InternalCYK.g:1133:3: ruleTerminal
             {
-             before(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_2_0()); 
+             before(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleSimple();
+            ruleTerminal();
 
             state._fsp--;
 
-             after(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_2_0()); 
+             after(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_2_0()); 
 
             }
 
@@ -3650,25 +3650,25 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GFNC__WAssignment_3"
-    // InternalCYK.g:1142:1: rule__GFNC__WAssignment_3 : ( ruleSimple ) ;
+    // InternalCYK.g:1142:1: rule__GFNC__WAssignment_3 : ( ruleTerminal ) ;
     public final void rule__GFNC__WAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1146:1: ( ( ruleSimple ) )
-            // InternalCYK.g:1147:2: ( ruleSimple )
+            // InternalCYK.g:1146:1: ( ( ruleTerminal ) )
+            // InternalCYK.g:1147:2: ( ruleTerminal )
             {
-            // InternalCYK.g:1147:2: ( ruleSimple )
-            // InternalCYK.g:1148:3: ruleSimple
+            // InternalCYK.g:1147:2: ( ruleTerminal )
+            // InternalCYK.g:1148:3: ruleTerminal
             {
-             before(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_3_0()); 
+             before(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            ruleSimple();
+            ruleTerminal();
 
             state._fsp--;
 
-             after(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_3_0()); 
+             after(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_3_0()); 
 
             }
 
@@ -3855,25 +3855,25 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Right__SimpleAssignment_0"
-    // InternalCYK.g:1217:1: rule__Right__SimpleAssignment_0 : ( ruleSimple ) ;
+    // InternalCYK.g:1217:1: rule__Right__SimpleAssignment_0 : ( ruleTerminal ) ;
     public final void rule__Right__SimpleAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1221:1: ( ( ruleSimple ) )
-            // InternalCYK.g:1222:2: ( ruleSimple )
+            // InternalCYK.g:1221:1: ( ( ruleTerminal ) )
+            // InternalCYK.g:1222:2: ( ruleTerminal )
             {
-            // InternalCYK.g:1222:2: ( ruleSimple )
-            // InternalCYK.g:1223:3: ruleSimple
+            // InternalCYK.g:1222:2: ( ruleTerminal )
+            // InternalCYK.g:1223:3: ruleTerminal
             {
-             before(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0()); 
+             before(grammarAccess.getRightAccess().getSimpleTerminalParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
-            ruleSimple();
+            ruleTerminal();
 
             state._fsp--;
 
-             after(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0()); 
+             after(grammarAccess.getRightAccess().getSimpleTerminalParserRuleCall_0_0()); 
 
             }
 
@@ -3981,32 +3981,32 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Right__LambdaAssignment_2"
 
 
-    // $ANTLR start "rule__Simple__TerminalsAssignment_1"
-    // InternalCYK.g:1266:1: rule__Simple__TerminalsAssignment_1 : ( ( rule__Simple__TerminalsAlternatives_1_0 ) ) ;
-    public final void rule__Simple__TerminalsAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Terminal__TerminalsAssignment_1"
+    // InternalCYK.g:1266:1: rule__Terminal__TerminalsAssignment_1 : ( ( rule__Terminal__TerminalsAlternatives_1_0 ) ) ;
+    public final void rule__Terminal__TerminalsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1270:1: ( ( ( rule__Simple__TerminalsAlternatives_1_0 ) ) )
-            // InternalCYK.g:1271:2: ( ( rule__Simple__TerminalsAlternatives_1_0 ) )
+            // InternalCYK.g:1270:1: ( ( ( rule__Terminal__TerminalsAlternatives_1_0 ) ) )
+            // InternalCYK.g:1271:2: ( ( rule__Terminal__TerminalsAlternatives_1_0 ) )
             {
-            // InternalCYK.g:1271:2: ( ( rule__Simple__TerminalsAlternatives_1_0 ) )
-            // InternalCYK.g:1272:3: ( rule__Simple__TerminalsAlternatives_1_0 )
+            // InternalCYK.g:1271:2: ( ( rule__Terminal__TerminalsAlternatives_1_0 ) )
+            // InternalCYK.g:1272:3: ( rule__Terminal__TerminalsAlternatives_1_0 )
             {
-             before(grammarAccess.getSimpleAccess().getTerminalsAlternatives_1_0()); 
-            // InternalCYK.g:1273:3: ( rule__Simple__TerminalsAlternatives_1_0 )
-            // InternalCYK.g:1273:4: rule__Simple__TerminalsAlternatives_1_0
+             before(grammarAccess.getTerminalAccess().getTerminalsAlternatives_1_0()); 
+            // InternalCYK.g:1273:3: ( rule__Terminal__TerminalsAlternatives_1_0 )
+            // InternalCYK.g:1273:4: rule__Terminal__TerminalsAlternatives_1_0
             {
             pushFollow(FOLLOW_2);
-            rule__Simple__TerminalsAlternatives_1_0();
+            rule__Terminal__TerminalsAlternatives_1_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleAccess().getTerminalsAlternatives_1_0()); 
+             after(grammarAccess.getTerminalAccess().getTerminalsAlternatives_1_0()); 
 
             }
 
@@ -4025,35 +4025,35 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Simple__TerminalsAssignment_1"
+    // $ANTLR end "rule__Terminal__TerminalsAssignment_1"
 
 
-    // $ANTLR start "rule__NonTerminal__NoTerminalsAssignment_1"
-    // InternalCYK.g:1281:1: rule__NonTerminal__NoTerminalsAssignment_1 : ( ( rule__NonTerminal__NoTerminalsAlternatives_1_0 ) ) ;
-    public final void rule__NonTerminal__NoTerminalsAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__NonTerminal__NonTerminalsAssignment_1"
+    // InternalCYK.g:1281:1: rule__NonTerminal__NonTerminalsAssignment_1 : ( ( rule__NonTerminal__NonTerminalsAlternatives_1_0 ) ) ;
+    public final void rule__NonTerminal__NonTerminalsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalCYK.g:1285:1: ( ( ( rule__NonTerminal__NoTerminalsAlternatives_1_0 ) ) )
-            // InternalCYK.g:1286:2: ( ( rule__NonTerminal__NoTerminalsAlternatives_1_0 ) )
+            // InternalCYK.g:1285:1: ( ( ( rule__NonTerminal__NonTerminalsAlternatives_1_0 ) ) )
+            // InternalCYK.g:1286:2: ( ( rule__NonTerminal__NonTerminalsAlternatives_1_0 ) )
             {
-            // InternalCYK.g:1286:2: ( ( rule__NonTerminal__NoTerminalsAlternatives_1_0 ) )
-            // InternalCYK.g:1287:3: ( rule__NonTerminal__NoTerminalsAlternatives_1_0 )
+            // InternalCYK.g:1286:2: ( ( rule__NonTerminal__NonTerminalsAlternatives_1_0 ) )
+            // InternalCYK.g:1287:3: ( rule__NonTerminal__NonTerminalsAlternatives_1_0 )
             {
-             before(grammarAccess.getNonTerminalAccess().getNoTerminalsAlternatives_1_0()); 
-            // InternalCYK.g:1288:3: ( rule__NonTerminal__NoTerminalsAlternatives_1_0 )
-            // InternalCYK.g:1288:4: rule__NonTerminal__NoTerminalsAlternatives_1_0
+             before(grammarAccess.getNonTerminalAccess().getNonTerminalsAlternatives_1_0()); 
+            // InternalCYK.g:1288:3: ( rule__NonTerminal__NonTerminalsAlternatives_1_0 )
+            // InternalCYK.g:1288:4: rule__NonTerminal__NonTerminalsAlternatives_1_0
             {
             pushFollow(FOLLOW_2);
-            rule__NonTerminal__NoTerminalsAlternatives_1_0();
+            rule__NonTerminal__NonTerminalsAlternatives_1_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNonTerminalAccess().getNoTerminalsAlternatives_1_0()); 
+             after(grammarAccess.getNonTerminalAccess().getNonTerminalsAlternatives_1_0()); 
 
             }
 
@@ -4072,7 +4072,7 @@ public class InternalCYKParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__NonTerminal__NoTerminalsAssignment_1"
+    // $ANTLR end "rule__NonTerminal__NonTerminalsAssignment_1"
 
 
     // $ANTLR start "rule__Binary__FirstAssignment_1_0"

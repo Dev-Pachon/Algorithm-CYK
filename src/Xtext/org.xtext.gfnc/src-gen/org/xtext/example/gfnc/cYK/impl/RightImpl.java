@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.xtext.example.gfnc.cYK.Binary;
 import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.Right;
-import org.xtext.example.gfnc.cYK.Simple;
+import org.xtext.example.gfnc.cYK.Terminal;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class RightImpl extends MinimalEObjectImpl.Container implements Right
    * @generated
    * @ordered
    */
-  protected Simple simple;
+  protected Terminal simple;
 
   /**
    * The cached value of the '{@link #getBinary() <em>Binary</em>}' containment reference.
@@ -101,7 +101,7 @@ public class RightImpl extends MinimalEObjectImpl.Container implements Right
    * @generated
    */
   @Override
-  public Simple getSimple()
+  public Terminal getSimple()
   {
     return simple;
   }
@@ -111,9 +111,9 @@ public class RightImpl extends MinimalEObjectImpl.Container implements Right
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetSimple(Simple newSimple, NotificationChain msgs)
+  public NotificationChain basicSetSimple(Terminal newSimple, NotificationChain msgs)
   {
-    Simple oldSimple = simple;
+    Terminal oldSimple = simple;
     simple = newSimple;
     if (eNotificationRequired())
     {
@@ -129,7 +129,7 @@ public class RightImpl extends MinimalEObjectImpl.Container implements Right
    * @generated
    */
   @Override
-  public void setSimple(Simple newSimple)
+  public void setSimple(Terminal newSimple)
   {
     if (newSimple != simple)
     {
@@ -269,7 +269,7 @@ public class RightImpl extends MinimalEObjectImpl.Container implements Right
     switch (featureID)
     {
       case CYKPackage.RIGHT__SIMPLE:
-        setSimple((Simple)newValue);
+        setSimple((Terminal)newValue);
         return;
       case CYKPackage.RIGHT__BINARY:
         setBinary((Binary)newValue);
@@ -292,7 +292,7 @@ public class RightImpl extends MinimalEObjectImpl.Container implements Right
     switch (featureID)
     {
       case CYKPackage.RIGHT__SIMPLE:
-        setSimple((Simple)null);
+        setSimple((Terminal)null);
         return;
       case CYKPackage.RIGHT__BINARY:
         setBinary((Binary)null);

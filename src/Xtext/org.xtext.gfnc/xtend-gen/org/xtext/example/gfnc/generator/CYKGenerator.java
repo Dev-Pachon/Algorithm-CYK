@@ -15,7 +15,8 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.xtext.example.gfnc.cYK.GFNC;
 import org.xtext.example.gfnc.cYK.Production;
-import org.xtext.example.gfnc.cYK.Simple;
+import org.xtext.example.gfnc.cYK.Terminal;
+import org.xtext.gfnc.model.AlgorithmCYK;
 
 /**
  * Generates code from your model files on save.
@@ -35,8 +36,8 @@ public class CYKGenerator extends AbstractGenerator {
     String _xblockexpression = null;
     {
       String input = "";
-      EList<Simple> _w = grammar.getW();
-      for (final Simple terminal : _w) {
+      EList<Terminal> _w = grammar.getW();
+      for (final Terminal terminal : _w) {
         String _input = input;
         String _terminals = terminal.getTerminals();
         input = (_input + _terminals);
@@ -46,15 +47,15 @@ public class CYKGenerator extends AbstractGenerator {
     return _xblockexpression;
   }
   
-  public ArrayList<String> getNoTerminals(final GFNC grammar) {
+  public ArrayList<String> getNonTerminals(final GFNC grammar) {
     ArrayList<String> _xblockexpression = null;
     {
-      ArrayList<String> noTerminals = CollectionLiterals.<String>newArrayList();
+      ArrayList<String> nonTerminals = CollectionLiterals.<String>newArrayList();
       EList<Production> _productions = grammar.getProductions();
       for (final Production production : _productions) {
-        noTerminals.add(production.getLeft().getNoTerminals());
+        nonTerminals.add(production.getLeft().getNonTerminals());
       }
-      _xblockexpression = noTerminals;
+      _xblockexpression = nonTerminals;
     }
     return _xblockexpression;
   }
@@ -72,11 +73,14 @@ public class CYKGenerator extends AbstractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("////");
     _builder.newLine();
-    ArrayList<String> _noTerminals = this.getNoTerminals(grammar);
-    _builder.append(_noTerminals);
+    ArrayList<String> _nonTerminals = this.getNonTerminals(grammar);
+    _builder.append(_nonTerminals);
     _builder.newLineIfNotEmpty();
     Object _production = this.getProduction(grammar);
     _builder.append(_production);
+    _builder.newLineIfNotEmpty();
+    String _CYK = AlgorithmCYK.CYK(grammar);
+    _builder.append(_CYK);
     _builder.newLineIfNotEmpty();
     return _builder;
   }

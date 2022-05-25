@@ -14,8 +14,8 @@ import org.xtext.example.gfnc.cYK.*;
 public class CYKValidator extends AbstractCYKValidator {
 	
 	@Check
-	public void checkGreetingStartsWithCapital(GFNC grammar) {
-		if (!grammar.getProductions().isEmpty() && !grammar.getProductions().get(0).getLeft().getNoTerminals().equals("S")) {
+	public void checkInitialProduction(GFNC grammar) {
+		if (!grammar.getProductions().isEmpty() && !grammar.getProductions().get(0).getLeft().getNonTerminals().equals("S")) {
 			error("The grammar must starts with the non Terminal S",  CYKPackage.Literals.GFNC__PRODUCTIONS);
 		}
 	}
@@ -26,7 +26,7 @@ public class CYKValidator extends AbstractCYKValidator {
 		if (grammar != null) {
 			int cont = 0;
 			for (Production other : grammar.getProductions()) {
-				if (production.getLeft().getNoTerminals().equals(other.getLeft().getNoTerminals())) {
+				if (production.getLeft().getNonTerminals().equals(other.getLeft().getNonTerminals())) {
 					cont++;
 				}
 			}
@@ -65,7 +65,7 @@ public class CYKValidator extends AbstractCYKValidator {
 	@Check
 	public void checkString(GFNC grammar) {
 		if(!grammar.getW().isEmpty()) {
-			for(Simple ter: grammar.getW()) {
+			for(Terminal ter: grammar.getW()) {
 				boolean belongs = false;
 				if(!grammar.getProductions().isEmpty()) {
 					for(Production production:grammar.getProductions()) {

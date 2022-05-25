@@ -68,7 +68,7 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
       case CYKPackage.GFNC: return createGFNC();
       case CYKPackage.PRODUCTION: return createProduction();
       case CYKPackage.RIGHT: return createRight();
-      case CYKPackage.SIMPLE: return createSimple();
+      case CYKPackage.TERMINAL: return createTerminal();
       case CYKPackage.NON_TERMINAL: return createNonTerminal();
       case CYKPackage.BINARY: return createBinary();
       default:
@@ -118,10 +118,10 @@ public class CYKFactoryImpl extends EFactoryImpl implements CYKFactory
    * @generated
    */
   @Override
-  public Simple createSimple()
+  public Terminal createTerminal()
   {
-    SimpleImpl simple = new SimpleImpl();
-    return simple;
+    TerminalImpl terminal = new TerminalImpl();
+    return terminal;
   }
 
   /**

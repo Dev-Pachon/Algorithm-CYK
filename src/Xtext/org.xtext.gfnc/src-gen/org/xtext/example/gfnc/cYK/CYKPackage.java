@@ -178,14 +178,14 @@ public interface CYKPackage extends EPackage
   int RIGHT_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.SimpleImpl <em>Simple</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.TerminalImpl <em>Terminal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.gfnc.cYK.impl.SimpleImpl
-   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getSimple()
+   * @see org.xtext.example.gfnc.cYK.impl.TerminalImpl
+   * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getTerminal()
    * @generated
    */
-  int SIMPLE = 3;
+  int TERMINAL = 3;
 
   /**
    * The feature id for the '<em><b>Terminals</b></em>' attribute.
@@ -194,16 +194,16 @@ public interface CYKPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIMPLE__TERMINALS = 0;
+  int TERMINAL__TERMINALS = 0;
 
   /**
-   * The number of structural features of the '<em>Simple</em>' class.
+   * The number of structural features of the '<em>Terminal</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIMPLE_FEATURE_COUNT = 1;
+  int TERMINAL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.gfnc.cYK.impl.NonTerminalImpl <em>Non Terminal</em>}' class.
@@ -216,13 +216,13 @@ public interface CYKPackage extends EPackage
   int NON_TERMINAL = 4;
 
   /**
-   * The feature id for the '<em><b>No Terminals</b></em>' attribute.
+   * The feature id for the '<em><b>Non Terminals</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NON_TERMINAL__NO_TERMINALS = 0;
+  int NON_TERMINAL__NON_TERMINALS = 0;
 
   /**
    * The number of structural features of the '<em>Non Terminal</em>' class.
@@ -379,25 +379,25 @@ public interface CYKPackage extends EPackage
   EAttribute getRight_Lambda();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Simple <em>Simple</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Terminal <em>Terminal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Simple</em>'.
-   * @see org.xtext.example.gfnc.cYK.Simple
+   * @return the meta object for class '<em>Terminal</em>'.
+   * @see org.xtext.example.gfnc.cYK.Terminal
    * @generated
    */
-  EClass getSimple();
+  EClass getTerminal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.Simple#getTerminals <em>Terminals</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.Terminal#getTerminals <em>Terminals</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Terminals</em>'.
-   * @see org.xtext.example.gfnc.cYK.Simple#getTerminals()
-   * @see #getSimple()
+   * @see org.xtext.example.gfnc.cYK.Terminal#getTerminals()
+   * @see #getTerminal()
    * @generated
    */
-  EAttribute getSimple_Terminals();
+  EAttribute getTerminal_Terminals();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.NonTerminal <em>Non Terminal</em>}'.
@@ -410,15 +410,15 @@ public interface CYKPackage extends EPackage
   EClass getNonTerminal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.NonTerminal#getNoTerminals <em>No Terminals</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.gfnc.cYK.NonTerminal#getNonTerminals <em>Non Terminals</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>No Terminals</em>'.
-   * @see org.xtext.example.gfnc.cYK.NonTerminal#getNoTerminals()
+   * @return the meta object for the attribute '<em>Non Terminals</em>'.
+   * @see org.xtext.example.gfnc.cYK.NonTerminal#getNonTerminals()
    * @see #getNonTerminal()
    * @generated
    */
-  EAttribute getNonTerminal_NoTerminals();
+  EAttribute getNonTerminal_NonTerminals();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.gfnc.cYK.Binary <em>Binary</em>}'.
@@ -562,14 +562,14 @@ public interface CYKPackage extends EPackage
     EAttribute RIGHT__LAMBDA = eINSTANCE.getRight_Lambda();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.SimpleImpl <em>Simple</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.TerminalImpl <em>Terminal</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.gfnc.cYK.impl.SimpleImpl
-     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getSimple()
+     * @see org.xtext.example.gfnc.cYK.impl.TerminalImpl
+     * @see org.xtext.example.gfnc.cYK.impl.CYKPackageImpl#getTerminal()
      * @generated
      */
-    EClass SIMPLE = eINSTANCE.getSimple();
+    EClass TERMINAL = eINSTANCE.getTerminal();
 
     /**
      * The meta object literal for the '<em><b>Terminals</b></em>' attribute feature.
@@ -577,7 +577,7 @@ public interface CYKPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SIMPLE__TERMINALS = eINSTANCE.getSimple_Terminals();
+    EAttribute TERMINAL__TERMINALS = eINSTANCE.getTerminal_Terminals();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.NonTerminalImpl <em>Non Terminal</em>}' class.
@@ -590,12 +590,12 @@ public interface CYKPackage extends EPackage
     EClass NON_TERMINAL = eINSTANCE.getNonTerminal();
 
     /**
-     * The meta object literal for the '<em><b>No Terminals</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Non Terminals</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NON_TERMINAL__NO_TERMINALS = eINSTANCE.getNonTerminal_NoTerminals();
+    EAttribute NON_TERMINAL__NON_TERMINALS = eINSTANCE.getNonTerminal_NonTerminals();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.gfnc.cYK.impl.BinaryImpl <em>Binary</em>}' class.

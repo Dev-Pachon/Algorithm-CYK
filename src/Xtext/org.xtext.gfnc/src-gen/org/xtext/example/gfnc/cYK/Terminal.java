@@ -7,21 +7,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Simple</b></em>'.
+ * A representation of the model object '<em><b>Terminal</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.gfnc.cYK.Simple#getTerminals <em>Terminals</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.Terminal#getTerminals <em>Terminals</em>}</li>
  * </ul>
  *
- * @see org.xtext.example.gfnc.cYK.CYKPackage#getSimple()
+ * @see org.xtext.example.gfnc.cYK.CYKPackage#getTerminal()
  * @model
  * @generated
  */
-public interface Simple extends EObject
+public interface Terminal extends EObject
 {
   /**
    * Returns the value of the '<em><b>Terminals</b></em>' attribute.
@@ -29,14 +29,14 @@ public interface Simple extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Terminals</em>' attribute.
    * @see #setTerminals(String)
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getSimple_Terminals()
+   * @see org.xtext.example.gfnc.cYK.CYKPackage#getTerminal_Terminals()
    * @model
    * @generated
    */
   String getTerminals();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Simple#getTerminals <em>Terminals</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Terminal#getTerminals <em>Terminals</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Terminals</em>' attribute.
@@ -45,4 +45,4 @@ public interface Simple extends EObject
    */
   void setTerminals(String value);
 
-} // Simple
+} // Terminal

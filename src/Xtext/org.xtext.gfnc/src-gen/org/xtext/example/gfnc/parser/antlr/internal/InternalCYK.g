@@ -87,9 +87,9 @@ ruleGFNC returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_2_0());
 				}
-				lv_w_2_0=ruleSimple
+				lv_w_2_0=ruleTerminal
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGFNCRule());
@@ -98,7 +98,7 @@ ruleGFNC returns [EObject current=null]
 						$current,
 						"w",
 						lv_w_2_0,
-						"org.xtext.example.gfnc.CYK.Simple");
+						"org.xtext.example.gfnc.CYK.Terminal");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -106,9 +106,9 @@ ruleGFNC returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_3_0());
 				}
-				lv_w_3_0=ruleSimple
+				lv_w_3_0=ruleTerminal
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGFNCRule());
@@ -117,7 +117,7 @@ ruleGFNC returns [EObject current=null]
 						$current,
 						"w",
 						lv_w_3_0,
-						"org.xtext.example.gfnc.CYK.Simple");
+						"org.xtext.example.gfnc.CYK.Terminal");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -259,9 +259,9 @@ ruleRight returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getRightAccess().getSimpleTerminalParserRuleCall_0_0());
 				}
-				lv_simple_0_0=ruleSimple
+				lv_simple_0_0=ruleTerminal
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRightRule());
@@ -270,7 +270,7 @@ ruleRight returns [EObject current=null]
 						$current,
 						"simple",
 						lv_simple_0_0,
-						"org.xtext.example.gfnc.CYK.Simple");
+						"org.xtext.example.gfnc.CYK.Terminal");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -313,15 +313,15 @@ ruleRight returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleSimple
-entryRuleSimple returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getSimpleRule()); }
-	iv_ruleSimple=ruleSimple
-	{ $current=$iv_ruleSimple.current; }
+// Entry rule entryRuleTerminal
+entryRuleTerminal returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTerminalRule()); }
+	iv_ruleTerminal=ruleTerminal
+	{ $current=$iv_ruleTerminal.current; }
 	EOF;
 
-// Rule Simple
-ruleSimple returns [EObject current=null]
+// Rule Terminal
+ruleTerminal returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -332,7 +332,7 @@ ruleSimple returns [EObject current=null]
 		(
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getSimpleAccess().getSimpleAction_0(),
+					grammarAccess.getTerminalAccess().getTerminalAction_0(),
 					$current);
 			}
 		)
@@ -341,275 +341,275 @@ ruleSimple returns [EObject current=null]
 				(
 					lv_terminals_1_1='a'
 					{
-						newLeafNode(lv_terminals_1_1, grammarAccess.getSimpleAccess().getTerminalsAKeyword_1_0_0());
+						newLeafNode(lv_terminals_1_1, grammarAccess.getTerminalAccess().getTerminalsAKeyword_1_0_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_1, null);
 					}
 					    |
 					lv_terminals_1_2='b'
 					{
-						newLeafNode(lv_terminals_1_2, grammarAccess.getSimpleAccess().getTerminalsBKeyword_1_0_1());
+						newLeafNode(lv_terminals_1_2, grammarAccess.getTerminalAccess().getTerminalsBKeyword_1_0_1());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_2, null);
 					}
 					    |
 					lv_terminals_1_3='c'
 					{
-						newLeafNode(lv_terminals_1_3, grammarAccess.getSimpleAccess().getTerminalsCKeyword_1_0_2());
+						newLeafNode(lv_terminals_1_3, grammarAccess.getTerminalAccess().getTerminalsCKeyword_1_0_2());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_3, null);
 					}
 					    |
 					lv_terminals_1_4='d'
 					{
-						newLeafNode(lv_terminals_1_4, grammarAccess.getSimpleAccess().getTerminalsDKeyword_1_0_3());
+						newLeafNode(lv_terminals_1_4, grammarAccess.getTerminalAccess().getTerminalsDKeyword_1_0_3());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_4, null);
 					}
 					    |
 					lv_terminals_1_5='e'
 					{
-						newLeafNode(lv_terminals_1_5, grammarAccess.getSimpleAccess().getTerminalsEKeyword_1_0_4());
+						newLeafNode(lv_terminals_1_5, grammarAccess.getTerminalAccess().getTerminalsEKeyword_1_0_4());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_5, null);
 					}
 					    |
 					lv_terminals_1_6='f'
 					{
-						newLeafNode(lv_terminals_1_6, grammarAccess.getSimpleAccess().getTerminalsFKeyword_1_0_5());
+						newLeafNode(lv_terminals_1_6, grammarAccess.getTerminalAccess().getTerminalsFKeyword_1_0_5());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_6, null);
 					}
 					    |
 					lv_terminals_1_7='g'
 					{
-						newLeafNode(lv_terminals_1_7, grammarAccess.getSimpleAccess().getTerminalsGKeyword_1_0_6());
+						newLeafNode(lv_terminals_1_7, grammarAccess.getTerminalAccess().getTerminalsGKeyword_1_0_6());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_7, null);
 					}
 					    |
 					lv_terminals_1_8='h'
 					{
-						newLeafNode(lv_terminals_1_8, grammarAccess.getSimpleAccess().getTerminalsHKeyword_1_0_7());
+						newLeafNode(lv_terminals_1_8, grammarAccess.getTerminalAccess().getTerminalsHKeyword_1_0_7());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_8, null);
 					}
 					    |
 					lv_terminals_1_9='i'
 					{
-						newLeafNode(lv_terminals_1_9, grammarAccess.getSimpleAccess().getTerminalsIKeyword_1_0_8());
+						newLeafNode(lv_terminals_1_9, grammarAccess.getTerminalAccess().getTerminalsIKeyword_1_0_8());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_9, null);
 					}
 					    |
 					lv_terminals_1_10='j'
 					{
-						newLeafNode(lv_terminals_1_10, grammarAccess.getSimpleAccess().getTerminalsJKeyword_1_0_9());
+						newLeafNode(lv_terminals_1_10, grammarAccess.getTerminalAccess().getTerminalsJKeyword_1_0_9());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_10, null);
 					}
 					    |
 					lv_terminals_1_11='k'
 					{
-						newLeafNode(lv_terminals_1_11, grammarAccess.getSimpleAccess().getTerminalsKKeyword_1_0_10());
+						newLeafNode(lv_terminals_1_11, grammarAccess.getTerminalAccess().getTerminalsKKeyword_1_0_10());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_11, null);
 					}
 					    |
 					lv_terminals_1_12='l'
 					{
-						newLeafNode(lv_terminals_1_12, grammarAccess.getSimpleAccess().getTerminalsLKeyword_1_0_11());
+						newLeafNode(lv_terminals_1_12, grammarAccess.getTerminalAccess().getTerminalsLKeyword_1_0_11());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_12, null);
 					}
 					    |
 					lv_terminals_1_13='m'
 					{
-						newLeafNode(lv_terminals_1_13, grammarAccess.getSimpleAccess().getTerminalsMKeyword_1_0_12());
+						newLeafNode(lv_terminals_1_13, grammarAccess.getTerminalAccess().getTerminalsMKeyword_1_0_12());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_13, null);
 					}
 					    |
 					lv_terminals_1_14='n'
 					{
-						newLeafNode(lv_terminals_1_14, grammarAccess.getSimpleAccess().getTerminalsNKeyword_1_0_13());
+						newLeafNode(lv_terminals_1_14, grammarAccess.getTerminalAccess().getTerminalsNKeyword_1_0_13());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_14, null);
 					}
 					    |
 					lv_terminals_1_15='o'
 					{
-						newLeafNode(lv_terminals_1_15, grammarAccess.getSimpleAccess().getTerminalsOKeyword_1_0_14());
+						newLeafNode(lv_terminals_1_15, grammarAccess.getTerminalAccess().getTerminalsOKeyword_1_0_14());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_15, null);
 					}
 					    |
 					lv_terminals_1_16='p'
 					{
-						newLeafNode(lv_terminals_1_16, grammarAccess.getSimpleAccess().getTerminalsPKeyword_1_0_15());
+						newLeafNode(lv_terminals_1_16, grammarAccess.getTerminalAccess().getTerminalsPKeyword_1_0_15());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_16, null);
 					}
 					    |
 					lv_terminals_1_17='q'
 					{
-						newLeafNode(lv_terminals_1_17, grammarAccess.getSimpleAccess().getTerminalsQKeyword_1_0_16());
+						newLeafNode(lv_terminals_1_17, grammarAccess.getTerminalAccess().getTerminalsQKeyword_1_0_16());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_17, null);
 					}
 					    |
 					lv_terminals_1_18='r'
 					{
-						newLeafNode(lv_terminals_1_18, grammarAccess.getSimpleAccess().getTerminalsRKeyword_1_0_17());
+						newLeafNode(lv_terminals_1_18, grammarAccess.getTerminalAccess().getTerminalsRKeyword_1_0_17());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_18, null);
 					}
 					    |
 					lv_terminals_1_19='s'
 					{
-						newLeafNode(lv_terminals_1_19, grammarAccess.getSimpleAccess().getTerminalsSKeyword_1_0_18());
+						newLeafNode(lv_terminals_1_19, grammarAccess.getTerminalAccess().getTerminalsSKeyword_1_0_18());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_19, null);
 					}
 					    |
 					lv_terminals_1_20='t'
 					{
-						newLeafNode(lv_terminals_1_20, grammarAccess.getSimpleAccess().getTerminalsTKeyword_1_0_19());
+						newLeafNode(lv_terminals_1_20, grammarAccess.getTerminalAccess().getTerminalsTKeyword_1_0_19());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_20, null);
 					}
 					    |
 					lv_terminals_1_21='v'
 					{
-						newLeafNode(lv_terminals_1_21, grammarAccess.getSimpleAccess().getTerminalsVKeyword_1_0_20());
+						newLeafNode(lv_terminals_1_21, grammarAccess.getTerminalAccess().getTerminalsVKeyword_1_0_20());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_21, null);
 					}
 					    |
 					lv_terminals_1_22='w'
 					{
-						newLeafNode(lv_terminals_1_22, grammarAccess.getSimpleAccess().getTerminalsWKeyword_1_0_21());
+						newLeafNode(lv_terminals_1_22, grammarAccess.getTerminalAccess().getTerminalsWKeyword_1_0_21());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_22, null);
 					}
 					    |
 					lv_terminals_1_23='x'
 					{
-						newLeafNode(lv_terminals_1_23, grammarAccess.getSimpleAccess().getTerminalsXKeyword_1_0_22());
+						newLeafNode(lv_terminals_1_23, grammarAccess.getTerminalAccess().getTerminalsXKeyword_1_0_22());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_23, null);
 					}
 					    |
 					lv_terminals_1_24='y'
 					{
-						newLeafNode(lv_terminals_1_24, grammarAccess.getSimpleAccess().getTerminalsYKeyword_1_0_23());
+						newLeafNode(lv_terminals_1_24, grammarAccess.getTerminalAccess().getTerminalsYKeyword_1_0_23());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_24, null);
 					}
 					    |
 					lv_terminals_1_25='z'
 					{
-						newLeafNode(lv_terminals_1_25, grammarAccess.getSimpleAccess().getTerminalsZKeyword_1_0_24());
+						newLeafNode(lv_terminals_1_25, grammarAccess.getTerminalAccess().getTerminalsZKeyword_1_0_24());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getSimpleRule());
+							$current = createModelElement(grammarAccess.getTerminalRule());
 						}
 						setWithLastConsumed($current, "terminals", lv_terminals_1_25, null);
 					}
@@ -645,290 +645,290 @@ ruleNonTerminal returns [EObject current=null]
 		(
 			(
 				(
-					lv_noTerminals_1_1='A'
+					lv_nonTerminals_1_1='A'
 					{
-						newLeafNode(lv_noTerminals_1_1, grammarAccess.getNonTerminalAccess().getNoTerminalsAKeyword_1_0_0());
+						newLeafNode(lv_nonTerminals_1_1, grammarAccess.getNonTerminalAccess().getNonTerminalsAKeyword_1_0_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_1, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_1, null);
 					}
 					    |
-					lv_noTerminals_1_2='B'
+					lv_nonTerminals_1_2='B'
 					{
-						newLeafNode(lv_noTerminals_1_2, grammarAccess.getNonTerminalAccess().getNoTerminalsBKeyword_1_0_1());
+						newLeafNode(lv_nonTerminals_1_2, grammarAccess.getNonTerminalAccess().getNonTerminalsBKeyword_1_0_1());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_2, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_2, null);
 					}
 					    |
-					lv_noTerminals_1_3='C'
+					lv_nonTerminals_1_3='C'
 					{
-						newLeafNode(lv_noTerminals_1_3, grammarAccess.getNonTerminalAccess().getNoTerminalsCKeyword_1_0_2());
+						newLeafNode(lv_nonTerminals_1_3, grammarAccess.getNonTerminalAccess().getNonTerminalsCKeyword_1_0_2());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_3, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_3, null);
 					}
 					    |
-					lv_noTerminals_1_4='D'
+					lv_nonTerminals_1_4='D'
 					{
-						newLeafNode(lv_noTerminals_1_4, grammarAccess.getNonTerminalAccess().getNoTerminalsDKeyword_1_0_3());
+						newLeafNode(lv_nonTerminals_1_4, grammarAccess.getNonTerminalAccess().getNonTerminalsDKeyword_1_0_3());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_4, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_4, null);
 					}
 					    |
-					lv_noTerminals_1_5='E'
+					lv_nonTerminals_1_5='E'
 					{
-						newLeafNode(lv_noTerminals_1_5, grammarAccess.getNonTerminalAccess().getNoTerminalsEKeyword_1_0_4());
+						newLeafNode(lv_nonTerminals_1_5, grammarAccess.getNonTerminalAccess().getNonTerminalsEKeyword_1_0_4());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_5, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_5, null);
 					}
 					    |
-					lv_noTerminals_1_6='F'
+					lv_nonTerminals_1_6='F'
 					{
-						newLeafNode(lv_noTerminals_1_6, grammarAccess.getNonTerminalAccess().getNoTerminalsFKeyword_1_0_5());
+						newLeafNode(lv_nonTerminals_1_6, grammarAccess.getNonTerminalAccess().getNonTerminalsFKeyword_1_0_5());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_6, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_6, null);
 					}
 					    |
-					lv_noTerminals_1_7='G'
+					lv_nonTerminals_1_7='G'
 					{
-						newLeafNode(lv_noTerminals_1_7, grammarAccess.getNonTerminalAccess().getNoTerminalsGKeyword_1_0_6());
+						newLeafNode(lv_nonTerminals_1_7, grammarAccess.getNonTerminalAccess().getNonTerminalsGKeyword_1_0_6());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_7, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_7, null);
 					}
 					    |
-					lv_noTerminals_1_8='H'
+					lv_nonTerminals_1_8='H'
 					{
-						newLeafNode(lv_noTerminals_1_8, grammarAccess.getNonTerminalAccess().getNoTerminalsHKeyword_1_0_7());
+						newLeafNode(lv_nonTerminals_1_8, grammarAccess.getNonTerminalAccess().getNonTerminalsHKeyword_1_0_7());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_8, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_8, null);
 					}
 					    |
-					lv_noTerminals_1_9='I'
+					lv_nonTerminals_1_9='I'
 					{
-						newLeafNode(lv_noTerminals_1_9, grammarAccess.getNonTerminalAccess().getNoTerminalsIKeyword_1_0_8());
+						newLeafNode(lv_nonTerminals_1_9, grammarAccess.getNonTerminalAccess().getNonTerminalsIKeyword_1_0_8());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_9, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_9, null);
 					}
 					    |
-					lv_noTerminals_1_10='J'
+					lv_nonTerminals_1_10='J'
 					{
-						newLeafNode(lv_noTerminals_1_10, grammarAccess.getNonTerminalAccess().getNoTerminalsJKeyword_1_0_9());
+						newLeafNode(lv_nonTerminals_1_10, grammarAccess.getNonTerminalAccess().getNonTerminalsJKeyword_1_0_9());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_10, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_10, null);
 					}
 					    |
-					lv_noTerminals_1_11='K'
+					lv_nonTerminals_1_11='K'
 					{
-						newLeafNode(lv_noTerminals_1_11, grammarAccess.getNonTerminalAccess().getNoTerminalsKKeyword_1_0_10());
+						newLeafNode(lv_nonTerminals_1_11, grammarAccess.getNonTerminalAccess().getNonTerminalsKKeyword_1_0_10());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_11, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_11, null);
 					}
 					    |
-					lv_noTerminals_1_12='L'
+					lv_nonTerminals_1_12='L'
 					{
-						newLeafNode(lv_noTerminals_1_12, grammarAccess.getNonTerminalAccess().getNoTerminalsLKeyword_1_0_11());
+						newLeafNode(lv_nonTerminals_1_12, grammarAccess.getNonTerminalAccess().getNonTerminalsLKeyword_1_0_11());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_12, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_12, null);
 					}
 					    |
-					lv_noTerminals_1_13='M'
+					lv_nonTerminals_1_13='M'
 					{
-						newLeafNode(lv_noTerminals_1_13, grammarAccess.getNonTerminalAccess().getNoTerminalsMKeyword_1_0_12());
+						newLeafNode(lv_nonTerminals_1_13, grammarAccess.getNonTerminalAccess().getNonTerminalsMKeyword_1_0_12());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_13, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_13, null);
 					}
 					    |
-					lv_noTerminals_1_14='N'
+					lv_nonTerminals_1_14='N'
 					{
-						newLeafNode(lv_noTerminals_1_14, grammarAccess.getNonTerminalAccess().getNoTerminalsNKeyword_1_0_13());
+						newLeafNode(lv_nonTerminals_1_14, grammarAccess.getNonTerminalAccess().getNonTerminalsNKeyword_1_0_13());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_14, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_14, null);
 					}
 					    |
-					lv_noTerminals_1_15='O'
+					lv_nonTerminals_1_15='O'
 					{
-						newLeafNode(lv_noTerminals_1_15, grammarAccess.getNonTerminalAccess().getNoTerminalsOKeyword_1_0_14());
+						newLeafNode(lv_nonTerminals_1_15, grammarAccess.getNonTerminalAccess().getNonTerminalsOKeyword_1_0_14());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_15, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_15, null);
 					}
 					    |
-					lv_noTerminals_1_16='P'
+					lv_nonTerminals_1_16='P'
 					{
-						newLeafNode(lv_noTerminals_1_16, grammarAccess.getNonTerminalAccess().getNoTerminalsPKeyword_1_0_15());
+						newLeafNode(lv_nonTerminals_1_16, grammarAccess.getNonTerminalAccess().getNonTerminalsPKeyword_1_0_15());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_16, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_16, null);
 					}
 					    |
-					lv_noTerminals_1_17='Q'
+					lv_nonTerminals_1_17='Q'
 					{
-						newLeafNode(lv_noTerminals_1_17, grammarAccess.getNonTerminalAccess().getNoTerminalsQKeyword_1_0_16());
+						newLeafNode(lv_nonTerminals_1_17, grammarAccess.getNonTerminalAccess().getNonTerminalsQKeyword_1_0_16());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_17, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_17, null);
 					}
 					    |
-					lv_noTerminals_1_18='R'
+					lv_nonTerminals_1_18='R'
 					{
-						newLeafNode(lv_noTerminals_1_18, grammarAccess.getNonTerminalAccess().getNoTerminalsRKeyword_1_0_17());
+						newLeafNode(lv_nonTerminals_1_18, grammarAccess.getNonTerminalAccess().getNonTerminalsRKeyword_1_0_17());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_18, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_18, null);
 					}
 					    |
-					lv_noTerminals_1_19='S'
+					lv_nonTerminals_1_19='S'
 					{
-						newLeafNode(lv_noTerminals_1_19, grammarAccess.getNonTerminalAccess().getNoTerminalsSKeyword_1_0_18());
+						newLeafNode(lv_nonTerminals_1_19, grammarAccess.getNonTerminalAccess().getNonTerminalsSKeyword_1_0_18());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_19, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_19, null);
 					}
 					    |
-					lv_noTerminals_1_20='T'
+					lv_nonTerminals_1_20='T'
 					{
-						newLeafNode(lv_noTerminals_1_20, grammarAccess.getNonTerminalAccess().getNoTerminalsTKeyword_1_0_19());
+						newLeafNode(lv_nonTerminals_1_20, grammarAccess.getNonTerminalAccess().getNonTerminalsTKeyword_1_0_19());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_20, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_20, null);
 					}
 					    |
-					lv_noTerminals_1_21='U'
+					lv_nonTerminals_1_21='U'
 					{
-						newLeafNode(lv_noTerminals_1_21, grammarAccess.getNonTerminalAccess().getNoTerminalsUKeyword_1_0_20());
+						newLeafNode(lv_nonTerminals_1_21, grammarAccess.getNonTerminalAccess().getNonTerminalsUKeyword_1_0_20());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_21, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_21, null);
 					}
 					    |
-					lv_noTerminals_1_22='V'
+					lv_nonTerminals_1_22='V'
 					{
-						newLeafNode(lv_noTerminals_1_22, grammarAccess.getNonTerminalAccess().getNoTerminalsVKeyword_1_0_21());
+						newLeafNode(lv_nonTerminals_1_22, grammarAccess.getNonTerminalAccess().getNonTerminalsVKeyword_1_0_21());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_22, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_22, null);
 					}
 					    |
-					lv_noTerminals_1_23='W'
+					lv_nonTerminals_1_23='W'
 					{
-						newLeafNode(lv_noTerminals_1_23, grammarAccess.getNonTerminalAccess().getNoTerminalsWKeyword_1_0_22());
+						newLeafNode(lv_nonTerminals_1_23, grammarAccess.getNonTerminalAccess().getNonTerminalsWKeyword_1_0_22());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_23, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_23, null);
 					}
 					    |
-					lv_noTerminals_1_24='X'
+					lv_nonTerminals_1_24='X'
 					{
-						newLeafNode(lv_noTerminals_1_24, grammarAccess.getNonTerminalAccess().getNoTerminalsXKeyword_1_0_23());
+						newLeafNode(lv_nonTerminals_1_24, grammarAccess.getNonTerminalAccess().getNonTerminalsXKeyword_1_0_23());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_24, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_24, null);
 					}
 					    |
-					lv_noTerminals_1_25='Y'
+					lv_nonTerminals_1_25='Y'
 					{
-						newLeafNode(lv_noTerminals_1_25, grammarAccess.getNonTerminalAccess().getNoTerminalsYKeyword_1_0_24());
+						newLeafNode(lv_nonTerminals_1_25, grammarAccess.getNonTerminalAccess().getNonTerminalsYKeyword_1_0_24());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_25, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_25, null);
 					}
 					    |
-					lv_noTerminals_1_26='Z'
+					lv_nonTerminals_1_26='Z'
 					{
-						newLeafNode(lv_noTerminals_1_26, grammarAccess.getNonTerminalAccess().getNoTerminalsZKeyword_1_0_25());
+						newLeafNode(lv_nonTerminals_1_26, grammarAccess.getNonTerminalAccess().getNonTerminalsZKeyword_1_0_25());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNonTerminalRule());
 						}
-						setWithLastConsumed($current, "noTerminals", lv_noTerminals_1_26, null);
+						setWithLastConsumed($current, "nonTerminals", lv_nonTerminals_1_26, null);
 					}
 				)
 			)

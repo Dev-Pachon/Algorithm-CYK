@@ -11,22 +11,22 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.gfnc.cYK.CYKPackage;
-import org.xtext.example.gfnc.cYK.Simple;
+import org.xtext.example.gfnc.cYK.Terminal;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Simple</b></em>'.
+ * An implementation of the model object '<em><b>Terminal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.SimpleImpl#getTerminals <em>Terminals</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.impl.TerminalImpl#getTerminals <em>Terminals</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
+public class TerminalImpl extends MinimalEObjectImpl.Container implements Terminal
 {
   /**
    * The default value of the '{@link #getTerminals() <em>Terminals</em>}' attribute.
@@ -53,7 +53,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SimpleImpl()
+  protected TerminalImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
   @Override
   protected EClass eStaticClass()
   {
-    return CYKPackage.Literals.SIMPLE;
+    return CYKPackage.Literals.TERMINAL;
   }
 
   /**
@@ -91,7 +91,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
     String oldTerminals = terminals;
     terminals = newTerminals;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.SIMPLE__TERMINALS, oldTerminals, terminals));
+      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.TERMINAL__TERMINALS, oldTerminals, terminals));
   }
 
   /**
@@ -104,7 +104,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
   {
     switch (featureID)
     {
-      case CYKPackage.SIMPLE__TERMINALS:
+      case CYKPackage.TERMINAL__TERMINALS:
         return getTerminals();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -120,7 +120,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
   {
     switch (featureID)
     {
-      case CYKPackage.SIMPLE__TERMINALS:
+      case CYKPackage.TERMINAL__TERMINALS:
         setTerminals((String)newValue);
         return;
     }
@@ -137,7 +137,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
   {
     switch (featureID)
     {
-      case CYKPackage.SIMPLE__TERMINALS:
+      case CYKPackage.TERMINAL__TERMINALS:
         setTerminals(TERMINALS_EDEFAULT);
         return;
     }
@@ -154,7 +154,7 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
   {
     switch (featureID)
     {
-      case CYKPackage.SIMPLE__TERMINALS:
+      case CYKPackage.TERMINAL__TERMINALS:
         return TERMINALS_EDEFAULT == null ? terminals != null : !TERMINALS_EDEFAULT.equals(terminals);
     }
     return super.eIsSet(featureID);
@@ -177,4 +177,4 @@ public class SimpleImpl extends MinimalEObjectImpl.Container implements Simple
     return result.toString();
   }
 
-} //SimpleImpl
+} //TerminalImpl

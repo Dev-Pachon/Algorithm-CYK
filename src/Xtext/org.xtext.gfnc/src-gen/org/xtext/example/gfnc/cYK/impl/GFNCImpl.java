@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.GFNC;
 import org.xtext.example.gfnc.cYK.Production;
-import org.xtext.example.gfnc.cYK.Simple;
+import org.xtext.example.gfnc.cYK.Terminal;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
    * @generated
    * @ordered
    */
-  protected EList<Simple> w;
+  protected EList<Terminal> w;
 
   /**
    * The cached value of the '{@link #getProductions() <em>Productions</em>}' containment reference list.
@@ -85,11 +85,11 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
    * @generated
    */
   @Override
-  public EList<Simple> getW()
+  public EList<Terminal> getW()
   {
     if (w == null)
     {
-      w = new EObjectContainmentEList<Simple>(Simple.class, this, CYKPackage.GFNC__W);
+      w = new EObjectContainmentEList<Terminal>(Terminal.class, this, CYKPackage.GFNC__W);
     }
     return w;
   }
@@ -158,7 +158,7 @@ public class GFNCImpl extends MinimalEObjectImpl.Container implements GFNC
     {
       case CYKPackage.GFNC__W:
         getW().clear();
-        getW().addAll((Collection<? extends Simple>)newValue);
+        getW().addAll((Collection<? extends Terminal>)newValue);
         return;
       case CYKPackage.GFNC__PRODUCTIONS:
         getProductions().clear();

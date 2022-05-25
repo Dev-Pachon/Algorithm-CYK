@@ -91,9 +91,9 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
         return createRightAdapter();
       }
       @Override
-      public Adapter caseSimple(Simple object)
+      public Adapter caseTerminal(Terminal object)
       {
-        return createSimpleAdapter();
+        return createTerminalAdapter();
       }
       @Override
       public Adapter caseNonTerminal(NonTerminal object)
@@ -173,16 +173,16 @@ public class CYKAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Simple <em>Simple</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.gfnc.cYK.Terminal <em>Terminal</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.gfnc.cYK.Simple
+   * @see org.xtext.example.gfnc.cYK.Terminal
    * @generated
    */
-  public Adapter createSimpleAdapter()
+  public Adapter createTerminalAdapter()
   {
     return null;
   }

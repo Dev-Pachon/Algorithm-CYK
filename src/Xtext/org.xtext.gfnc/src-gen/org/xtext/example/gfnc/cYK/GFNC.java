@@ -28,7 +28,7 @@ public interface GFNC extends EObject
 {
   /**
    * Returns the value of the '<em><b>W</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.gfnc.cYK.Simple}.
+   * The list contents are of type {@link org.xtext.example.gfnc.cYK.Terminal}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>W</em>' containment reference list.
@@ -36,7 +36,7 @@ public interface GFNC extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Simple> getW();
+  EList<Terminal> getW();
 
   /**
    * Returns the value of the '<em><b>Productions</b></em>' containment reference list.

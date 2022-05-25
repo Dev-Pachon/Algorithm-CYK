@@ -51,13 +51,13 @@ public interface CYKFactory extends EFactory
   Right createRight();
 
   /**
-   * Returns a new object of class '<em>Simple</em>'.
+   * Returns a new object of class '<em>Terminal</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Simple</em>'.
+   * @return a new object of class '<em>Terminal</em>'.
    * @generated
    */
-  Simple createSimple();
+  Terminal createTerminal();
 
   /**
    * Returns a new object of class '<em>Non Terminal</em>'.

@@ -16,7 +16,7 @@ import org.xtext.example.gfnc.cYK.CYKPackage;
 import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
 import org.xtext.example.gfnc.cYK.Right;
-import org.xtext.example.gfnc.cYK.Simple;
+import org.xtext.example.gfnc.cYK.Terminal;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass simpleEClass = null;
+  private EClass terminalEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -247,9 +247,9 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EClass getSimple()
+  public EClass getTerminal()
   {
-    return simpleEClass;
+    return terminalEClass;
   }
 
   /**
@@ -258,9 +258,9 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EAttribute getSimple_Terminals()
+  public EAttribute getTerminal_Terminals()
   {
-    return (EAttribute)simpleEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)terminalEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -280,7 +280,7 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
    * @generated
    */
   @Override
-  public EAttribute getNonTerminal_NoTerminals()
+  public EAttribute getNonTerminal_NonTerminals()
   {
     return (EAttribute)nonTerminalEClass.getEStructuralFeatures().get(0);
   }
@@ -362,11 +362,11 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
     createEReference(rightEClass, RIGHT__BINARY);
     createEAttribute(rightEClass, RIGHT__LAMBDA);
 
-    simpleEClass = createEClass(SIMPLE);
-    createEAttribute(simpleEClass, SIMPLE__TERMINALS);
+    terminalEClass = createEClass(TERMINAL);
+    createEAttribute(terminalEClass, TERMINAL__TERMINALS);
 
     nonTerminalEClass = createEClass(NON_TERMINAL);
-    createEAttribute(nonTerminalEClass, NON_TERMINAL__NO_TERMINALS);
+    createEAttribute(nonTerminalEClass, NON_TERMINAL__NON_TERMINALS);
 
     binaryEClass = createEClass(BINARY);
     createEReference(binaryEClass, BINARY__FIRST);
@@ -405,7 +405,7 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(gfncEClass, org.xtext.example.gfnc.cYK.GFNC.class, "GFNC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGFNC_W(), this.getSimple(), null, "w", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGFNC_W(), this.getTerminal(), null, "w", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGFNC_Productions(), this.getProduction(), null, "productions", null, 0, -1, org.xtext.example.gfnc.cYK.GFNC.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(productionEClass, Production.class, "Production", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -413,15 +413,15 @@ public class CYKPackageImpl extends EPackageImpl implements CYKPackage
     initEReference(getProduction_Right(), this.getRight(), null, "right", null, 0, -1, Production.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rightEClass, Right.class, "Right", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRight_Simple(), this.getSimple(), null, "simple", null, 0, 1, Right.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRight_Simple(), this.getTerminal(), null, "simple", null, 0, 1, Right.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRight_Binary(), this.getBinary(), null, "binary", null, 0, 1, Right.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRight_Lambda(), ecorePackage.getEString(), "lambda", null, 0, 1, Right.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(simpleEClass, Simple.class, "Simple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSimple_Terminals(), ecorePackage.getEString(), "terminals", null, 0, 1, Simple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(terminalEClass, Terminal.class, "Terminal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTerminal_Terminals(), ecorePackage.getEString(), "terminals", null, 0, 1, Terminal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nonTerminalEClass, NonTerminal.class, "NonTerminal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNonTerminal_NoTerminals(), ecorePackage.getEString(), "noTerminals", null, 0, 1, NonTerminal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNonTerminal_NonTerminals(), ecorePackage.getEString(), "nonTerminals", null, 0, 1, NonTerminal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(binaryEClass, Binary.class, "Binary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBinary_First(), this.getNonTerminal(), null, "first", null, 0, 1, Binary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

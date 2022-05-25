@@ -19,11 +19,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Right/binary"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//Right/lambda"/>
     </genClasses>
-    <genClasses ecoreClass="CYK.ecore#//Simple">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//Simple/terminals"/>
+    <genClasses ecoreClass="CYK.ecore#//Terminal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//Terminal/terminals"/>
     </genClasses>
     <genClasses ecoreClass="CYK.ecore#//NonTerminal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//NonTerminal/noTerminals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//NonTerminal/nonTerminals"/>
     </genClasses>
     <genClasses ecoreClass="CYK.ecore#//Binary">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Binary/first"/>

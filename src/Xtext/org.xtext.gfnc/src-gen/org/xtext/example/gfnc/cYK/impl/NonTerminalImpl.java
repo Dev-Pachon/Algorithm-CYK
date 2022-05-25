@@ -21,7 +21,7 @@ import org.xtext.example.gfnc.cYK.NonTerminal;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.gfnc.cYK.impl.NonTerminalImpl#getNoTerminals <em>No Terminals</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.impl.NonTerminalImpl#getNonTerminals <em>Non Terminals</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +29,24 @@ import org.xtext.example.gfnc.cYK.NonTerminal;
 public class NonTerminalImpl extends MinimalEObjectImpl.Container implements NonTerminal
 {
   /**
-   * The default value of the '{@link #getNoTerminals() <em>No Terminals</em>}' attribute.
+   * The default value of the '{@link #getNonTerminals() <em>Non Terminals</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNoTerminals()
+   * @see #getNonTerminals()
    * @generated
    * @ordered
    */
-  protected static final String NO_TERMINALS_EDEFAULT = null;
+  protected static final String NON_TERMINALS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNoTerminals() <em>No Terminals</em>}' attribute.
+   * The cached value of the '{@link #getNonTerminals() <em>Non Terminals</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNoTerminals()
+   * @see #getNonTerminals()
    * @generated
    * @ordered
    */
-  protected String noTerminals = NO_TERMINALS_EDEFAULT;
+  protected String nonTerminals = NON_TERMINALS_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,9 +75,9 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
    * @generated
    */
   @Override
-  public String getNoTerminals()
+  public String getNonTerminals()
   {
-    return noTerminals;
+    return nonTerminals;
   }
 
   /**
@@ -86,12 +86,12 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
    * @generated
    */
   @Override
-  public void setNoTerminals(String newNoTerminals)
+  public void setNonTerminals(String newNonTerminals)
   {
-    String oldNoTerminals = noTerminals;
-    noTerminals = newNoTerminals;
+    String oldNonTerminals = nonTerminals;
+    nonTerminals = newNonTerminals;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.NON_TERMINAL__NO_TERMINALS, oldNoTerminals, noTerminals));
+      eNotify(new ENotificationImpl(this, Notification.SET, CYKPackage.NON_TERMINAL__NON_TERMINALS, oldNonTerminals, nonTerminals));
   }
 
   /**
@@ -104,8 +104,8 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
   {
     switch (featureID)
     {
-      case CYKPackage.NON_TERMINAL__NO_TERMINALS:
-        return getNoTerminals();
+      case CYKPackage.NON_TERMINAL__NON_TERMINALS:
+        return getNonTerminals();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +120,8 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
   {
     switch (featureID)
     {
-      case CYKPackage.NON_TERMINAL__NO_TERMINALS:
-        setNoTerminals((String)newValue);
+      case CYKPackage.NON_TERMINAL__NON_TERMINALS:
+        setNonTerminals((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +137,8 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
   {
     switch (featureID)
     {
-      case CYKPackage.NON_TERMINAL__NO_TERMINALS:
-        setNoTerminals(NO_TERMINALS_EDEFAULT);
+      case CYKPackage.NON_TERMINAL__NON_TERMINALS:
+        setNonTerminals(NON_TERMINALS_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +154,8 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
   {
     switch (featureID)
     {
-      case CYKPackage.NON_TERMINAL__NO_TERMINALS:
-        return NO_TERMINALS_EDEFAULT == null ? noTerminals != null : !NO_TERMINALS_EDEFAULT.equals(noTerminals);
+      case CYKPackage.NON_TERMINAL__NON_TERMINALS:
+        return NON_TERMINALS_EDEFAULT == null ? nonTerminals != null : !NON_TERMINALS_EDEFAULT.equals(nonTerminals);
     }
     return super.eIsSet(featureID);
   }
@@ -171,8 +171,8 @@ public class NonTerminalImpl extends MinimalEObjectImpl.Container implements Non
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (noTerminals: ");
-    result.append(noTerminals);
+    result.append(" (nonTerminals: ");
+    result.append(nonTerminals);
     result.append(')');
     return result.toString();
   }

@@ -163,7 +163,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGFNC"
-    // InternalCYK.g:71:1: ruleGFNC returns [EObject current=null] : (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleSimple ) ) ( (lv_w_3_0= ruleSimple ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* ) ;
+    // InternalCYK.g:71:1: ruleGFNC returns [EObject current=null] : (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* ) ;
     public final EObject ruleGFNC() throws RecognitionException {
         EObject current = null;
 
@@ -182,11 +182,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCYK.g:77:2: ( (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleSimple ) ) ( (lv_w_3_0= ruleSimple ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* ) )
-            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleSimple ) ) ( (lv_w_3_0= ruleSimple ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* )
+            // InternalCYK.g:77:2: ( (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* ) )
+            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* )
             {
-            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleSimple ) ) ( (lv_w_3_0= ruleSimple ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* )
-            // InternalCYK.g:79:3: otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleSimple ) ) ( (lv_w_3_0= ruleSimple ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )*
+            // InternalCYK.g:78:2: (otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )* )
+            // InternalCYK.g:79:3: otherlv_0= 'W' otherlv_1= ':' ( (lv_w_2_0= ruleTerminal ) ) ( (lv_w_3_0= ruleTerminal ) )* otherlv_4= 'G' otherlv_5= ':' ( (lv_productions_6_0= ruleProduction ) )*
             {
             otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
@@ -196,17 +196,17 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getGFNCAccess().getColonKeyword_1());
             		
-            // InternalCYK.g:87:3: ( (lv_w_2_0= ruleSimple ) )
-            // InternalCYK.g:88:4: (lv_w_2_0= ruleSimple )
+            // InternalCYK.g:87:3: ( (lv_w_2_0= ruleTerminal ) )
+            // InternalCYK.g:88:4: (lv_w_2_0= ruleTerminal )
             {
-            // InternalCYK.g:88:4: (lv_w_2_0= ruleSimple )
-            // InternalCYK.g:89:5: lv_w_2_0= ruleSimple
+            // InternalCYK.g:88:4: (lv_w_2_0= ruleTerminal )
+            // InternalCYK.g:89:5: lv_w_2_0= ruleTerminal
             {
 
-            					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_5);
-            lv_w_2_0=ruleSimple();
+            lv_w_2_0=ruleTerminal();
 
             state._fsp--;
 
@@ -218,7 +218,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             						current,
             						"w",
             						lv_w_2_0,
-            						"org.xtext.example.gfnc.CYK.Simple");
+            						"org.xtext.example.gfnc.CYK.Terminal");
             					afterParserOrEnumRuleCall();
             				
 
@@ -227,7 +227,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:106:3: ( (lv_w_3_0= ruleSimple ) )*
+            // InternalCYK.g:106:3: ( (lv_w_3_0= ruleTerminal ) )*
             loop1:
             do {
                 int alt1=2;
@@ -240,16 +240,16 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalCYK.g:107:4: (lv_w_3_0= ruleSimple )
+            	    // InternalCYK.g:107:4: (lv_w_3_0= ruleTerminal )
             	    {
-            	    // InternalCYK.g:107:4: (lv_w_3_0= ruleSimple )
-            	    // InternalCYK.g:108:5: lv_w_3_0= ruleSimple
+            	    // InternalCYK.g:107:4: (lv_w_3_0= ruleTerminal )
+            	    // InternalCYK.g:108:5: lv_w_3_0= ruleTerminal
             	    {
 
-            	    					newCompositeNode(grammarAccess.getGFNCAccess().getWSimpleParserRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getGFNCAccess().getWTerminalParserRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_5);
-            	    lv_w_3_0=ruleSimple();
+            	    lv_w_3_0=ruleTerminal();
 
             	    state._fsp--;
 
@@ -261,7 +261,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             	    						current,
             	    						"w",
             	    						lv_w_3_0,
-            	    						"org.xtext.example.gfnc.CYK.Simple");
+            	    						"org.xtext.example.gfnc.CYK.Terminal");
             	    					afterParserOrEnumRuleCall();
             	    				
 
@@ -628,7 +628,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRight"
-    // InternalCYK.g:251:1: ruleRight returns [EObject current=null] : ( ( (lv_simple_0_0= ruleSimple ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) ;
+    // InternalCYK.g:251:1: ruleRight returns [EObject current=null] : ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) ;
     public final EObject ruleRight() throws RecognitionException {
         EObject current = null;
 
@@ -642,10 +642,10 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCYK.g:257:2: ( ( ( (lv_simple_0_0= ruleSimple ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) )
-            // InternalCYK.g:258:2: ( ( (lv_simple_0_0= ruleSimple ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) )
+            // InternalCYK.g:257:2: ( ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) ) )
+            // InternalCYK.g:258:2: ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) )
             {
-            // InternalCYK.g:258:2: ( ( (lv_simple_0_0= ruleSimple ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) )
+            // InternalCYK.g:258:2: ( ( (lv_simple_0_0= ruleTerminal ) ) | ( (lv_binary_1_0= ruleBinary ) ) | ( (lv_lambda_2_0= '_' ) ) )
             int alt5=3;
             switch ( input.LA(1) ) {
             case 17:
@@ -721,19 +721,19 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             switch (alt5) {
                 case 1 :
-                    // InternalCYK.g:259:3: ( (lv_simple_0_0= ruleSimple ) )
+                    // InternalCYK.g:259:3: ( (lv_simple_0_0= ruleTerminal ) )
                     {
-                    // InternalCYK.g:259:3: ( (lv_simple_0_0= ruleSimple ) )
-                    // InternalCYK.g:260:4: (lv_simple_0_0= ruleSimple )
+                    // InternalCYK.g:259:3: ( (lv_simple_0_0= ruleTerminal ) )
+                    // InternalCYK.g:260:4: (lv_simple_0_0= ruleTerminal )
                     {
-                    // InternalCYK.g:260:4: (lv_simple_0_0= ruleSimple )
-                    // InternalCYK.g:261:5: lv_simple_0_0= ruleSimple
+                    // InternalCYK.g:260:4: (lv_simple_0_0= ruleTerminal )
+                    // InternalCYK.g:261:5: lv_simple_0_0= ruleTerminal
                     {
 
-                    					newCompositeNode(grammarAccess.getRightAccess().getSimpleSimpleParserRuleCall_0_0());
+                    					newCompositeNode(grammarAccess.getRightAccess().getSimpleTerminalParserRuleCall_0_0());
                     				
                     pushFollow(FOLLOW_2);
-                    lv_simple_0_0=ruleSimple();
+                    lv_simple_0_0=ruleTerminal();
 
                     state._fsp--;
 
@@ -745,7 +745,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     						current,
                     						"simple",
                     						lv_simple_0_0,
-                    						"org.xtext.example.gfnc.CYK.Simple");
+                    						"org.xtext.example.gfnc.CYK.Terminal");
                     					afterParserOrEnumRuleCall();
                     				
 
@@ -844,25 +844,25 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleRight"
 
 
-    // $ANTLR start "entryRuleSimple"
-    // InternalCYK.g:317:1: entryRuleSimple returns [EObject current=null] : iv_ruleSimple= ruleSimple EOF ;
-    public final EObject entryRuleSimple() throws RecognitionException {
+    // $ANTLR start "entryRuleTerminal"
+    // InternalCYK.g:317:1: entryRuleTerminal returns [EObject current=null] : iv_ruleTerminal= ruleTerminal EOF ;
+    public final EObject entryRuleTerminal() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleSimple = null;
+        EObject iv_ruleTerminal = null;
 
 
         try {
-            // InternalCYK.g:317:47: (iv_ruleSimple= ruleSimple EOF )
-            // InternalCYK.g:318:2: iv_ruleSimple= ruleSimple EOF
+            // InternalCYK.g:317:49: (iv_ruleTerminal= ruleTerminal EOF )
+            // InternalCYK.g:318:2: iv_ruleTerminal= ruleTerminal EOF
             {
-             newCompositeNode(grammarAccess.getSimpleRule()); 
+             newCompositeNode(grammarAccess.getTerminalRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleSimple=ruleSimple();
+            iv_ruleTerminal=ruleTerminal();
 
             state._fsp--;
 
-             current =iv_ruleSimple; 
+             current =iv_ruleTerminal; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -877,12 +877,12 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleSimple"
+    // $ANTLR end "entryRuleTerminal"
 
 
-    // $ANTLR start "ruleSimple"
-    // InternalCYK.g:324:1: ruleSimple returns [EObject current=null] : ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) ) ;
-    public final EObject ruleSimple() throws RecognitionException {
+    // $ANTLR start "ruleTerminal"
+    // InternalCYK.g:324:1: ruleTerminal returns [EObject current=null] : ( () ( ( (lv_terminals_1_1= 'a' | lv_terminals_1_2= 'b' | lv_terminals_1_3= 'c' | lv_terminals_1_4= 'd' | lv_terminals_1_5= 'e' | lv_terminals_1_6= 'f' | lv_terminals_1_7= 'g' | lv_terminals_1_8= 'h' | lv_terminals_1_9= 'i' | lv_terminals_1_10= 'j' | lv_terminals_1_11= 'k' | lv_terminals_1_12= 'l' | lv_terminals_1_13= 'm' | lv_terminals_1_14= 'n' | lv_terminals_1_15= 'o' | lv_terminals_1_16= 'p' | lv_terminals_1_17= 'q' | lv_terminals_1_18= 'r' | lv_terminals_1_19= 's' | lv_terminals_1_20= 't' | lv_terminals_1_21= 'v' | lv_terminals_1_22= 'w' | lv_terminals_1_23= 'x' | lv_terminals_1_24= 'y' | lv_terminals_1_25= 'z' ) ) ) ) ;
+    public final EObject ruleTerminal() throws RecognitionException {
         EObject current = null;
 
         Token lv_terminals_1_1=null;
@@ -926,7 +926,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
             {
 
             				current = forceCreateModelElement(
-            					grammarAccess.getSimpleAccess().getSimpleAction_0(),
+            					grammarAccess.getTerminalAccess().getTerminalAction_0(),
             					current);
             			
 
@@ -1079,11 +1079,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_1=(Token)match(input,17,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_1, grammarAccess.getSimpleAccess().getTerminalsAKeyword_1_0_0());
+                    						newLeafNode(lv_terminals_1_1, grammarAccess.getTerminalAccess().getTerminalsAKeyword_1_0_0());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_1, null);
                     					
@@ -1095,11 +1095,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_2=(Token)match(input,18,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_2, grammarAccess.getSimpleAccess().getTerminalsBKeyword_1_0_1());
+                    						newLeafNode(lv_terminals_1_2, grammarAccess.getTerminalAccess().getTerminalsBKeyword_1_0_1());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_2, null);
                     					
@@ -1111,11 +1111,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_3=(Token)match(input,19,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_3, grammarAccess.getSimpleAccess().getTerminalsCKeyword_1_0_2());
+                    						newLeafNode(lv_terminals_1_3, grammarAccess.getTerminalAccess().getTerminalsCKeyword_1_0_2());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_3, null);
                     					
@@ -1127,11 +1127,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_4=(Token)match(input,20,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_4, grammarAccess.getSimpleAccess().getTerminalsDKeyword_1_0_3());
+                    						newLeafNode(lv_terminals_1_4, grammarAccess.getTerminalAccess().getTerminalsDKeyword_1_0_3());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_4, null);
                     					
@@ -1143,11 +1143,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_5=(Token)match(input,21,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_5, grammarAccess.getSimpleAccess().getTerminalsEKeyword_1_0_4());
+                    						newLeafNode(lv_terminals_1_5, grammarAccess.getTerminalAccess().getTerminalsEKeyword_1_0_4());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_5, null);
                     					
@@ -1159,11 +1159,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_6=(Token)match(input,22,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_6, grammarAccess.getSimpleAccess().getTerminalsFKeyword_1_0_5());
+                    						newLeafNode(lv_terminals_1_6, grammarAccess.getTerminalAccess().getTerminalsFKeyword_1_0_5());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_6, null);
                     					
@@ -1175,11 +1175,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_7=(Token)match(input,23,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_7, grammarAccess.getSimpleAccess().getTerminalsGKeyword_1_0_6());
+                    						newLeafNode(lv_terminals_1_7, grammarAccess.getTerminalAccess().getTerminalsGKeyword_1_0_6());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_7, null);
                     					
@@ -1191,11 +1191,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_8=(Token)match(input,24,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_8, grammarAccess.getSimpleAccess().getTerminalsHKeyword_1_0_7());
+                    						newLeafNode(lv_terminals_1_8, grammarAccess.getTerminalAccess().getTerminalsHKeyword_1_0_7());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_8, null);
                     					
@@ -1207,11 +1207,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_9=(Token)match(input,25,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_9, grammarAccess.getSimpleAccess().getTerminalsIKeyword_1_0_8());
+                    						newLeafNode(lv_terminals_1_9, grammarAccess.getTerminalAccess().getTerminalsIKeyword_1_0_8());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_9, null);
                     					
@@ -1223,11 +1223,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_10=(Token)match(input,26,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_10, grammarAccess.getSimpleAccess().getTerminalsJKeyword_1_0_9());
+                    						newLeafNode(lv_terminals_1_10, grammarAccess.getTerminalAccess().getTerminalsJKeyword_1_0_9());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_10, null);
                     					
@@ -1239,11 +1239,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_11=(Token)match(input,27,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_11, grammarAccess.getSimpleAccess().getTerminalsKKeyword_1_0_10());
+                    						newLeafNode(lv_terminals_1_11, grammarAccess.getTerminalAccess().getTerminalsKKeyword_1_0_10());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_11, null);
                     					
@@ -1255,11 +1255,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_12=(Token)match(input,28,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_12, grammarAccess.getSimpleAccess().getTerminalsLKeyword_1_0_11());
+                    						newLeafNode(lv_terminals_1_12, grammarAccess.getTerminalAccess().getTerminalsLKeyword_1_0_11());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_12, null);
                     					
@@ -1271,11 +1271,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_13=(Token)match(input,29,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_13, grammarAccess.getSimpleAccess().getTerminalsMKeyword_1_0_12());
+                    						newLeafNode(lv_terminals_1_13, grammarAccess.getTerminalAccess().getTerminalsMKeyword_1_0_12());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_13, null);
                     					
@@ -1287,11 +1287,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_14=(Token)match(input,30,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_14, grammarAccess.getSimpleAccess().getTerminalsNKeyword_1_0_13());
+                    						newLeafNode(lv_terminals_1_14, grammarAccess.getTerminalAccess().getTerminalsNKeyword_1_0_13());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_14, null);
                     					
@@ -1303,11 +1303,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_15=(Token)match(input,31,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_15, grammarAccess.getSimpleAccess().getTerminalsOKeyword_1_0_14());
+                    						newLeafNode(lv_terminals_1_15, grammarAccess.getTerminalAccess().getTerminalsOKeyword_1_0_14());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_15, null);
                     					
@@ -1319,11 +1319,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_16=(Token)match(input,32,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_16, grammarAccess.getSimpleAccess().getTerminalsPKeyword_1_0_15());
+                    						newLeafNode(lv_terminals_1_16, grammarAccess.getTerminalAccess().getTerminalsPKeyword_1_0_15());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_16, null);
                     					
@@ -1335,11 +1335,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_17=(Token)match(input,33,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_17, grammarAccess.getSimpleAccess().getTerminalsQKeyword_1_0_16());
+                    						newLeafNode(lv_terminals_1_17, grammarAccess.getTerminalAccess().getTerminalsQKeyword_1_0_16());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_17, null);
                     					
@@ -1351,11 +1351,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_18=(Token)match(input,34,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_18, grammarAccess.getSimpleAccess().getTerminalsRKeyword_1_0_17());
+                    						newLeafNode(lv_terminals_1_18, grammarAccess.getTerminalAccess().getTerminalsRKeyword_1_0_17());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_18, null);
                     					
@@ -1367,11 +1367,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_19=(Token)match(input,35,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_19, grammarAccess.getSimpleAccess().getTerminalsSKeyword_1_0_18());
+                    						newLeafNode(lv_terminals_1_19, grammarAccess.getTerminalAccess().getTerminalsSKeyword_1_0_18());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_19, null);
                     					
@@ -1383,11 +1383,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_20=(Token)match(input,36,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_20, grammarAccess.getSimpleAccess().getTerminalsTKeyword_1_0_19());
+                    						newLeafNode(lv_terminals_1_20, grammarAccess.getTerminalAccess().getTerminalsTKeyword_1_0_19());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_20, null);
                     					
@@ -1399,11 +1399,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_21=(Token)match(input,37,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_21, grammarAccess.getSimpleAccess().getTerminalsVKeyword_1_0_20());
+                    						newLeafNode(lv_terminals_1_21, grammarAccess.getTerminalAccess().getTerminalsVKeyword_1_0_20());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_21, null);
                     					
@@ -1415,11 +1415,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_22=(Token)match(input,38,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_22, grammarAccess.getSimpleAccess().getTerminalsWKeyword_1_0_21());
+                    						newLeafNode(lv_terminals_1_22, grammarAccess.getTerminalAccess().getTerminalsWKeyword_1_0_21());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_22, null);
                     					
@@ -1431,11 +1431,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_23=(Token)match(input,39,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_23, grammarAccess.getSimpleAccess().getTerminalsXKeyword_1_0_22());
+                    						newLeafNode(lv_terminals_1_23, grammarAccess.getTerminalAccess().getTerminalsXKeyword_1_0_22());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_23, null);
                     					
@@ -1447,11 +1447,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_24=(Token)match(input,40,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_24, grammarAccess.getSimpleAccess().getTerminalsYKeyword_1_0_23());
+                    						newLeafNode(lv_terminals_1_24, grammarAccess.getTerminalAccess().getTerminalsYKeyword_1_0_23());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_24, null);
                     					
@@ -1463,11 +1463,11 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
                     {
                     lv_terminals_1_25=(Token)match(input,41,FOLLOW_2); 
 
-                    						newLeafNode(lv_terminals_1_25, grammarAccess.getSimpleAccess().getTerminalsZKeyword_1_0_24());
+                    						newLeafNode(lv_terminals_1_25, grammarAccess.getTerminalAccess().getTerminalsZKeyword_1_0_24());
                     					
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getSimpleRule());
+                    							current = createModelElement(grammarAccess.getTerminalRule());
                     						}
                     						setWithLastConsumed(current, "terminals", lv_terminals_1_25, null);
                     					
@@ -1502,7 +1502,7 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleSimple"
+    // $ANTLR end "ruleTerminal"
 
 
     // $ANTLR start "entryRuleNonTerminal"
@@ -1542,46 +1542,46 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNonTerminal"
-    // InternalCYK.g:630:1: ruleNonTerminal returns [EObject current=null] : ( () ( ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) ) ) ) ;
+    // InternalCYK.g:630:1: ruleNonTerminal returns [EObject current=null] : ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) ) ;
     public final EObject ruleNonTerminal() throws RecognitionException {
         EObject current = null;
 
-        Token lv_noTerminals_1_1=null;
-        Token lv_noTerminals_1_2=null;
-        Token lv_noTerminals_1_3=null;
-        Token lv_noTerminals_1_4=null;
-        Token lv_noTerminals_1_5=null;
-        Token lv_noTerminals_1_6=null;
-        Token lv_noTerminals_1_7=null;
-        Token lv_noTerminals_1_8=null;
-        Token lv_noTerminals_1_9=null;
-        Token lv_noTerminals_1_10=null;
-        Token lv_noTerminals_1_11=null;
-        Token lv_noTerminals_1_12=null;
-        Token lv_noTerminals_1_13=null;
-        Token lv_noTerminals_1_14=null;
-        Token lv_noTerminals_1_15=null;
-        Token lv_noTerminals_1_16=null;
-        Token lv_noTerminals_1_17=null;
-        Token lv_noTerminals_1_18=null;
-        Token lv_noTerminals_1_19=null;
-        Token lv_noTerminals_1_20=null;
-        Token lv_noTerminals_1_21=null;
-        Token lv_noTerminals_1_22=null;
-        Token lv_noTerminals_1_23=null;
-        Token lv_noTerminals_1_24=null;
-        Token lv_noTerminals_1_25=null;
-        Token lv_noTerminals_1_26=null;
+        Token lv_nonTerminals_1_1=null;
+        Token lv_nonTerminals_1_2=null;
+        Token lv_nonTerminals_1_3=null;
+        Token lv_nonTerminals_1_4=null;
+        Token lv_nonTerminals_1_5=null;
+        Token lv_nonTerminals_1_6=null;
+        Token lv_nonTerminals_1_7=null;
+        Token lv_nonTerminals_1_8=null;
+        Token lv_nonTerminals_1_9=null;
+        Token lv_nonTerminals_1_10=null;
+        Token lv_nonTerminals_1_11=null;
+        Token lv_nonTerminals_1_12=null;
+        Token lv_nonTerminals_1_13=null;
+        Token lv_nonTerminals_1_14=null;
+        Token lv_nonTerminals_1_15=null;
+        Token lv_nonTerminals_1_16=null;
+        Token lv_nonTerminals_1_17=null;
+        Token lv_nonTerminals_1_18=null;
+        Token lv_nonTerminals_1_19=null;
+        Token lv_nonTerminals_1_20=null;
+        Token lv_nonTerminals_1_21=null;
+        Token lv_nonTerminals_1_22=null;
+        Token lv_nonTerminals_1_23=null;
+        Token lv_nonTerminals_1_24=null;
+        Token lv_nonTerminals_1_25=null;
+        Token lv_nonTerminals_1_26=null;
 
 
         	enterRule();
 
         try {
-            // InternalCYK.g:636:2: ( ( () ( ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) ) ) ) )
-            // InternalCYK.g:637:2: ( () ( ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) ) ) )
+            // InternalCYK.g:636:2: ( ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) ) )
+            // InternalCYK.g:637:2: ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) )
             {
-            // InternalCYK.g:637:2: ( () ( ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) ) ) )
-            // InternalCYK.g:638:3: () ( ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) ) )
+            // InternalCYK.g:637:2: ( () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) ) )
+            // InternalCYK.g:638:3: () ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) )
             {
             // InternalCYK.g:638:3: ()
             // InternalCYK.g:639:4: 
@@ -1594,13 +1594,13 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalCYK.g:645:3: ( ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) ) )
-            // InternalCYK.g:646:4: ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) )
+            // InternalCYK.g:645:3: ( ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) ) )
+            // InternalCYK.g:646:4: ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) )
             {
-            // InternalCYK.g:646:4: ( (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' ) )
-            // InternalCYK.g:647:5: (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' )
+            // InternalCYK.g:646:4: ( (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' ) )
+            // InternalCYK.g:647:5: (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' )
             {
-            // InternalCYK.g:647:5: (lv_noTerminals_1_1= 'A' | lv_noTerminals_1_2= 'B' | lv_noTerminals_1_3= 'C' | lv_noTerminals_1_4= 'D' | lv_noTerminals_1_5= 'E' | lv_noTerminals_1_6= 'F' | lv_noTerminals_1_7= 'G' | lv_noTerminals_1_8= 'H' | lv_noTerminals_1_9= 'I' | lv_noTerminals_1_10= 'J' | lv_noTerminals_1_11= 'K' | lv_noTerminals_1_12= 'L' | lv_noTerminals_1_13= 'M' | lv_noTerminals_1_14= 'N' | lv_noTerminals_1_15= 'O' | lv_noTerminals_1_16= 'P' | lv_noTerminals_1_17= 'Q' | lv_noTerminals_1_18= 'R' | lv_noTerminals_1_19= 'S' | lv_noTerminals_1_20= 'T' | lv_noTerminals_1_21= 'U' | lv_noTerminals_1_22= 'V' | lv_noTerminals_1_23= 'W' | lv_noTerminals_1_24= 'X' | lv_noTerminals_1_25= 'Y' | lv_noTerminals_1_26= 'Z' )
+            // InternalCYK.g:647:5: (lv_nonTerminals_1_1= 'A' | lv_nonTerminals_1_2= 'B' | lv_nonTerminals_1_3= 'C' | lv_nonTerminals_1_4= 'D' | lv_nonTerminals_1_5= 'E' | lv_nonTerminals_1_6= 'F' | lv_nonTerminals_1_7= 'G' | lv_nonTerminals_1_8= 'H' | lv_nonTerminals_1_9= 'I' | lv_nonTerminals_1_10= 'J' | lv_nonTerminals_1_11= 'K' | lv_nonTerminals_1_12= 'L' | lv_nonTerminals_1_13= 'M' | lv_nonTerminals_1_14= 'N' | lv_nonTerminals_1_15= 'O' | lv_nonTerminals_1_16= 'P' | lv_nonTerminals_1_17= 'Q' | lv_nonTerminals_1_18= 'R' | lv_nonTerminals_1_19= 'S' | lv_nonTerminals_1_20= 'T' | lv_nonTerminals_1_21= 'U' | lv_nonTerminals_1_22= 'V' | lv_nonTerminals_1_23= 'W' | lv_nonTerminals_1_24= 'X' | lv_nonTerminals_1_25= 'Y' | lv_nonTerminals_1_26= 'Z' )
             int alt7=26;
             switch ( input.LA(1) ) {
             case 42:
@@ -1742,417 +1742,417 @@ public class InternalCYKParser extends AbstractInternalAntlrParser {
 
             switch (alt7) {
                 case 1 :
-                    // InternalCYK.g:648:6: lv_noTerminals_1_1= 'A'
+                    // InternalCYK.g:648:6: lv_nonTerminals_1_1= 'A'
                     {
-                    lv_noTerminals_1_1=(Token)match(input,42,FOLLOW_2); 
+                    lv_nonTerminals_1_1=(Token)match(input,42,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_1, grammarAccess.getNonTerminalAccess().getNoTerminalsAKeyword_1_0_0());
+                    						newLeafNode(lv_nonTerminals_1_1, grammarAccess.getNonTerminalAccess().getNonTerminalsAKeyword_1_0_0());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_1, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_1, null);
                     					
 
                     }
                     break;
                 case 2 :
-                    // InternalCYK.g:659:6: lv_noTerminals_1_2= 'B'
+                    // InternalCYK.g:659:6: lv_nonTerminals_1_2= 'B'
                     {
-                    lv_noTerminals_1_2=(Token)match(input,43,FOLLOW_2); 
+                    lv_nonTerminals_1_2=(Token)match(input,43,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_2, grammarAccess.getNonTerminalAccess().getNoTerminalsBKeyword_1_0_1());
+                    						newLeafNode(lv_nonTerminals_1_2, grammarAccess.getNonTerminalAccess().getNonTerminalsBKeyword_1_0_1());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_2, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_2, null);
                     					
 
                     }
                     break;
                 case 3 :
-                    // InternalCYK.g:670:6: lv_noTerminals_1_3= 'C'
+                    // InternalCYK.g:670:6: lv_nonTerminals_1_3= 'C'
                     {
-                    lv_noTerminals_1_3=(Token)match(input,44,FOLLOW_2); 
+                    lv_nonTerminals_1_3=(Token)match(input,44,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_3, grammarAccess.getNonTerminalAccess().getNoTerminalsCKeyword_1_0_2());
+                    						newLeafNode(lv_nonTerminals_1_3, grammarAccess.getNonTerminalAccess().getNonTerminalsCKeyword_1_0_2());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_3, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_3, null);
                     					
 
                     }
                     break;
                 case 4 :
-                    // InternalCYK.g:681:6: lv_noTerminals_1_4= 'D'
+                    // InternalCYK.g:681:6: lv_nonTerminals_1_4= 'D'
                     {
-                    lv_noTerminals_1_4=(Token)match(input,45,FOLLOW_2); 
+                    lv_nonTerminals_1_4=(Token)match(input,45,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_4, grammarAccess.getNonTerminalAccess().getNoTerminalsDKeyword_1_0_3());
+                    						newLeafNode(lv_nonTerminals_1_4, grammarAccess.getNonTerminalAccess().getNonTerminalsDKeyword_1_0_3());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_4, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_4, null);
                     					
 
                     }
                     break;
                 case 5 :
-                    // InternalCYK.g:692:6: lv_noTerminals_1_5= 'E'
+                    // InternalCYK.g:692:6: lv_nonTerminals_1_5= 'E'
                     {
-                    lv_noTerminals_1_5=(Token)match(input,46,FOLLOW_2); 
+                    lv_nonTerminals_1_5=(Token)match(input,46,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_5, grammarAccess.getNonTerminalAccess().getNoTerminalsEKeyword_1_0_4());
+                    						newLeafNode(lv_nonTerminals_1_5, grammarAccess.getNonTerminalAccess().getNonTerminalsEKeyword_1_0_4());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_5, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_5, null);
                     					
 
                     }
                     break;
                 case 6 :
-                    // InternalCYK.g:703:6: lv_noTerminals_1_6= 'F'
+                    // InternalCYK.g:703:6: lv_nonTerminals_1_6= 'F'
                     {
-                    lv_noTerminals_1_6=(Token)match(input,47,FOLLOW_2); 
+                    lv_nonTerminals_1_6=(Token)match(input,47,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_6, grammarAccess.getNonTerminalAccess().getNoTerminalsFKeyword_1_0_5());
+                    						newLeafNode(lv_nonTerminals_1_6, grammarAccess.getNonTerminalAccess().getNonTerminalsFKeyword_1_0_5());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_6, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_6, null);
                     					
 
                     }
                     break;
                 case 7 :
-                    // InternalCYK.g:714:6: lv_noTerminals_1_7= 'G'
+                    // InternalCYK.g:714:6: lv_nonTerminals_1_7= 'G'
                     {
-                    lv_noTerminals_1_7=(Token)match(input,13,FOLLOW_2); 
+                    lv_nonTerminals_1_7=(Token)match(input,13,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_7, grammarAccess.getNonTerminalAccess().getNoTerminalsGKeyword_1_0_6());
+                    						newLeafNode(lv_nonTerminals_1_7, grammarAccess.getNonTerminalAccess().getNonTerminalsGKeyword_1_0_6());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_7, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_7, null);
                     					
 
                     }
                     break;
                 case 8 :
-                    // InternalCYK.g:725:6: lv_noTerminals_1_8= 'H'
+                    // InternalCYK.g:725:6: lv_nonTerminals_1_8= 'H'
                     {
-                    lv_noTerminals_1_8=(Token)match(input,48,FOLLOW_2); 
+                    lv_nonTerminals_1_8=(Token)match(input,48,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_8, grammarAccess.getNonTerminalAccess().getNoTerminalsHKeyword_1_0_7());
+                    						newLeafNode(lv_nonTerminals_1_8, grammarAccess.getNonTerminalAccess().getNonTerminalsHKeyword_1_0_7());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_8, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_8, null);
                     					
 
                     }
                     break;
                 case 9 :
-                    // InternalCYK.g:736:6: lv_noTerminals_1_9= 'I'
+                    // InternalCYK.g:736:6: lv_nonTerminals_1_9= 'I'
                     {
-                    lv_noTerminals_1_9=(Token)match(input,49,FOLLOW_2); 
+                    lv_nonTerminals_1_9=(Token)match(input,49,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_9, grammarAccess.getNonTerminalAccess().getNoTerminalsIKeyword_1_0_8());
+                    						newLeafNode(lv_nonTerminals_1_9, grammarAccess.getNonTerminalAccess().getNonTerminalsIKeyword_1_0_8());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_9, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_9, null);
                     					
 
                     }
                     break;
                 case 10 :
-                    // InternalCYK.g:747:6: lv_noTerminals_1_10= 'J'
+                    // InternalCYK.g:747:6: lv_nonTerminals_1_10= 'J'
                     {
-                    lv_noTerminals_1_10=(Token)match(input,50,FOLLOW_2); 
+                    lv_nonTerminals_1_10=(Token)match(input,50,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_10, grammarAccess.getNonTerminalAccess().getNoTerminalsJKeyword_1_0_9());
+                    						newLeafNode(lv_nonTerminals_1_10, grammarAccess.getNonTerminalAccess().getNonTerminalsJKeyword_1_0_9());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_10, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_10, null);
                     					
 
                     }
                     break;
                 case 11 :
-                    // InternalCYK.g:758:6: lv_noTerminals_1_11= 'K'
+                    // InternalCYK.g:758:6: lv_nonTerminals_1_11= 'K'
                     {
-                    lv_noTerminals_1_11=(Token)match(input,51,FOLLOW_2); 
+                    lv_nonTerminals_1_11=(Token)match(input,51,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_11, grammarAccess.getNonTerminalAccess().getNoTerminalsKKeyword_1_0_10());
+                    						newLeafNode(lv_nonTerminals_1_11, grammarAccess.getNonTerminalAccess().getNonTerminalsKKeyword_1_0_10());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_11, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_11, null);
                     					
 
                     }
                     break;
                 case 12 :
-                    // InternalCYK.g:769:6: lv_noTerminals_1_12= 'L'
+                    // InternalCYK.g:769:6: lv_nonTerminals_1_12= 'L'
                     {
-                    lv_noTerminals_1_12=(Token)match(input,52,FOLLOW_2); 
+                    lv_nonTerminals_1_12=(Token)match(input,52,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_12, grammarAccess.getNonTerminalAccess().getNoTerminalsLKeyword_1_0_11());
+                    						newLeafNode(lv_nonTerminals_1_12, grammarAccess.getNonTerminalAccess().getNonTerminalsLKeyword_1_0_11());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_12, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_12, null);
                     					
 
                     }
                     break;
                 case 13 :
-                    // InternalCYK.g:780:6: lv_noTerminals_1_13= 'M'
+                    // InternalCYK.g:780:6: lv_nonTerminals_1_13= 'M'
                     {
-                    lv_noTerminals_1_13=(Token)match(input,53,FOLLOW_2); 
+                    lv_nonTerminals_1_13=(Token)match(input,53,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_13, grammarAccess.getNonTerminalAccess().getNoTerminalsMKeyword_1_0_12());
+                    						newLeafNode(lv_nonTerminals_1_13, grammarAccess.getNonTerminalAccess().getNonTerminalsMKeyword_1_0_12());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_13, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_13, null);
                     					
 
                     }
                     break;
                 case 14 :
-                    // InternalCYK.g:791:6: lv_noTerminals_1_14= 'N'
+                    // InternalCYK.g:791:6: lv_nonTerminals_1_14= 'N'
                     {
-                    lv_noTerminals_1_14=(Token)match(input,54,FOLLOW_2); 
+                    lv_nonTerminals_1_14=(Token)match(input,54,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_14, grammarAccess.getNonTerminalAccess().getNoTerminalsNKeyword_1_0_13());
+                    						newLeafNode(lv_nonTerminals_1_14, grammarAccess.getNonTerminalAccess().getNonTerminalsNKeyword_1_0_13());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_14, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_14, null);
                     					
 
                     }
                     break;
                 case 15 :
-                    // InternalCYK.g:802:6: lv_noTerminals_1_15= 'O'
+                    // InternalCYK.g:802:6: lv_nonTerminals_1_15= 'O'
                     {
-                    lv_noTerminals_1_15=(Token)match(input,55,FOLLOW_2); 
+                    lv_nonTerminals_1_15=(Token)match(input,55,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_15, grammarAccess.getNonTerminalAccess().getNoTerminalsOKeyword_1_0_14());
+                    						newLeafNode(lv_nonTerminals_1_15, grammarAccess.getNonTerminalAccess().getNonTerminalsOKeyword_1_0_14());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_15, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_15, null);
                     					
 
                     }
                     break;
                 case 16 :
-                    // InternalCYK.g:813:6: lv_noTerminals_1_16= 'P'
+                    // InternalCYK.g:813:6: lv_nonTerminals_1_16= 'P'
                     {
-                    lv_noTerminals_1_16=(Token)match(input,56,FOLLOW_2); 
+                    lv_nonTerminals_1_16=(Token)match(input,56,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_16, grammarAccess.getNonTerminalAccess().getNoTerminalsPKeyword_1_0_15());
+                    						newLeafNode(lv_nonTerminals_1_16, grammarAccess.getNonTerminalAccess().getNonTerminalsPKeyword_1_0_15());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_16, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_16, null);
                     					
 
                     }
                     break;
                 case 17 :
-                    // InternalCYK.g:824:6: lv_noTerminals_1_17= 'Q'
+                    // InternalCYK.g:824:6: lv_nonTerminals_1_17= 'Q'
                     {
-                    lv_noTerminals_1_17=(Token)match(input,57,FOLLOW_2); 
+                    lv_nonTerminals_1_17=(Token)match(input,57,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_17, grammarAccess.getNonTerminalAccess().getNoTerminalsQKeyword_1_0_16());
+                    						newLeafNode(lv_nonTerminals_1_17, grammarAccess.getNonTerminalAccess().getNonTerminalsQKeyword_1_0_16());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_17, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_17, null);
                     					
 
                     }
                     break;
                 case 18 :
-                    // InternalCYK.g:835:6: lv_noTerminals_1_18= 'R'
+                    // InternalCYK.g:835:6: lv_nonTerminals_1_18= 'R'
                     {
-                    lv_noTerminals_1_18=(Token)match(input,58,FOLLOW_2); 
+                    lv_nonTerminals_1_18=(Token)match(input,58,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_18, grammarAccess.getNonTerminalAccess().getNoTerminalsRKeyword_1_0_17());
+                    						newLeafNode(lv_nonTerminals_1_18, grammarAccess.getNonTerminalAccess().getNonTerminalsRKeyword_1_0_17());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_18, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_18, null);
                     					
 
                     }
                     break;
                 case 19 :
-                    // InternalCYK.g:846:6: lv_noTerminals_1_19= 'S'
+                    // InternalCYK.g:846:6: lv_nonTerminals_1_19= 'S'
                     {
-                    lv_noTerminals_1_19=(Token)match(input,59,FOLLOW_2); 
+                    lv_nonTerminals_1_19=(Token)match(input,59,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_19, grammarAccess.getNonTerminalAccess().getNoTerminalsSKeyword_1_0_18());
+                    						newLeafNode(lv_nonTerminals_1_19, grammarAccess.getNonTerminalAccess().getNonTerminalsSKeyword_1_0_18());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_19, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_19, null);
                     					
 
                     }
                     break;
                 case 20 :
-                    // InternalCYK.g:857:6: lv_noTerminals_1_20= 'T'
+                    // InternalCYK.g:857:6: lv_nonTerminals_1_20= 'T'
                     {
-                    lv_noTerminals_1_20=(Token)match(input,60,FOLLOW_2); 
+                    lv_nonTerminals_1_20=(Token)match(input,60,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_20, grammarAccess.getNonTerminalAccess().getNoTerminalsTKeyword_1_0_19());
+                    						newLeafNode(lv_nonTerminals_1_20, grammarAccess.getNonTerminalAccess().getNonTerminalsTKeyword_1_0_19());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_20, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_20, null);
                     					
 
                     }
                     break;
                 case 21 :
-                    // InternalCYK.g:868:6: lv_noTerminals_1_21= 'U'
+                    // InternalCYK.g:868:6: lv_nonTerminals_1_21= 'U'
                     {
-                    lv_noTerminals_1_21=(Token)match(input,61,FOLLOW_2); 
+                    lv_nonTerminals_1_21=(Token)match(input,61,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_21, grammarAccess.getNonTerminalAccess().getNoTerminalsUKeyword_1_0_20());
+                    						newLeafNode(lv_nonTerminals_1_21, grammarAccess.getNonTerminalAccess().getNonTerminalsUKeyword_1_0_20());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_21, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_21, null);
                     					
 
                     }
                     break;
                 case 22 :
-                    // InternalCYK.g:879:6: lv_noTerminals_1_22= 'V'
+                    // InternalCYK.g:879:6: lv_nonTerminals_1_22= 'V'
                     {
-                    lv_noTerminals_1_22=(Token)match(input,62,FOLLOW_2); 
+                    lv_nonTerminals_1_22=(Token)match(input,62,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_22, grammarAccess.getNonTerminalAccess().getNoTerminalsVKeyword_1_0_21());
+                    						newLeafNode(lv_nonTerminals_1_22, grammarAccess.getNonTerminalAccess().getNonTerminalsVKeyword_1_0_21());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_22, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_22, null);
                     					
 
                     }
                     break;
                 case 23 :
-                    // InternalCYK.g:890:6: lv_noTerminals_1_23= 'W'
+                    // InternalCYK.g:890:6: lv_nonTerminals_1_23= 'W'
                     {
-                    lv_noTerminals_1_23=(Token)match(input,11,FOLLOW_2); 
+                    lv_nonTerminals_1_23=(Token)match(input,11,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_23, grammarAccess.getNonTerminalAccess().getNoTerminalsWKeyword_1_0_22());
+                    						newLeafNode(lv_nonTerminals_1_23, grammarAccess.getNonTerminalAccess().getNonTerminalsWKeyword_1_0_22());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_23, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_23, null);
                     					
 
                     }
                     break;
                 case 24 :
-                    // InternalCYK.g:901:6: lv_noTerminals_1_24= 'X'
+                    // InternalCYK.g:901:6: lv_nonTerminals_1_24= 'X'
                     {
-                    lv_noTerminals_1_24=(Token)match(input,63,FOLLOW_2); 
+                    lv_nonTerminals_1_24=(Token)match(input,63,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_24, grammarAccess.getNonTerminalAccess().getNoTerminalsXKeyword_1_0_23());
+                    						newLeafNode(lv_nonTerminals_1_24, grammarAccess.getNonTerminalAccess().getNonTerminalsXKeyword_1_0_23());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_24, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_24, null);
                     					
 
                     }
                     break;
                 case 25 :
-                    // InternalCYK.g:912:6: lv_noTerminals_1_25= 'Y'
+                    // InternalCYK.g:912:6: lv_nonTerminals_1_25= 'Y'
                     {
-                    lv_noTerminals_1_25=(Token)match(input,64,FOLLOW_2); 
+                    lv_nonTerminals_1_25=(Token)match(input,64,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_25, grammarAccess.getNonTerminalAccess().getNoTerminalsYKeyword_1_0_24());
+                    						newLeafNode(lv_nonTerminals_1_25, grammarAccess.getNonTerminalAccess().getNonTerminalsYKeyword_1_0_24());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_25, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_25, null);
                     					
 
                     }
                     break;
                 case 26 :
-                    // InternalCYK.g:923:6: lv_noTerminals_1_26= 'Z'
+                    // InternalCYK.g:923:6: lv_nonTerminals_1_26= 'Z'
                     {
-                    lv_noTerminals_1_26=(Token)match(input,65,FOLLOW_2); 
+                    lv_nonTerminals_1_26=(Token)match(input,65,FOLLOW_2); 
 
-                    						newLeafNode(lv_noTerminals_1_26, grammarAccess.getNonTerminalAccess().getNoTerminalsZKeyword_1_0_25());
+                    						newLeafNode(lv_nonTerminals_1_26, grammarAccess.getNonTerminalAccess().getNonTerminalsZKeyword_1_0_25());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getNonTerminalRule());
                     						}
-                    						setWithLastConsumed(current, "noTerminals", lv_noTerminals_1_26, null);
+                    						setWithLastConsumed(current, "nonTerminals", lv_nonTerminals_1_26, null);
                     					
 
                     }

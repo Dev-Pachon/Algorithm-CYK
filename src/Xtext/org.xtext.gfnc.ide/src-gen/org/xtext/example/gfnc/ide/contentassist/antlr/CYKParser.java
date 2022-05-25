@@ -32,12 +32,12 @@ public class CYKParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, CYKGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getRightAccess().getAlternatives(), "rule__Right__Alternatives");
-			builder.put(grammarAccess.getSimpleAccess().getTerminalsAlternatives_1_0(), "rule__Simple__TerminalsAlternatives_1_0");
-			builder.put(grammarAccess.getNonTerminalAccess().getNoTerminalsAlternatives_1_0(), "rule__NonTerminal__NoTerminalsAlternatives_1_0");
+			builder.put(grammarAccess.getTerminalAccess().getTerminalsAlternatives_1_0(), "rule__Terminal__TerminalsAlternatives_1_0");
+			builder.put(grammarAccess.getNonTerminalAccess().getNonTerminalsAlternatives_1_0(), "rule__NonTerminal__NonTerminalsAlternatives_1_0");
 			builder.put(grammarAccess.getGFNCAccess().getGroup(), "rule__GFNC__Group__0");
 			builder.put(grammarAccess.getProductionAccess().getGroup(), "rule__Production__Group__0");
 			builder.put(grammarAccess.getProductionAccess().getGroup_3(), "rule__Production__Group_3__0");
-			builder.put(grammarAccess.getSimpleAccess().getGroup(), "rule__Simple__Group__0");
+			builder.put(grammarAccess.getTerminalAccess().getGroup(), "rule__Terminal__Group__0");
 			builder.put(grammarAccess.getNonTerminalAccess().getGroup(), "rule__NonTerminal__Group__0");
 			builder.put(grammarAccess.getBinaryAccess().getGroup(), "rule__Binary__Group__0");
 			builder.put(grammarAccess.getBinaryAccess().getGroup_1(), "rule__Binary__Group_1__0");
@@ -50,8 +50,8 @@ public class CYKParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRightAccess().getSimpleAssignment_0(), "rule__Right__SimpleAssignment_0");
 			builder.put(grammarAccess.getRightAccess().getBinaryAssignment_1(), "rule__Right__BinaryAssignment_1");
 			builder.put(grammarAccess.getRightAccess().getLambdaAssignment_2(), "rule__Right__LambdaAssignment_2");
-			builder.put(grammarAccess.getSimpleAccess().getTerminalsAssignment_1(), "rule__Simple__TerminalsAssignment_1");
-			builder.put(grammarAccess.getNonTerminalAccess().getNoTerminalsAssignment_1(), "rule__NonTerminal__NoTerminalsAssignment_1");
+			builder.put(grammarAccess.getTerminalAccess().getTerminalsAssignment_1(), "rule__Terminal__TerminalsAssignment_1");
+			builder.put(grammarAccess.getNonTerminalAccess().getNonTerminalsAssignment_1(), "rule__NonTerminal__NonTerminalsAssignment_1");
 			builder.put(grammarAccess.getBinaryAccess().getFirstAssignment_1_0(), "rule__Binary__FirstAssignment_1_0");
 			builder.put(grammarAccess.getBinaryAccess().getSecondAssignment_1_1(), "rule__Binary__SecondAssignment_1_1");
 		}

@@ -30,12 +30,12 @@ public interface Right extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Simple</em>' containment reference.
-   * @see #setSimple(Simple)
+   * @see #setSimple(Terminal)
    * @see org.xtext.example.gfnc.cYK.CYKPackage#getRight_Simple()
    * @model containment="true"
    * @generated
    */
-  Simple getSimple();
+  Terminal getSimple();
 
   /**
    * Sets the value of the '{@link org.xtext.example.gfnc.cYK.Right#getSimple <em>Simple</em>}' containment reference.
@@ -45,7 +45,7 @@ public interface Right extends EObject
    * @see #getSimple()
    * @generated
    */
-  void setSimple(Simple value);
+  void setSimple(Terminal value);
 
   /**
    * Returns the value of the '<em><b>Binary</b></em>' containment reference.

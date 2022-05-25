@@ -20,7 +20,7 @@ import org.xtext.example.gfnc.cYK.GFNC;
 import org.xtext.example.gfnc.cYK.NonTerminal;
 import org.xtext.example.gfnc.cYK.Production;
 import org.xtext.example.gfnc.cYK.Right;
-import org.xtext.example.gfnc.cYK.Simple;
+import org.xtext.example.gfnc.cYK.Terminal;
 import org.xtext.example.gfnc.services.CYKGrammarAccess;
 
 @SuppressWarnings("all")
@@ -52,8 +52,8 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case CYKPackage.RIGHT:
 				sequence_Right(context, (Right) semanticObject); 
 				return; 
-			case CYKPackage.SIMPLE:
-				sequence_Simple(context, (Simple) semanticObject); 
+			case CYKPackage.TERMINAL:
+				sequence_Terminal(context, (Terminal) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -89,7 +89,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     GFNC returns GFNC
 	 *
 	 * Constraint:
-	 *     (w+=Simple w+=Simple* productions+=Production*)
+	 *     (w+=Terminal w+=Terminal* productions+=Production*)
 	 * </pre>
 	 */
 	protected void sequence_GFNC(ISerializationContext context, GFNC semanticObject) {
@@ -104,32 +104,32 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *
 	 * Constraint:
 	 *     (
-	 *         noTerminals='A' | 
-	 *         noTerminals='B' | 
-	 *         noTerminals='C' | 
-	 *         noTerminals='D' | 
-	 *         noTerminals='E' | 
-	 *         noTerminals='F' | 
-	 *         noTerminals='G' | 
-	 *         noTerminals='H' | 
-	 *         noTerminals='I' | 
-	 *         noTerminals='J' | 
-	 *         noTerminals='K' | 
-	 *         noTerminals='L' | 
-	 *         noTerminals='M' | 
-	 *         noTerminals='N' | 
-	 *         noTerminals='O' | 
-	 *         noTerminals='P' | 
-	 *         noTerminals='Q' | 
-	 *         noTerminals='R' | 
-	 *         noTerminals='S' | 
-	 *         noTerminals='T' | 
-	 *         noTerminals='U' | 
-	 *         noTerminals='V' | 
-	 *         noTerminals='W' | 
-	 *         noTerminals='X' | 
-	 *         noTerminals='Y' | 
-	 *         noTerminals='Z'
+	 *         nonTerminals='A' | 
+	 *         nonTerminals='B' | 
+	 *         nonTerminals='C' | 
+	 *         nonTerminals='D' | 
+	 *         nonTerminals='E' | 
+	 *         nonTerminals='F' | 
+	 *         nonTerminals='G' | 
+	 *         nonTerminals='H' | 
+	 *         nonTerminals='I' | 
+	 *         nonTerminals='J' | 
+	 *         nonTerminals='K' | 
+	 *         nonTerminals='L' | 
+	 *         nonTerminals='M' | 
+	 *         nonTerminals='N' | 
+	 *         nonTerminals='O' | 
+	 *         nonTerminals='P' | 
+	 *         nonTerminals='Q' | 
+	 *         nonTerminals='R' | 
+	 *         nonTerminals='S' | 
+	 *         nonTerminals='T' | 
+	 *         nonTerminals='U' | 
+	 *         nonTerminals='V' | 
+	 *         nonTerminals='W' | 
+	 *         nonTerminals='X' | 
+	 *         nonTerminals='Y' | 
+	 *         nonTerminals='Z'
 	 *     )
 	 * </pre>
 	 */
@@ -158,7 +158,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Right returns Right
 	 *
 	 * Constraint:
-	 *     (simple=Simple | binary=Binary | lambda='_')
+	 *     (simple=Terminal | binary=Binary | lambda='_')
 	 * </pre>
 	 */
 	protected void sequence_Right(ISerializationContext context, Right semanticObject) {
@@ -169,7 +169,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Simple returns Simple
+	 *     Terminal returns Terminal
 	 *
 	 * Constraint:
 	 *     (
@@ -201,7 +201,7 @@ public class CYKSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 * </pre>
 	 */
-	protected void sequence_Simple(ISerializationContext context, Simple semanticObject) {
+	protected void sequence_Terminal(ISerializationContext context, Terminal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

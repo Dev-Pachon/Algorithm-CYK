@@ -94,10 +94,10 @@ public class CYKSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CYKPackage.SIMPLE:
+      case CYKPackage.TERMINAL:
       {
-        Simple simple = (Simple)theEObject;
-        T result = caseSimple(simple);
+        Terminal terminal = (Terminal)theEObject;
+        T result = caseTerminal(terminal);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -168,17 +168,17 @@ public class CYKSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Simple</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Terminal</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Simple</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Terminal</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSimple(Simple object)
+  public T caseTerminal(Terminal object)
   {
     return null;
   }

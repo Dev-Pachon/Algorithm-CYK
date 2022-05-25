@@ -29,21 +29,21 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cWKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cWAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cWSimpleParserRuleCall_2_0 = (RuleCall)cWAssignment_2.eContents().get(0);
+		private final RuleCall cWTerminalParserRuleCall_2_0 = (RuleCall)cWAssignment_2.eContents().get(0);
 		private final Assignment cWAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cWSimpleParserRuleCall_3_0 = (RuleCall)cWAssignment_3.eContents().get(0);
+		private final RuleCall cWTerminalParserRuleCall_3_0 = (RuleCall)cWAssignment_3.eContents().get(0);
 		private final Keyword cGKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cProductionsAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cProductionsProductionParserRuleCall_6_0 = (RuleCall)cProductionsAssignment_6.eContents().get(0);
 		
 		//GFNC:
-		//    'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+		//    'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
 		//    'G' ':'  productions+=Production*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+		//'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
 		//'G' ':'  productions+=Production*
 		public Group getGroup() { return cGroup; }
 		
@@ -53,17 +53,17 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 		
-		//w+=(Simple)
+		//w+=(Terminal)
 		public Assignment getWAssignment_2() { return cWAssignment_2; }
 		
-		//(Simple)
-		public RuleCall getWSimpleParserRuleCall_2_0() { return cWSimpleParserRuleCall_2_0; }
+		//(Terminal)
+		public RuleCall getWTerminalParserRuleCall_2_0() { return cWTerminalParserRuleCall_2_0; }
 		
-		//(w+=Simple)*
+		//(w+=Terminal)*
 		public Assignment getWAssignment_3() { return cWAssignment_3; }
 		
-		//Simple
-		public RuleCall getWSimpleParserRuleCall_3_0() { return cWSimpleParserRuleCall_3_0; }
+		//Terminal
+		public RuleCall getWTerminalParserRuleCall_3_0() { return cWTerminalParserRuleCall_3_0; }
 		
 		////W is the string which will be analyzed by CYK
 		//   'G'
@@ -130,25 +130,25 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Right");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cSimpleAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cSimpleSimpleParserRuleCall_0_0 = (RuleCall)cSimpleAssignment_0.eContents().get(0);
+		private final RuleCall cSimpleTerminalParserRuleCall_0_0 = (RuleCall)cSimpleAssignment_0.eContents().get(0);
 		private final Assignment cBinaryAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cBinaryBinaryParserRuleCall_1_0 = (RuleCall)cBinaryAssignment_1.eContents().get(0);
 		private final Assignment cLambdaAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
 		private final Keyword cLambda_Keyword_2_0 = (Keyword)cLambdaAssignment_2.eContents().get(0);
 		
 		//Right:
-		//    simple=Simple | binary=Binary | lambda = '_'
+		//    simple=Terminal | binary=Binary | lambda = '_'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//simple=Simple | binary=Binary | lambda = '_'
+		//simple=Terminal | binary=Binary | lambda = '_'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//simple=Simple
+		//simple=Terminal
 		public Assignment getSimpleAssignment_0() { return cSimpleAssignment_0; }
 		
-		//Simple
-		public RuleCall getSimpleSimpleParserRuleCall_0_0() { return cSimpleSimpleParserRuleCall_0_0; }
+		//Terminal
+		public RuleCall getSimpleTerminalParserRuleCall_0_0() { return cSimpleTerminalParserRuleCall_0_0; }
 		
 		//binary=Binary
 		public Assignment getBinaryAssignment_1() { return cBinaryAssignment_1; }
@@ -162,10 +162,10 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'_'
 		public Keyword getLambda_Keyword_2_0() { return cLambda_Keyword_2_0; }
 	}
-	public class SimpleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Simple");
+	public class TerminalElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Terminal");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cSimpleAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cTerminalAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cTerminalsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final Alternatives cTerminalsAlternatives_1_0 = (Alternatives)cTerminalsAssignment_1.eContents().get(0);
 		private final Keyword cTerminalsAKeyword_1_0_0 = (Keyword)cTerminalsAlternatives_1_0.eContents().get(0);
@@ -194,18 +194,18 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cTerminalsYKeyword_1_0_23 = (Keyword)cTerminalsAlternatives_1_0.eContents().get(23);
 		private final Keyword cTerminalsZKeyword_1_0_24 = (Keyword)cTerminalsAlternatives_1_0.eContents().get(24);
 		
-		//Simple:
-		//    {Simple} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
+		//Terminal:
+		//    {Terminal} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
 		//    'm'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'v'|'w'|'x'|'y'|'z')
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Simple} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
+		//{Terminal} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
 		//'m'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'v'|'w'|'x'|'y'|'z')
 		public Group getGroup() { return cGroup; }
 		
-		//{Simple}
-		public Action getSimpleAction_0() { return cSimpleAction_0; }
+		//{Terminal}
+		public Action getTerminalAction_0() { return cTerminalAction_0; }
 		
 		//terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
 		//   'm'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'v'|'w'|'x'|'y'|'z')
@@ -294,133 +294,133 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.NonTerminal");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cNonTerminalAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNoTerminalsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Alternatives cNoTerminalsAlternatives_1_0 = (Alternatives)cNoTerminalsAssignment_1.eContents().get(0);
-		private final Keyword cNoTerminalsAKeyword_1_0_0 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(0);
-		private final Keyword cNoTerminalsBKeyword_1_0_1 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(1);
-		private final Keyword cNoTerminalsCKeyword_1_0_2 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(2);
-		private final Keyword cNoTerminalsDKeyword_1_0_3 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(3);
-		private final Keyword cNoTerminalsEKeyword_1_0_4 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(4);
-		private final Keyword cNoTerminalsFKeyword_1_0_5 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(5);
-		private final Keyword cNoTerminalsGKeyword_1_0_6 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(6);
-		private final Keyword cNoTerminalsHKeyword_1_0_7 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(7);
-		private final Keyword cNoTerminalsIKeyword_1_0_8 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(8);
-		private final Keyword cNoTerminalsJKeyword_1_0_9 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(9);
-		private final Keyword cNoTerminalsKKeyword_1_0_10 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(10);
-		private final Keyword cNoTerminalsLKeyword_1_0_11 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(11);
-		private final Keyword cNoTerminalsMKeyword_1_0_12 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(12);
-		private final Keyword cNoTerminalsNKeyword_1_0_13 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(13);
-		private final Keyword cNoTerminalsOKeyword_1_0_14 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(14);
-		private final Keyword cNoTerminalsPKeyword_1_0_15 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(15);
-		private final Keyword cNoTerminalsQKeyword_1_0_16 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(16);
-		private final Keyword cNoTerminalsRKeyword_1_0_17 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(17);
-		private final Keyword cNoTerminalsSKeyword_1_0_18 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(18);
-		private final Keyword cNoTerminalsTKeyword_1_0_19 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(19);
-		private final Keyword cNoTerminalsUKeyword_1_0_20 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(20);
-		private final Keyword cNoTerminalsVKeyword_1_0_21 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(21);
-		private final Keyword cNoTerminalsWKeyword_1_0_22 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(22);
-		private final Keyword cNoTerminalsXKeyword_1_0_23 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(23);
-		private final Keyword cNoTerminalsYKeyword_1_0_24 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(24);
-		private final Keyword cNoTerminalsZKeyword_1_0_25 = (Keyword)cNoTerminalsAlternatives_1_0.eContents().get(25);
+		private final Assignment cNonTerminalsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cNonTerminalsAlternatives_1_0 = (Alternatives)cNonTerminalsAssignment_1.eContents().get(0);
+		private final Keyword cNonTerminalsAKeyword_1_0_0 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(0);
+		private final Keyword cNonTerminalsBKeyword_1_0_1 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(1);
+		private final Keyword cNonTerminalsCKeyword_1_0_2 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(2);
+		private final Keyword cNonTerminalsDKeyword_1_0_3 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(3);
+		private final Keyword cNonTerminalsEKeyword_1_0_4 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(4);
+		private final Keyword cNonTerminalsFKeyword_1_0_5 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(5);
+		private final Keyword cNonTerminalsGKeyword_1_0_6 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(6);
+		private final Keyword cNonTerminalsHKeyword_1_0_7 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(7);
+		private final Keyword cNonTerminalsIKeyword_1_0_8 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(8);
+		private final Keyword cNonTerminalsJKeyword_1_0_9 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(9);
+		private final Keyword cNonTerminalsKKeyword_1_0_10 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(10);
+		private final Keyword cNonTerminalsLKeyword_1_0_11 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(11);
+		private final Keyword cNonTerminalsMKeyword_1_0_12 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(12);
+		private final Keyword cNonTerminalsNKeyword_1_0_13 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(13);
+		private final Keyword cNonTerminalsOKeyword_1_0_14 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(14);
+		private final Keyword cNonTerminalsPKeyword_1_0_15 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(15);
+		private final Keyword cNonTerminalsQKeyword_1_0_16 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(16);
+		private final Keyword cNonTerminalsRKeyword_1_0_17 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(17);
+		private final Keyword cNonTerminalsSKeyword_1_0_18 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(18);
+		private final Keyword cNonTerminalsTKeyword_1_0_19 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(19);
+		private final Keyword cNonTerminalsUKeyword_1_0_20 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(20);
+		private final Keyword cNonTerminalsVKeyword_1_0_21 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(21);
+		private final Keyword cNonTerminalsWKeyword_1_0_22 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(22);
+		private final Keyword cNonTerminalsXKeyword_1_0_23 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(23);
+		private final Keyword cNonTerminalsYKeyword_1_0_24 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(24);
+		private final Keyword cNonTerminalsZKeyword_1_0_25 = (Keyword)cNonTerminalsAlternatives_1_0.eContents().get(25);
 		
 		//NonTerminal:
-		//    {NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
+		//    {NonTerminal} nonTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
 		//    'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
+		//{NonTerminal} nonTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
 		//'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 		public Group getGroup() { return cGroup; }
 		
 		//{NonTerminal}
 		public Action getNonTerminalAction_0() { return cNonTerminalAction_0; }
 		
-		//noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
+		//nonTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
 		//   'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
-		public Assignment getNoTerminalsAssignment_1() { return cNoTerminalsAssignment_1; }
+		public Assignment getNonTerminalsAssignment_1() { return cNonTerminalsAssignment_1; }
 		
 		//('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
 		//   'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
-		public Alternatives getNoTerminalsAlternatives_1_0() { return cNoTerminalsAlternatives_1_0; }
+		public Alternatives getNonTerminalsAlternatives_1_0() { return cNonTerminalsAlternatives_1_0; }
 		
 		//'A'
-		public Keyword getNoTerminalsAKeyword_1_0_0() { return cNoTerminalsAKeyword_1_0_0; }
+		public Keyword getNonTerminalsAKeyword_1_0_0() { return cNonTerminalsAKeyword_1_0_0; }
 		
 		//'B'
-		public Keyword getNoTerminalsBKeyword_1_0_1() { return cNoTerminalsBKeyword_1_0_1; }
+		public Keyword getNonTerminalsBKeyword_1_0_1() { return cNonTerminalsBKeyword_1_0_1; }
 		
 		//'C'
-		public Keyword getNoTerminalsCKeyword_1_0_2() { return cNoTerminalsCKeyword_1_0_2; }
+		public Keyword getNonTerminalsCKeyword_1_0_2() { return cNonTerminalsCKeyword_1_0_2; }
 		
 		//'D'
-		public Keyword getNoTerminalsDKeyword_1_0_3() { return cNoTerminalsDKeyword_1_0_3; }
+		public Keyword getNonTerminalsDKeyword_1_0_3() { return cNonTerminalsDKeyword_1_0_3; }
 		
 		//'E'
-		public Keyword getNoTerminalsEKeyword_1_0_4() { return cNoTerminalsEKeyword_1_0_4; }
+		public Keyword getNonTerminalsEKeyword_1_0_4() { return cNonTerminalsEKeyword_1_0_4; }
 		
 		//'F'
-		public Keyword getNoTerminalsFKeyword_1_0_5() { return cNoTerminalsFKeyword_1_0_5; }
+		public Keyword getNonTerminalsFKeyword_1_0_5() { return cNonTerminalsFKeyword_1_0_5; }
 		
 		//'G'
-		public Keyword getNoTerminalsGKeyword_1_0_6() { return cNoTerminalsGKeyword_1_0_6; }
+		public Keyword getNonTerminalsGKeyword_1_0_6() { return cNonTerminalsGKeyword_1_0_6; }
 		
 		//'H'
-		public Keyword getNoTerminalsHKeyword_1_0_7() { return cNoTerminalsHKeyword_1_0_7; }
+		public Keyword getNonTerminalsHKeyword_1_0_7() { return cNonTerminalsHKeyword_1_0_7; }
 		
 		//'I'
-		public Keyword getNoTerminalsIKeyword_1_0_8() { return cNoTerminalsIKeyword_1_0_8; }
+		public Keyword getNonTerminalsIKeyword_1_0_8() { return cNonTerminalsIKeyword_1_0_8; }
 		
 		//'J'
-		public Keyword getNoTerminalsJKeyword_1_0_9() { return cNoTerminalsJKeyword_1_0_9; }
+		public Keyword getNonTerminalsJKeyword_1_0_9() { return cNonTerminalsJKeyword_1_0_9; }
 		
 		//'K'
-		public Keyword getNoTerminalsKKeyword_1_0_10() { return cNoTerminalsKKeyword_1_0_10; }
+		public Keyword getNonTerminalsKKeyword_1_0_10() { return cNonTerminalsKKeyword_1_0_10; }
 		
 		//'L'
-		public Keyword getNoTerminalsLKeyword_1_0_11() { return cNoTerminalsLKeyword_1_0_11; }
+		public Keyword getNonTerminalsLKeyword_1_0_11() { return cNonTerminalsLKeyword_1_0_11; }
 		
 		//'M'
-		public Keyword getNoTerminalsMKeyword_1_0_12() { return cNoTerminalsMKeyword_1_0_12; }
+		public Keyword getNonTerminalsMKeyword_1_0_12() { return cNonTerminalsMKeyword_1_0_12; }
 		
 		//'N'
-		public Keyword getNoTerminalsNKeyword_1_0_13() { return cNoTerminalsNKeyword_1_0_13; }
+		public Keyword getNonTerminalsNKeyword_1_0_13() { return cNonTerminalsNKeyword_1_0_13; }
 		
 		//'O'
-		public Keyword getNoTerminalsOKeyword_1_0_14() { return cNoTerminalsOKeyword_1_0_14; }
+		public Keyword getNonTerminalsOKeyword_1_0_14() { return cNonTerminalsOKeyword_1_0_14; }
 		
 		//'P'
-		public Keyword getNoTerminalsPKeyword_1_0_15() { return cNoTerminalsPKeyword_1_0_15; }
+		public Keyword getNonTerminalsPKeyword_1_0_15() { return cNonTerminalsPKeyword_1_0_15; }
 		
 		//'Q'
-		public Keyword getNoTerminalsQKeyword_1_0_16() { return cNoTerminalsQKeyword_1_0_16; }
+		public Keyword getNonTerminalsQKeyword_1_0_16() { return cNonTerminalsQKeyword_1_0_16; }
 		
 		//'R'
-		public Keyword getNoTerminalsRKeyword_1_0_17() { return cNoTerminalsRKeyword_1_0_17; }
+		public Keyword getNonTerminalsRKeyword_1_0_17() { return cNonTerminalsRKeyword_1_0_17; }
 		
 		//'S'
-		public Keyword getNoTerminalsSKeyword_1_0_18() { return cNoTerminalsSKeyword_1_0_18; }
+		public Keyword getNonTerminalsSKeyword_1_0_18() { return cNonTerminalsSKeyword_1_0_18; }
 		
 		//'T'
-		public Keyword getNoTerminalsTKeyword_1_0_19() { return cNoTerminalsTKeyword_1_0_19; }
+		public Keyword getNonTerminalsTKeyword_1_0_19() { return cNonTerminalsTKeyword_1_0_19; }
 		
 		//'U'
-		public Keyword getNoTerminalsUKeyword_1_0_20() { return cNoTerminalsUKeyword_1_0_20; }
+		public Keyword getNonTerminalsUKeyword_1_0_20() { return cNonTerminalsUKeyword_1_0_20; }
 		
 		//'V'
-		public Keyword getNoTerminalsVKeyword_1_0_21() { return cNoTerminalsVKeyword_1_0_21; }
+		public Keyword getNonTerminalsVKeyword_1_0_21() { return cNonTerminalsVKeyword_1_0_21; }
 		
 		//'W'
-		public Keyword getNoTerminalsWKeyword_1_0_22() { return cNoTerminalsWKeyword_1_0_22; }
+		public Keyword getNonTerminalsWKeyword_1_0_22() { return cNonTerminalsWKeyword_1_0_22; }
 		
 		//'X'
-		public Keyword getNoTerminalsXKeyword_1_0_23() { return cNoTerminalsXKeyword_1_0_23; }
+		public Keyword getNonTerminalsXKeyword_1_0_23() { return cNonTerminalsXKeyword_1_0_23; }
 		
 		//'Y'
-		public Keyword getNoTerminalsYKeyword_1_0_24() { return cNoTerminalsYKeyword_1_0_24; }
+		public Keyword getNonTerminalsYKeyword_1_0_24() { return cNonTerminalsYKeyword_1_0_24; }
 		
 		//'Z'
-		public Keyword getNoTerminalsZKeyword_1_0_25() { return cNoTerminalsZKeyword_1_0_25; }
+		public Keyword getNonTerminalsZKeyword_1_0_25() { return cNonTerminalsZKeyword_1_0_25; }
 	}
 	public class BinaryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.gfnc.CYK.Binary");
@@ -463,7 +463,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	private final GFNCElements pGFNC;
 	private final ProductionElements pProduction;
 	private final RightElements pRight;
-	private final SimpleElements pSimple;
+	private final TerminalElements pTerminal;
 	private final NonTerminalElements pNonTerminal;
 	private final BinaryElements pBinary;
 	
@@ -479,7 +479,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.pGFNC = new GFNCElements();
 		this.pProduction = new ProductionElements();
 		this.pRight = new RightElements();
-		this.pSimple = new SimpleElements();
+		this.pTerminal = new TerminalElements();
 		this.pNonTerminal = new NonTerminalElements();
 		this.pBinary = new BinaryElements();
 	}
@@ -512,7 +512,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 
 	
 	//GFNC:
-	//    'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+	//    'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
 	//    'G' ':'  productions+=Production*
 	//;
 	public GFNCElements getGFNCAccess() {
@@ -535,7 +535,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Right:
-	//    simple=Simple | binary=Binary | lambda = '_'
+	//    simple=Terminal | binary=Binary | lambda = '_'
 	//;
 	public RightElements getRightAccess() {
 		return pRight;
@@ -545,20 +545,20 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getRightAccess().getRule();
 	}
 	
-	//Simple:
-	//    {Simple} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
+	//Terminal:
+	//    {Terminal} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
 	//    'm'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'v'|'w'|'x'|'y'|'z')
 	//;
-	public SimpleElements getSimpleAccess() {
-		return pSimple;
+	public TerminalElements getTerminalAccess() {
+		return pTerminal;
 	}
 	
-	public ParserRule getSimpleRule() {
-		return getSimpleAccess().getRule();
+	public ParserRule getTerminalRule() {
+		return getTerminalAccess().getRule();
 	}
 	
 	//NonTerminal:
-	//    {NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
+	//    {NonTerminal} nonTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
 	//    'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 	//;
 	public NonTerminalElements getNonTerminalAccess() {

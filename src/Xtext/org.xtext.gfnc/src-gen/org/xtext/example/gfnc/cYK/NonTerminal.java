@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.gfnc.cYK.NonTerminal#getNoTerminals <em>No Terminals</em>}</li>
+ *   <li>{@link org.xtext.example.gfnc.cYK.NonTerminal#getNonTerminals <em>Non Terminals</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.gfnc.cYK.CYKPackage#getNonTerminal()
@@ -24,25 +24,25 @@ import org.eclipse.emf.ecore.EObject;
 public interface NonTerminal extends EObject
 {
   /**
-   * Returns the value of the '<em><b>No Terminals</b></em>' attribute.
+   * Returns the value of the '<em><b>Non Terminals</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>No Terminals</em>' attribute.
-   * @see #setNoTerminals(String)
-   * @see org.xtext.example.gfnc.cYK.CYKPackage#getNonTerminal_NoTerminals()
+   * @return the value of the '<em>Non Terminals</em>' attribute.
+   * @see #setNonTerminals(String)
+   * @see org.xtext.example.gfnc.cYK.CYKPackage#getNonTerminal_NonTerminals()
    * @model
    * @generated
    */
-  String getNoTerminals();
+  String getNonTerminals();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.NonTerminal#getNoTerminals <em>No Terminals</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.gfnc.cYK.NonTerminal#getNonTerminals <em>Non Terminals</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>No Terminals</em>' attribute.
-   * @see #getNoTerminals()
+   * @param value the new value of the '<em>Non Terminals</em>' attribute.
+   * @see #getNonTerminals()
    * @generated
    */
-  void setNoTerminals(String value);
+  void setNonTerminals(String value);
 
 } // NonTerminal
