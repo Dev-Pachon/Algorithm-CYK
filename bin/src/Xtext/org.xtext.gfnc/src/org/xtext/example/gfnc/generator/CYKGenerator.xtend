@@ -8,6 +8,7 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.example.gfnc.cYK.GFNC
+import org.xtext.gfnc.model.AlgorithmCYK
 
 /**
  * Generates code from your model files on save.
@@ -19,7 +20,6 @@ class CYKGenerator extends AbstractGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		val grammar = resource.contents.head as GFNC
 		fsa.generateFile('Output.txt', getOutput(grammar))
-	
 	}
 	
 	def getInput(GFNC grammar) {
@@ -30,14 +30,14 @@ class CYKGenerator extends AbstractGenerator {
 		input
 	}
 	
-	def getNoTerminals(GFNC grammar){
-		var noTerminals = newArrayList()
+	def getNonTerminals(GFNC grammar){
+		var nonTerminals = newArrayList()
 		
 		for(production : grammar.productions){
-			noTerminals.add(production.left.^noTerminals)
+			nonTerminals.add(production.left.^nonTerminals)
 		}
 		
-		noTerminals
+		nonTerminals
 	}
 	
 	def getProduction(GFNC grammar){
@@ -50,8 +50,9 @@ class CYKGenerator extends AbstractGenerator {
 		Imprime
 		«getInput(grammar)»
 		////
-		«getNoTerminals(grammar)»
+		«getNonTerminals(grammar)»
 		«getProduction(grammar)»
+		«AlgorithmCYK.CYK(grammar)»
 		'''
 	}
 	

@@ -3,7 +3,6 @@
  */
 package org.xtext.example.gfnc.generator;
 
-import java.util.ArrayList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -11,10 +10,8 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
-import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.xtext.example.gfnc.cYK.GFNC;
-import org.xtext.example.gfnc.cYK.Production;
 import org.xtext.example.gfnc.cYK.Terminal;
 import org.xtext.gfnc.model.AlgorithmCYK;
 
@@ -47,40 +44,21 @@ public class CYKGenerator extends AbstractGenerator {
     return _xblockexpression;
   }
   
-  public ArrayList<String> getNonTerminals(final GFNC grammar) {
-    ArrayList<String> _xblockexpression = null;
-    {
-      ArrayList<String> nonTerminals = CollectionLiterals.<String>newArrayList();
-      EList<Production> _productions = grammar.getProductions();
-      for (final Production production : _productions) {
-        nonTerminals.add(production.getLeft().getNonTerminals());
-      }
-      _xblockexpression = nonTerminals;
-    }
-    return _xblockexpression;
-  }
-  
-  public Object getProduction(final GFNC grammar) {
-    return null;
-  }
-  
   public CharSequence getOutput(final GFNC grammar) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("Imprime");
+    _builder.append("Matriz del algoritmo:");
     _builder.newLine();
-    String _input = this.getInput(grammar);
-    _builder.append(_input);
-    _builder.newLineIfNotEmpty();
-    _builder.append("////");
     _builder.newLine();
-    ArrayList<String> _nonTerminals = this.getNonTerminals(grammar);
-    _builder.append(_nonTerminals);
-    _builder.newLineIfNotEmpty();
-    Object _production = this.getProduction(grammar);
-    _builder.append(_production);
-    _builder.newLineIfNotEmpty();
     String _CYK = AlgorithmCYK.CYK(grammar);
     _builder.append(_CYK);
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("La cadena ");
+    String _input = this.getInput(grammar);
+    _builder.append(_input);
+    _builder.append(" ");
+    String _message = AlgorithmCYK.message();
+    _builder.append(_message);
     _builder.newLineIfNotEmpty();
     return _builder;
   }

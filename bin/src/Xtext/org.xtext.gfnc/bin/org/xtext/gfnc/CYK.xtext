@@ -3,25 +3,25 @@ grammar org.xtext.example.gfnc.CYK with org.eclipse.xtext.common.Terminals
 generate cYK "http://www.xtext.org/example/gfnc/CYK"
 
 GFNC:
-	'W' ':' w+=(Simple)(w+=Simple)* //W is the string which will be analyzed by CYK
+	'W' ':' w+=(Terminal)(w+=Terminal)* //W is the string which will be analyzed by CYK
 	'G' ':'  productions+=Production*
 ;
 
 Production:
-	left=NonTerminal '->' rigth+=(Rigth)('|' + rigth+=Rigth)*
+	left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
 ;
 
-Rigth: 
-	simple=Simple | binary=Binary | lambda = '_'
+Right: 
+	simple=Terminal | binary=Binary | lambda = '_'
 ;
 
-Simple:
-	{Simple} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
+Terminal:
+	{Terminal} terminals = ('a'|'b'|'c'|'d'|'e'|'f'|'g'|'h'|'i'|'j'|'k'|'l'|
 	'm'|'n'|'o'|'p'|'q'|'r'|'s'|'t'|'v'|'w'|'x'|'y'|'z')
 ;
 
 NonTerminal:
-	{NonTerminal} noTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
+	{NonTerminal} nonTerminals = ('A'|'B'|'C'| 'D'|'E'|'F'|'G'|'H'|'I'|'J'|'K'|'L'|
 	'M'|'N'|'O'|'P'|'Q'|'R'|'S'|'T'|'U'|'V'|'W'| 'X'|'Y'|'Z')
 ;
 

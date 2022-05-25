@@ -7,12 +7,14 @@ import org.eclipse.emf.common.util.EList;
 import org.xtext.example.gfnc.cYK.*;
 
 public class AlgorithmCYK {
+	
+	private static Set<NonTerminal> matrix[][];
 
     public static String CYK(GFNC grammar){
     	Set<NonTerminal> table[][] = initialize(grammar);
     	
     	table = step2(grammar, table);
-    	
+    	matrix = table;
         return showTable(table);
     }
 
@@ -70,9 +72,7 @@ public class AlgorithmCYK {
             }  
         }
 		return table;
-    }
-	
-	
+    }	
 	
 	private static Set<NonTerminal> producesStep2(GFNC grammar, Set<NonTerminal> B, Set<NonTerminal> C) {
 		Set<NonTerminal> producedBy = new LinkedHashSet<NonTerminal>();
@@ -111,5 +111,21 @@ public class AlgorithmCYK {
 		}
 		
 		return msg;
+	}
+	
+	public static String message() {
+		Set<NonTerminal> temp = matrix[0][matrix.length-1];
+		boolean generated = false;
+		for (NonTerminal aux: temp) {
+			if(aux.getNonTerminals().equals("S")){
+				generated = true;
+			}
+		}
+		
+		if(generated) {
+			return "es generada";
+		} else {
+			return "NO es generada";
+		}
 	}
 }
