@@ -18,7 +18,9 @@ public class AlgorithmCYK {
         return showTable(table);
     }
 
+    
     @SuppressWarnings("unchecked")
+	// Initializing the table with the first row of the table.
 	private static Set<NonTerminal>[][] initialize(GFNC grammar){
         int n = grammar.getW().size();
         
@@ -41,7 +43,15 @@ public class AlgorithmCYK {
         
     }
 
-    private static Set<NonTerminal> produces(GFNC grammar, int i) {
+    
+    /**
+	 * It returns a set of non-terminals that produce a given terminal
+	 * 
+	 * @param grammar the grammar to be analyzed
+	 * @param i the index of the terminal in the grammar's W
+	 * @return A set of non-terminals that produce the terminal at position i in the word.
+	 */
+	private static Set<NonTerminal> produces(GFNC grammar, int i) {
     	String terminal = grammar.getW().get(i).getTerminals();
     	Set<NonTerminal> producedBy = new LinkedHashSet<>();
 		for(Production p : grammar.getProductions()) {
@@ -58,6 +68,15 @@ public class AlgorithmCYK {
 		return producedBy;
 	}
 
+	
+	/**
+	 * For each non-terminal in the grammar, check if it can produce the two sets of non-terminals in the
+	 * table. If it can, add it to the table
+	 * 
+	 * @param grammar The grammar to be used
+	 * @param table the table that will be filled with the results of the algorithm
+	 * @return The table with the sets of non-terminals that can be produced by the grammar.
+	 */
 	private static Set<NonTerminal>[][] step2(GFNC grammar, Set<NonTerminal>[][] table){
         int n = grammar.getW().size();
         for (int j = 1; j < n; j++) {
@@ -74,6 +93,16 @@ public class AlgorithmCYK {
 		return table;
     }	
 	
+	
+	/**
+	 * Given a grammar, a set of non-terminals B and a set of non-terminals C, this function returns the
+	 * set of non-terminals that can produce a string of the form BxC
+	 * 
+	 * @param grammar the grammar to be analyzed
+	 * @param B the set of non-terminals
+	 * @param C the set of non-terminals 
+	 * @return A set of non-terminals that can produce the binary production of the form BxC.
+	 */
 	private static Set<NonTerminal> producesStep2(GFNC grammar, Set<NonTerminal> B, Set<NonTerminal> C) {
 		Set<NonTerminal> producedBy = new LinkedHashSet<NonTerminal>();
 		for(Production p : grammar.getProductions()) {
@@ -96,6 +125,13 @@ public class AlgorithmCYK {
 		return producedBy;
 	}
 
+	
+	/**
+	 * It takes a 2D array of sets of non-terminals and returns a string representation of the table
+	 * 
+	 * @param table The table to be printed
+	 * @return A string representation of the table.
+	 */
 	public static String showTable(Set<NonTerminal> table[][]) {
 		String msg = "";
 		for (int i = 0; i < table.length; i++) {
