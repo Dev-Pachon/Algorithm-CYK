@@ -15,7 +15,7 @@ public class AlgorithmCYK {
 		if (grammar.getW().getLambda() != null) {
 			if (validateLambda(grammar)) {
 				generated = true;
-				return "[]";
+				return "[S]";
 			}
 			generated = false;
 			return "[]";
@@ -169,18 +169,34 @@ public class AlgorithmCYK {
 	 * @param table The table to be printed
 	 * @return A string representation of the table.
 	 */
-	public static String showTable(Set<NonTerminal> table[][]) {
+	private static String showTable(Set<NonTerminal> table[][]) {
 		String msg = "";
 		for (int i = 0; i < table.length; i++) {
+			
+			final Object[] line = new String[table[i].length];
+			
 			for (int j = 0; j < table[i].length; j++) {
-				msg += "[";
+				String lineAux = "";
+				lineAux += "[";
 				for (NonTerminal nt : table[i][j])
-					msg += nt.getNonTerminals() + " ";
-				msg = msg.trim();
-				msg += "] ";
+					lineAux += nt.getNonTerminals() + " ";
+				lineAux = lineAux.trim();
+				lineAux += "] ";
+				line[j] = lineAux;
 			}
+			
+			String format = "";
+			
+			for(int f = 0; f < table[i].length;f++) {
+				format += "%-15s";
+			}
+			format += " \r";
+			
+			msg += String.format(format,line);
+			
 			msg = msg.trim();
 			msg += "\n";
+			
 		}
 
 		return msg;
@@ -188,9 +204,9 @@ public class AlgorithmCYK {
 
 	public static String message() {
 		if (generated) {
-			return "es generada";
+			return "es generada por la gramática.";
 		} else {
-			return "NO es generada";
+			return "NO es generada por la gramática.";
 		}
 	}
 }
