@@ -2,10 +2,14 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cYK" nsURI="http://www.xtext.org/example/gfnc/CYK" nsPrefix="cYK">
   <eClassifiers xsi:type="ecore:EClass" name="GFNC">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="w" upperBound="-1" eType="#//Terminal"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="w" eType="#//W" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="productions" upperBound="-1"
         eType="#//Production" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="W">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lambda" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="w" upperBound="-1" eType="#//Terminal"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Production">
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//NonTerminal"

@@ -36,13 +36,13 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cProductionsProductionParserRuleCall_5_0 = (RuleCall)cProductionsAssignment_5.eContents().get(0);
 		
 		//GFNC:
-		//    'W' ':'    w=W //W is the string which will be analyzed by CYK
-		//    'G' ':' productions+=Production*
+		//    'W' ':'    w = W //W is the string which will be analyzed by CYK
+		//    'G' ':' productions += Production*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'W' ':'    w=W //W is the string which will be analyzed by CYK
-		//'G' ':' productions+=Production*
+		//'W' ':'    w = W //W is the string which will be analyzed by CYK
+		//'G' ':' productions += Production*
 		public Group getGroup() { return cGroup; }
 		
 		//'W'
@@ -51,7 +51,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 		
-		//w=W
+		//w = W
 		public Assignment getWAssignment_2() { return cWAssignment_2; }
 		
 		//W
@@ -64,7 +64,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//':'
 		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
 		
-		//productions+=Production*
+		//productions += Production*
 		public Assignment getProductionsAssignment_5() { return cProductionsAssignment_5; }
 		
 		//Production
@@ -82,29 +82,29 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cWTerminalParserRuleCall_1_1_0 = (RuleCall)cWAssignment_1_1.eContents().get(0);
 		
 		//W:
-		//    lambda=Lambda | w+=(Terminal)(w+=Terminal)*
+		//    lambda = Lambda | w += (Terminal)(w += Terminal)*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//lambda=Lambda | w+=(Terminal)(w+=Terminal)*
+		//lambda = Lambda | w += (Terminal)(w += Terminal)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//lambda=Lambda
+		//lambda = Lambda
 		public Assignment getLambdaAssignment_0() { return cLambdaAssignment_0; }
 		
 		//Lambda
 		public RuleCall getLambdaLambdaParserRuleCall_0_0() { return cLambdaLambdaParserRuleCall_0_0; }
 		
-		//w+=(Terminal)(w+=Terminal)*
+		//w += (Terminal)(w += Terminal)*
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//w+=(Terminal)
+		//w += (Terminal)
 		public Assignment getWAssignment_1_0() { return cWAssignment_1_0; }
 		
 		//(Terminal)
 		public RuleCall getWTerminalParserRuleCall_1_0_0() { return cWTerminalParserRuleCall_1_0_0; }
 		
-		//(w+=Terminal)*
+		//(w += Terminal)*
 		public Assignment getWAssignment_1_1() { return cWAssignment_1_1; }
 		
 		//Terminal
@@ -124,14 +124,14 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cRightRightParserRuleCall_3_1_0 = (RuleCall)cRightAssignment_3_1.eContents().get(0);
 		
 		//Production:
-		//    left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
+		//    left = NonTerminal '->' right += (Right)('|' + right += Right)*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
+		//left = NonTerminal '->' right += (Right)('|' + right += Right)*
 		public Group getGroup() { return cGroup; }
 		
-		//left=NonTerminal
+		//left = NonTerminal
 		public Assignment getLeftAssignment_0() { return cLeftAssignment_0; }
 		
 		//NonTerminal
@@ -140,19 +140,19 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'->'
 		public Keyword getHyphenMinusGreaterThanSignKeyword_1() { return cHyphenMinusGreaterThanSignKeyword_1; }
 		
-		//right +=(Right)
+		//right += (Right)
 		public Assignment getRightAssignment_2() { return cRightAssignment_2; }
 		
 		//(Right)
 		public RuleCall getRightRightParserRuleCall_2_0() { return cRightRightParserRuleCall_2_0; }
 		
-		//('|' + right+=Right)*
+		//('|' + right += Right)*
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//'|' +
 		public Keyword getVerticalLineKeyword_3_0() { return cVerticalLineKeyword_3_0; }
 		
-		//right+=Right
+		//right += Right
 		public Assignment getRightAssignment_3_1() { return cRightAssignment_3_1; }
 		
 		//Right
@@ -169,20 +169,20 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cLambdaLambdaParserRuleCall_2_0 = (RuleCall)cLambdaAssignment_2.eContents().get(0);
 		
 		//Right:
-		//    simple=Terminal | binary=Binary | lambda = Lambda
+		//    simple = Terminal | binary = Binary | lambda = Lambda
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//simple=Terminal | binary=Binary | lambda = Lambda
+		//simple = Terminal | binary = Binary | lambda = Lambda
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//simple=Terminal
+		//simple = Terminal
 		public Assignment getSimpleAssignment_0() { return cSimpleAssignment_0; }
 		
 		//Terminal
 		public RuleCall getSimpleTerminalParserRuleCall_0_0() { return cSimpleTerminalParserRuleCall_0_0; }
 		
-		//binary=Binary
+		//binary = Binary
 		public Assignment getBinaryAssignment_1() { return cBinaryAssignment_1; }
 		
 		//Binary
@@ -477,26 +477,26 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cSecondNonTerminalParserRuleCall_1_1_0 = (RuleCall)cSecondAssignment_1_1.eContents().get(0);
 		
 		//Binary:
-		//    {Binary}(first=NonTerminal second=NonTerminal)
+		//    {Binary}(first = NonTerminal second = NonTerminal)
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Binary}(first=NonTerminal second=NonTerminal)
+		//{Binary}(first = NonTerminal second = NonTerminal)
 		public Group getGroup() { return cGroup; }
 		
 		//{Binary}
 		public Action getBinaryAction_0() { return cBinaryAction_0; }
 		
-		//(first=NonTerminal second=NonTerminal)
+		//(first = NonTerminal second = NonTerminal)
 		public Group getGroup_1() { return cGroup_1; }
 		
-		//first=NonTerminal
+		//first = NonTerminal
 		public Assignment getFirstAssignment_1_0() { return cFirstAssignment_1_0; }
 		
 		//NonTerminal
 		public RuleCall getFirstNonTerminalParserRuleCall_1_0_0() { return cFirstNonTerminalParserRuleCall_1_0_0; }
 		
-		//second=NonTerminal
+		//second = NonTerminal
 		public Assignment getSecondAssignment_1_1() { return cSecondAssignment_1_1; }
 		
 		//NonTerminal
@@ -560,8 +560,8 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 
 	
 	//GFNC:
-	//    'W' ':'    w=W //W is the string which will be analyzed by CYK
-	//    'G' ':' productions+=Production*
+	//    'W' ':'    w = W //W is the string which will be analyzed by CYK
+	//    'G' ':' productions += Production*
 	//;
 	public GFNCElements getGFNCAccess() {
 		return pGFNC;
@@ -572,7 +572,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//W:
-	//    lambda=Lambda | w+=(Terminal)(w+=Terminal)*
+	//    lambda = Lambda | w += (Terminal)(w += Terminal)*
 	//;
 	public WElements getWAccess() {
 		return pW;
@@ -583,7 +583,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Production:
-	//    left=NonTerminal '->' right +=(Right)('|' + right+=Right)*
+	//    left = NonTerminal '->' right += (Right)('|' + right += Right)*
 	//;
 	public ProductionElements getProductionAccess() {
 		return pProduction;
@@ -594,7 +594,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Right:
-	//    simple=Terminal | binary=Binary | lambda = Lambda
+	//    simple = Terminal | binary = Binary | lambda = Lambda
 	//;
 	public RightElements getRightAccess() {
 		return pRight;
@@ -640,7 +640,7 @@ public class CYKGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//Binary:
-	//    {Binary}(first=NonTerminal second=NonTerminal)
+	//    {Binary}(first = NonTerminal second = NonTerminal)
 	//;
 	public BinaryElements getBinaryAccess() {
 		return pBinary;

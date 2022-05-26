@@ -24,35 +24,20 @@ class CYKGenerator extends AbstractGenerator {
 	
 	def getInput(GFNC grammar) {
 		var input = ""
-		for(terminal : grammar.w){
+		for(terminal : grammar.w.w){
 			input += terminal.^terminals
 		}
 		input
 	}
 	
-	def getNonTerminals(GFNC grammar){
-		var nonTerminals = newArrayList()
-		
-		for(production : grammar.productions){
-			nonTerminals.add(production.left.^nonTerminals)
-		}
-		
-		nonTerminals
-	}
-	
-	def getProduction(GFNC grammar){
-
-	} 
-	
 	
 	def getOutput(GFNC grammar){
 		'''
-		Imprime
-		«getInput(grammar)»
-		////
-		«getNonTerminals(grammar)»
-		«getProduction(grammar)»
+		Matriz del algoritmo:
+		
 		«AlgorithmCYK.CYK(grammar)»
+		
+		La cadena «getInput(grammar)» «AlgorithmCYK.message()»
 		'''
 	}
 	

@@ -63,14 +63,11 @@ public class AlgorithmCYK {
 				table[i][j] = new LinkedHashSet<NonTerminal>();
 			}
 		}
-
 		for (int i = 0; i < n; i++) {
 			// X(i,j) = X(i,1) := conjunto de variables A tales que A → ai
 			table[i][0] = produces(grammar, i);
 		}
-
 		return table;
-
 	}
 
 	/**
@@ -180,6 +177,11 @@ public class AlgorithmCYK {
 				lineAux += "[";
 				for (NonTerminal nt : table[i][j])
 					lineAux += nt.getNonTerminals() + " ";
+				
+				if(lineAux.substring(1).equals("")) {
+					lineAux += "-";
+				}
+				
 				lineAux = lineAux.trim();
 				lineAux += "] ";
 				line[j] = lineAux;
@@ -188,15 +190,14 @@ public class AlgorithmCYK {
 			String format = "";
 			
 			for(int f = 0; f < table[i].length;f++) {
-				format += "%-15s";
+				format += "%-12s";
 			}
 			format += " \r";
 			
 			msg += String.format(format,line);
 			
 			msg = msg.trim();
-			msg += "\n";
-			
+			msg += "\n";	
 		}
 
 		return msg;

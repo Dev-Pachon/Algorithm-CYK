@@ -10,6 +10,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//GFNC/w"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//GFNC/productions"/>
     </genClasses>
+    <genClasses ecoreClass="CYK.ecore#//W">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CYK.ecore#//W/lambda"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//W/w"/>
+    </genClasses>
     <genClasses ecoreClass="CYK.ecore#//Production">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Production/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CYK.ecore#//Production/right"/>
