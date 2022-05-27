@@ -11,6 +11,8 @@ public class AlgorithmCYK {
 	private static boolean generated;
 
 	public static String CYK(GFNC grammar) {
+		generated = false;
+		
 		Set<NonTerminal> table[][] = initialize(grammar);
 		if (grammar.getW().getLambda() != null) {
 			if (validateLambda(grammar)) {
@@ -18,7 +20,7 @@ public class AlgorithmCYK {
 				return "[S]";
 			}
 			generated = false;
-			return "[]";
+			return "[-]";
 		}
 
 		table = step2(grammar, table);

@@ -22,7 +22,6 @@ import org.xtext.gfnc.model.AlgorithmCYK;
  */
 @SuppressWarnings("all")
 public class CYKGenerator extends AbstractGenerator {
-  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     EObject _head = IterableExtensions.<EObject>head(resource.getContents());
     final GFNC grammar = ((GFNC) _head);
